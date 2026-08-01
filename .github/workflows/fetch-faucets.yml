@@ -22,39 +22,49 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Fetch faucet list from FaucetPay API
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch from FaucetPay API via Node.js
         run: |
-          set -e
-          HTTP_CODE=$(curl -s -o faucets.tmp.json -w "%{http_code}" \
-            -X POST "https://faucetpay.io/api/v1/faucetlist" \
-            -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
-            -H "Content-Type: application/x-www-form-urlencoded" \
-            -d "currency=BTC")
+          node -e '
+          const fs = require("fs");
 
-          echo "HTTP status: $HTTP_CODE"
+          async function fetchData() {
+            try {
+              const response = await fetch("https://faucetpay.io/api/v1/faucetlist", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/x-www-form-urlencoded",
+                  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+                },
+                body: new URLSearchParams({ currency: "BTC" })
+              });
 
-          if [ "$HTTP_CODE" -ne 200 ]; then
-            echo "::error::FaucetPay API returned HTTP $HTTP_CODE"
-            cat faucets.tmp.json || true
-            exit 1
-          fi
+              const data = await response.json();
+              
+              if (data.status !== 200) {
+                console.error("API returned error status:", data);
+                process.exit(1);
+              }
 
-      - name: Validate JSON response
-        run: |
-          set -e
-          if ! jq empty faucets.tmp.json 2>/dev/null; then
-            echo "::error::Response is not valid JSON, aborting."
-            cat faucets.tmp.json || true
-            exit 1
-          fi
-          mv faucets.tmp.json faucets.json
+              const result = {
+                fetched_at: new Date().toISOString(),
+                data: data
+              };
 
-      - name: Stamp fetch metadata
-        run: |
-          TMP=$(mktemp)
-          jq --arg ts "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
-             '{ fetched_at: $ts, data: . }' faucets.json > "$TMP"
-          mv "$TMP" faucets.json
+              fs.writeFileSync("faucets.json", JSON.stringify(result, null, 2));
+              console.log("Successfully fetched and saved faucets.json!");
+            } catch (err) {
+              console.error("Fetch failed:", err);
+              process.exit(1);
+            }
+          }
+
+          fetchData();
+          '
 
       - name: Commit and push if changed
         run: |
