@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FaucetPay Monitor</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          bg: '#0f1115',
+          panel: '#161a21',
+          panel2: '#1c212b',
+          border: '#2a2f3a',
+          accent: '#22c55e',
+        }
+      }
+    }
+  }
+</script>
+
+<!-- Tabulator -->
+<link href="https://unpkg.com/tabulator-tables@5.6.1/dist/css/tabulator_midnight.min.css" rel="stylesheet">
+<script src="https://unpkg.com/tabulator-tables@5.6.1/dist/js/tabulator.min.js"></script>
+
+<style>
+  body { background-color: #0f1115; }
+
+  /* Tune Tabulator's built-in dark theme to match the Tailwind palette */
+  .tabulator {
+    background-color: #161a21;
+    border: 1px solid #2a2f3a;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    font-family: inherit;
+  }
+  .tabulator-header {
+    background-color: #1c212b;
+    border-bottom: 1px solid #2a2f3a;
+  }
+  .tabulator-col {
+    background-color: #1c212b !important;
+  }
+  .tabulator-row {
+    background-color: #161a21;
+    border-bottom: 1px solid #21262f;
+  }
+  .tabulator-row.tabulator-row-even {
+    background-color: #14171d;
+  }
+  .tabulator-row:hover {
+    background-color: #20262f !important;
+  }
+  .tabulator-footer {
+    background-color: #1c212b;
+    border-top: 1px solid #2a2f3a;
+  }
+  .tabulator-header-filter input {
+    background-color: #0f1115;
+    border: 1px solid #2a2f3a;
+    color: #e5e7eb;
+    border-radius: 0.375rem;
+  }
+
+  .badge-live {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.35);
+  }
+  .badge-dead {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.35);
+  }
+  .visit-btn {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 0.375rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: #22c55e;
+    color: #0f1115;
+    text-decoration: none;
+    transition: opacity 0.15s ease;
+  }
+  .visit-btn:hover { opacity: 0.85; }
+
+  ::-webkit-scrollbar { height: 8px; width: 8px; }
+  ::-webkit-scrollbar-thumb { background-color: #2a2f3a; border-radius: 4px; }
+</style>
+</head>
+
+<body class="min-h-screen text-gray-200">
+
+  <div class="max-w-7xl mx-auto px-4 py-6">
+
+    <!-- Top panel -->
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+      <div>
+        <h1 class="text-2xl font-bold text-white flex items-center gap-2">
+          💧 FaucetPay Monitor
+        </h1>
+        <p class="text-sm text-gray-400 mt-1">Автоматический мониторинг кранов FaucetPay (обновление каждый час)</p>
+      </div>
+
+      <div class="flex gap-3">
+        <div class="bg-panel border border-border rounded-xl px-4 py-2 text-center min-w-[120px]">
+          <div class="text-xs text-gray-400 uppercase tracking-wide">Записей</div>
+          <div id="record-count" class="text-lg font-semibold text-white">—</div>
+        </div>
+        <div class="bg-panel border border-border rounded-xl px-4 py-2 text-center min-w-[160px]">
+          <div class="text-xs text-gray-400 uppercase tracking-wide">Обновлено</div>
+          <div id="last-updated" class="text-sm font-semibold text-white">—</div>
+        </div>
+        <button id="refresh-btn" class="bg-panel border border-border rounded-xl px-4 py-2 text-sm text-gray-300 hover:bg-panel2 hover:text-white transition-colors">
+          ⟳ Обновить
+        </button>
+      </div>
+    </div>
+
+    <!-- Error banner -->
+    <div id="error-banner" class="hidden mb-4 rounded-xl border border-red-500/40 bg-red-500/10 text-red-300 px-4 py-3 text-sm"></div>
+
+    <!-- Table -->
+    <div id="faucet-table" class="w-full"></div>
+
+    <p class="text-xs text-gray-500 mt-4">
+      Данные предоставлены публичным API FaucetPay. Файл <code class="text-gray-400">faucets.json</code> обновляется автоматически через GitHub Actions.
+    </p>
+  </div>
+
+<script>
+  const DATA_URL = './faucets.json';
+  const errorBanner = document.getElementById('error-banner');
+  const recordCountEl = document.getElementById('record-count');
+  const lastUpdatedEl = document.getElementById('last-updated');
+
+  function showError(message) {
+    errorBanner.textContent = message;
+    errorBanner.classList.remove('hidden');
+  }
+
+  function hideError() {
+    errorBanner.classList.add('hidden');
+    errorBanner.textContent = '';
+  }
+
+  function formatTimestamp(iso) {
+    if (!iso) return '—';
+    try {
+      const d = new Date(iso);
+      return d.toLocaleString('ru-RU', {
+        day: '2-digit', month: '2-digit', year: 'numeric',
+        hour: '2-digit', minute: '2-digit'
+      });
+    } catch (e) {
+      return iso;
+    }
+  }
+
+  // Normalizes whatever shape faucets.json has into a flat array of faucet rows.
+  // Supports:
+  //   { fetched_at: "...", data: [ ... ] or { faucets: [...] } }
+  //   [ ... ]  (raw array)
+  //   { faucets: [...] } (raw object with a faucets key)
+  function normalizeResponse(json) {
+    let fetchedAt = null;
+    let payload = json;
+
+    if (json && typeof json === 'object' && !Array.isArray(json) && 'data' in json) {
+      fetchedAt = json.fetched_at || null;
+      payload = json.data;
+    }
+
+    let rows = [];
+    if (Array.isArray(payload)) {
+      rows = payload;
+    } else if (payload && typeof payload === 'object') {
+      if (Array.isArray(payload.faucets)) {
+        rows = payload.faucets;
+      } else if (Array.isArray(payload.data)) {
+        rows = payload.data;
+      } else {
+        // Fallback: object keyed by faucet id/name -> flatten its values
+        rows = Object.values(payload).filter(v => v && typeof v === 'object');
+      }
+    }
+
+    return { fetchedAt, rows };
+  }
+
+  const table = new Tabulator("#faucet-table", {
+    layout: "fitColumns",
+    responsiveLayout: "collapse",
+    pagination: true,
+    paginationSize: 25,
+    paginationSizeSelector: [20, 25, 50, 100],
+    placeholder: "Нет данных для отображения",
+    columns: [
+      {
+        title: "Название крана",
+        field: "name",
+        sorter: "string",
+        headerFilter: "input",
+        headerFilterPlaceholder: "Поиск...",
+        minWidth: 180,
+      },
+      {
+        title: "Статус",
+        field: "is_up",
+        hozAlign: "center",
+        width: 110,
+        sorter: "boolean",
+        formatter: function (cell) {
+          const val = cell.getValue();
+          return val
+            ? '<span class="badge-live">LIVE</span>'
+            : '<span class="badge-dead">DEAD</span>';
+        },
+      },
+      {
+        title: "Здоровье",
+        field: "health",
+        sorter: "number",
+        hozAlign: "right",
+        width: 110,
+        formatter: function (cell) {
+          const val = cell.getValue();
+          return (val === null || val === undefined) ? '—' : `${val}%`;
+        },
+      },
+      {
+        title: "Таймер",
+        field: "timer",
+        sorter: "number",
+        hozAlign: "right",
+        width: 110,
+        formatter: function (cell) {
+          const val = cell.getValue();
+          return (val === null || val === undefined) ? '—' : `${val} мин`;
+        },
+      },
+      {
+        title: "Выплата",
+        field: "payout",
+        sorter: "string",
+        hozAlign: "left",
+        minWidth: 140,
+      },
+      {
+        title: "Активные юзеры",
+        field: "active_users",
+        sorter: "number",
+        hozAlign: "right",
+        width: 150,
+      },
+      {
+        title: "Переход",
+        field: "url",
+        hozAlign: "center",
+        width: 110,
+        headerSort: false,
+        formatter: function (cell) {
+          const url = cell.getValue();
+          if (!url) return '—';
+          return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="visit-btn">Перейти ↗</a>`;
+        },
+      },
+    ],
+    initialSort: [
+      { column: "health", dir: "desc" },
+    ],
+  });
+
+  async function loadData() {
+    hideError();
+    recordCountEl.textContent = '…';
+    lastUpdatedEl.textContent = '…';
+
+    try {
+      const res = await fetch(`${DATA_URL}?t=${Date.now()}`, { cache: 'no-store' });
+
+      if (!res.ok) {
+        throw new Error(`Файл faucets.json не найден (HTTP ${res.status}). Возможно, GitHub Action ещё не запускался.`);
+      }
+
+      let json;
+      try {
+        json = await res.json();
+      } catch (e) {
+        throw new Error('faucets.json повреждён или содержит некорректный JSON.');
+      }
+
+      const { fetchedAt, rows } = normalizeResponse(json);
+
+      if (!Array.isArray(rows) || rows.length === 0) {
+        throw new Error('faucets.json загружен, но не содержит записей о кранах.');
+      }
+
+      table.setData(rows);
+      recordCountEl.textContent = rows.length;
+      lastUpdatedEl.textContent = formatTimestamp(fetchedAt);
+
+    } catch (err) {
+      console.error(err);
+      recordCountEl.textContent = '0';
+      lastUpdatedEl.textContent = '—';
+      table.setData([]);
+      showError(err.message || 'Не удалось загрузить данные.');
+    }
+  }
+
+  document.getElementById('refresh-btn').addEventListener('click', loadData);
+
+  loadData();
+</script>
+
+</body>
+</html>
