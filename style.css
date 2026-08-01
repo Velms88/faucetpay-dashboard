@@ -1,0 +1,27 @@
+/* 1. Сдвиг пагинации таблицы Tabulator влево и вниз */
+.tabulator-footer .tabulator-paginator {
+    justify-content: flex-start !important;
+    text-align: left !important;
+    display: flex;
+    padding-left: 10px;
+}
+
+/* 2. Позиционирование блока статистики "Записей... Обновлено... ⟳ Обновить" */
+/* Важно: Предполагается, что элементы #record-count, #last-updated и кнопка #refresh-btn 
+   находятся в одном контейнере-обертке. Если у него есть класс, замените .stats-wrapper на него. 
+   Если общего контейнера нет, просто оберните их в <div class="stats-wrapper">...</div> в HTML */
+
+.stats-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Смещаем блок немного правее середины */
+    padding-left: 20%; 
+    
+    /* Отступ от самой таблицы */
+    margin-bottom: 15px; 
+    
+    /* Делаем отступы между текстом и кнопкой для аккуратного вида */
+    gap: 15px; 
+}
