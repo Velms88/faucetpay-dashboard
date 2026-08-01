@@ -1,0 +1,69 @@
+name: Fetch FaucetPay Faucet List
+
+on:
+  schedule:
+    # Запуск каждый час в 0 минут
+    - cron: '0 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-faucets
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Fetch faucet list from FaucetPay API
+        run: |
+          set -e
+          HTTP_CODE=$(curl -s -o faucets.tmp.json -w "%{http_code}" \
+            -X POST "https://faucetpay.io/api/v1/faucetlist" \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            -d "currency=BTC")
+
+          echo "HTTP status: $HTTP_CODE"
+
+          if [ "$HTTP_CODE" -ne 200 ]; then
+            echo "::error::FaucetPay API returned HTTP $HTTP_CODE"
+            cat faucets.tmp.json || true
+            exit 1
+          fi
+
+      - name: Validate JSON response
+        run: |
+          set -e
+          if ! jq empty faucets.tmp.json 2>/dev/null; then
+            echo "::error::Response is not valid JSON, aborting."
+            cat faucets.tmp.json || true
+            exit 1
+          fi
+          mv faucets.tmp.json faucets.json
+
+      - name: Stamp fetch metadata
+        run: |
+          TMP=$(mktemp)
+          jq --arg ts "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
+             '{ fetched_at: $ts, data: . }' faucets.json > "$TMP"
+          mv "$TMP" faucets.json
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add faucets.json
+
+          if git diff --staged --quiet; then
+            echo "No changes in faucets.json, skipping commit."
+          else
+            git commit -m "chore: update faucets.json [skip ci]"
+            git push
+          fi
