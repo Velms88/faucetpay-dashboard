@@ -23,12 +23,22 @@ jobs:
           fetch-depth: 1
 
       - name: Fetch faucet list from FaucetPay API
+        env:
+          # Optional: FaucetPay's own docs list api_key as optional for this
+          # endpoint. Leave the secret unset if you don't have/need one.
+          FAUCETPAY_API_KEY: ${{ secrets.FAUCETPAY_API_KEY }}
         run: |
           set -e
-          HTTP_CODE=$(curl -s -o faucets.tmp.json -w "%{http_code}" \
-            -X POST "https://faucetpay.io/api/v1/faucetlist" \
-            -H "Content-Type: application/x-www-form-urlencoded" \
-            -d "currency=BTC")
+
+          # This endpoint is called with a plain GET request (confirmed against
+          # FaucetPay's own documented usage) - POSTing to it returns
+          # {"status":404,"message":"Invalid API method accessed."}
+          URL="https://faucetpay.io/api/listv1/faucetlist"
+          if [ -n "$FAUCETPAY_API_KEY" ]; then
+            URL="${URL}?api_key=${FAUCETPAY_API_KEY}"
+          fi
+
+          HTTP_CODE=$(curl -s -o faucets.tmp.json -w "%{http_code}" "$URL")
 
           echo "HTTP status: $HTTP_CODE"
 
@@ -41,11 +51,22 @@ jobs:
       - name: Validate JSON response
         run: |
           set -e
+
           if ! jq empty faucets.tmp.json 2>/dev/null; then
             echo "::error::Response is not valid JSON, aborting."
             cat faucets.tmp.json || true
             exit 1
           fi
+
+          # FaucetPay can return HTTP 200 while embedding its own error code
+          # (e.g. 403 invalid api_key, 301 access denied) inside the JSON body.
+          BODY_STATUS=$(jq -r '.status // empty' faucets.tmp.json)
+          if [ -n "$BODY_STATUS" ] && [ "$BODY_STATUS" != "200" ]; then
+            BODY_MESSAGE=$(jq -r '.message // "no message"' faucets.tmp.json)
+            echo "::error::FaucetPay API responded with status $BODY_STATUS: $BODY_MESSAGE"
+            exit 1
+          fi
+
           mv faucets.tmp.json faucets.json
 
       - name: Stamp fetch metadata
