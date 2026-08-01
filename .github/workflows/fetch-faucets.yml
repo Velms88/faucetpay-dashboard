@@ -2,6 +2,7 @@ name: Fetch FaucetPay Faucet List
 
 on:
   schedule:
+    # Запуск каждый час в 0 минут
     - cron: '0 * * * *'
   workflow_dispatch: {}
 
@@ -21,63 +22,38 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Fetch from FaucetPay API via Node.js
+      - name: Fetch faucet list from FaucetPay API
         run: |
-          node -e '
-          const fs = require("fs");
+          set -e
+          HTTP_CODE=$(curl -s -o faucets.tmp.json -w "%{http_code}" \
+            -X POST "https://faucetpay.io/api/v1/faucetlist" \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            -d "currency=BTC")
 
-          async function tryFetch(url, body) {
-            console.log(`Trying ${url}...`);
-            const response = await fetch(url, {
-              method: "POST",
-              headers: {
-                "accept": "application/json, text/plain, */*",
-                "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-              },
-              body: body
-            });
-            const text = await response.text();
-            try {
-              return JSON.parse(text);
-            } catch (e) {
-              return { status: 500, raw: text };
-            }
-          }
+          echo "HTTP status: $HTTP_CODE"
 
-          async function fetchData() {
-            // Эндпоинт 1: /api/v1/getfaucets
-            let data = await tryFetch("https://faucetpay.io/api/v1/getfaucets", "currency=BTC");
+          if [ "$HTTP_CODE" -ne 200 ]; then
+            echo "::error::FaucetPay API returned HTTP $HTTP_CODE"
+            cat faucets.tmp.json || true
+            exit 1
+          fi
 
-            // Эндпоинт 2 (резервный): если 1-й вернул ошибку, пробуем альтернативный роут
-            if (data.status !== 200) {
-              console.log("Endpoint getfaucets failed, trying /api/v1/faucetlist with API key format...");
-              data = await tryFetch("https://faucetpay.io/api/v1/faucetlist", "api_key=&currency=BTC");
-            }
+      - name: Validate JSON response
+        run: |
+          set -e
+          if ! jq empty faucets.tmp.json 2>/dev/null; then
+            echo "::error::Response is not valid JSON, aborting."
+            cat faucets.tmp.json || true
+            exit 1
+          fi
+          mv faucets.tmp.json faucets.json
 
-            console.log("Final API Response Status:", data.status);
-
-            if (data.status !== 200 && !Array.isArray(data.data)) {
-              console.error("Failed to fetch valid data from FaucetPay:", JSON.stringify(data));
-              process.exit(1);
-            }
-
-            const result = {
-              fetched_at: new Date().toISOString(),
-              data: data
-            };
-
-            fs.writeFileSync("faucets.json", JSON.stringify(result, null, 2));
-            console.log("Successfully fetched and saved faucets.json!");
-          }
-
-          fetchData();
-          '
+      - name: Stamp fetch metadata
+        run: |
+          TMP=$(mktemp)
+          jq --arg ts "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
+             '{ fetched_at: $ts, data: . }' faucets.json > "$TMP"
+          mv "$TMP" faucets.json
 
       - name: Commit and push if changed
         run: |
