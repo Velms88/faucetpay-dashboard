@@ -2,8 +2,10 @@ name: Fetch FaucetPay Faucet List
 
 on:
   schedule:
-    # Запуск каждый час в 0 минут
-    - cron: '0 * * * *'
+    # Запуск каждый час, но НЕ в 0 минут — ':00' самое загруженное время у
+    # GitHub Actions (там скапливаются cron-джобы всех репозиториев мира),
+    # и такие запуски чаще всего откладываются или пропускаются.
+    - cron: '13 * * * *'
   workflow_dispatch: {}
 
 permissions:
@@ -16,6 +18,7 @@ concurrency:
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -38,7 +41,12 @@ jobs:
             URL="${URL}?api_key=${FAUCETPAY_API_KEY}"
           fi
 
-          HTTP_CODE=$(curl -s -o faucets.tmp.json -w "%{http_code}" "$URL")
+          HTTP_CODE=$(curl -s -o faucets.tmp.json -w "%{http_code}" \
+            --connect-timeout 10 \
+            --max-time 30 \
+            --retry 2 \
+            --retry-delay 3 \
+            "$URL")
 
           echo "HTTP status: $HTTP_CODE"
 
@@ -86,5 +94,6 @@ jobs:
             echo "No changes in faucets.json, skipping commit."
           else
             git commit -m "chore: update faucets.json [skip ci]"
+            git pull --rebase origin main
             git push
           fi
