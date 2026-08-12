@@ -139,7 +139,7 @@ function copyUrlFallback(text) {
 }
 
 // ----------------------------------------------------------------------------
-// Table setup
+// Table setup logic
 // ----------------------------------------------------------------------------
 
 const table = new Tabulator('#faucet-table', {
