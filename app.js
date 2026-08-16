@@ -227,8 +227,14 @@ const table = new Tabulator('#faucet-table', {
       sorter: 'string',
       headerFilter: 'input',
       headerFilterPlaceholder: 'Поиск...',
-      // Удален жесткий width: 80 и заменен на minWidth, чтобы вместить строку "BTC, LTC, DASH..."
-      minWidth: 120, 
+      // ВАЖНО: колонка БЕЗ фиксированного width в режиме fitColumns/fitDataStretch становится
+      // "растущей" и поглощает всё свободное место. На широких десктопных экранах алгоритм
+      // подгонки ширин Tabulator зацикливался (бесконечная рекурсия, ~2 ГБ RAM, таблица не
+      // отрисовывалась). maxWidth жёстко ограничивает рост, и расчёт сходится. (см. Tabulator #4651)
+      minWidth: 120,
+      width: 140,
+      maxWidth: 260,
+      cssClass: 'truncate-cell',
     },
     {
       title: 'Актив. юзеры',
