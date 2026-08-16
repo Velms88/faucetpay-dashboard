@@ -143,8 +143,10 @@ function copyUrlFallback(text) {
 // ----------------------------------------------------------------------------
 
 const table = new Tabulator('#faucet-table', {
-  // fitColumns решает проблему лишней пустой колонки, растягивая данные на всю ширину
-  layout: 'fitColumns', 
+  // ВНИМАНИЕ: layout: 'fitColumns' на десктопных экранах (широкий вьюпорт) заставляет
+  // Tabulator бесконечно пересчитывать ширины колонок при каждом resize, что вешает
+  // браузер и съедает гигабайты памяти. fitDataStretch заполняет ширину без этого цикла.
+  layout: 'fitDataStretch',
   responsiveLayout: false,
   pagination: true,
   paginationSize: 25,
