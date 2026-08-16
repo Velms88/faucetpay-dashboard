@@ -1,172 +1,42 @@
 <!DOCTYPE html>
-<html lang="ru" class="dark">
+<html lang="ru">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>FaucetPay Monitor</title>
-
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    darkMode: 'class',
-    theme: {
-      extend: {
-        colors: {
-          bg: '#0f1115',
-          panel: '#161a21',
-          panel2: '#1c212b',
-          border: '#2a2f3a',
-          accent: '#22c55e',
-        }
-      }
-    }
-  }
-</script>
-
-<!-- Tabulator -->
-<link href="https://unpkg.com/tabulator-tables@5.6.1/dist/css/tabulator_midnight.min.css" rel="stylesheet">
-<script src="https://unpkg.com/tabulator-tables@5.6.1/dist/js/tabulator.min.js"></script>
-
-<!-- Кастомные стили -->
 <link rel="stylesheet" href="./style.css">
-
-<style>
-  body { background-color: #0f1115; }
-
-  /* Tune Tabulator's built-in dark theme to match the Tailwind palette */
-  .tabulator {
-    background-color: #161a21;
-    border: 1px solid #2a2f3a;
-    border-radius: 0.75rem;
-    overflow: hidden;
-    font-family: inherit;
-  }
-  .tabulator-header {
-    background-color: #1c212b;
-    border-bottom: 1px solid #2a2f3a;
-  }
-  .tabulator-col {
-    background-color: #1c212b !important;
-  }
-  .tabulator-row {
-    background-color: #161a21;
-    border-bottom: 1px solid #21262f;
-  }
-  .tabulator-row.tabulator-row-even {
-    background-color: #14171d;
-  }
-  .tabulator-row:hover {
-    background-color: #20262f !important;
-  }
-  .tabulator-footer {
-    background-color: #1c212b;
-    border-top: 1px solid #2a2f3a;
-  }
-  .tabulator-header-filter input {
-    background-color: #0f1115;
-    border: 1px solid #2a2f3a;
-    color: #e5e7eb;
-    border-radius: 0.375rem;
-  }
-
-  /* Compact cell padding */
-  .tabulator .tabulator-cell,
-  .tabulator .tabulator-col-title {
-    padding-top: 6px;
-    padding-bottom: 6px;
-  }
-
-  /* Long faucet names / category names get ellipsis instead of stretching the column */
-  .tabulator-cell.truncate-cell {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .badge-live {
-    display: inline-block;
-    padding: 2px 10px;
-    border-radius: 9999px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    background-color: rgba(34, 197, 94, 0.15);
-    color: #4ade80;
-    border: 1px solid rgba(34, 197, 94, 0.35);
-  }
-  .badge-dead {
-    display: inline-block;
-    padding: 2px 10px;
-    border-radius: 9999px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    background-color: rgba(239, 68, 68, 0.15);
-    color: #f87171;
-    border: 1px solid rgba(239, 68, 68, 0.35);
-  }
-  .visit-btn {
-    display: inline-block;
-    padding: 3px 12px;
-    border-radius: 0.375rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    background-color: #22c55e;
-    color: #0f1115;
-    text-decoration: none;
-    transition: opacity 0.15s ease;
-  }
-  .visit-btn:hover { opacity: 0.85; }
-
-  ::-webkit-scrollbar { height: 8px; width: 8px; }
-  ::-webkit-scrollbar-thumb { background-color: #2a2f3a; border-radius: 4px; }
-</style>
 </head>
+<body>
 
-<body class="min-h-screen text-gray-200">
+  <div class="container">
 
-  <div class="max-w-[1700px] mx-auto px-4 py-6">
-
-    <!-- Top panel -->
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+    <div class="topbar">
       <div>
-        <h1 class="text-2xl font-bold text-white flex items-center gap-2">
-          💧 FaucetPay Monitor
-        </h1>
-        <p class="text-sm text-gray-400 mt-1">Автоматический мониторинг кранов FaucetPay (обновление каждый час)</p>
+        <h1>💧 FaucetPay Monitor</h1>
+        <p class="subtitle">Автоматический мониторинг кранов FaucetPay (обновление каждый час)</p>
       </div>
 
-      <!-- Добавлен класс stats-wrapper для позиционирования из style.css -->
-      <div class="stats-wrapper flex gap-3">
-        <div class="bg-panel border border-border rounded-xl px-4 py-2 text-center min-w-[120px]">
-          <div class="text-xs text-gray-400 uppercase tracking-wide">Записей</div>
-          <div id="record-count" class="text-lg font-semibold text-white">—</div>
+      <div class="stats-wrapper">
+        <div class="stat-card">
+          <div class="label">Записей</div>
+          <div id="record-count" class="value">—</div>
         </div>
-        <div class="bg-panel border border-border rounded-xl px-4 py-2 text-center min-w-[160px]">
-          <div class="text-xs text-gray-400 uppercase tracking-wide">Обновлено</div>
-          <div id="last-updated" class="text-sm font-semibold text-white">—</div>
+        <div class="stat-card">
+          <div class="label">Обновлено</div>
+          <div id="last-updated" class="value">—</div>
         </div>
-        <button id="refresh-btn" class="bg-panel border border-border rounded-xl px-4 py-2 text-sm text-gray-300 hover:bg-panel2 hover:text-white transition-colors">
-          ⟳ Обновить
-        </button>
+        <button id="refresh-btn" class="btn">⟳ Обновить</button>
       </div>
     </div>
 
-    <!-- Error banner -->
-    <div id="error-banner" class="hidden mb-4 rounded-xl border border-red-500/40 bg-red-500/10 text-red-300 px-4 py-3 text-sm"></div>
+    <div id="error-banner" class="error-banner"></div>
 
-    <!-- Table -->
-    <div class="w-full overflow-x-auto rounded-xl">
-      <div id="faucet-table"></div>
-    </div>
+    <div id="faucet-table"></div>
 
-    <p class="text-xs text-gray-500 mt-4">
-      Данные предоставлены публичным API FaucetPay. Файл <code class="text-gray-400">faucets.json</code> обновляется автоматически через GitHub Actions.
-    </p>
+    <p class="footer-note">Данные предоставлены публичным API FaucetPay. Файл faucets.json обновляется автоматически через GitHub Actions.</p>
   </div>
 
-  <!-- All table logic and JSON parsing lives in app.js -->
-  <!-- ?v=2 — cache-buster: GitHub Pages и браузеры агрессивно кэшируют app.js,
-       из-за чего правки на стороне могут не подхватываться. Меняйте версию при каждом деплое. -->
-  <script src="./app.js?v=3"></script>
+  <!-- ?v=4 — cache-buster: меняйте версию при каждом деплое, чтобы браузеры подхватывали новую версию app.js -->
+  <script src="./app.js?v=4"></script>
 </body>
 </html>
