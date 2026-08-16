@@ -165,6 +165,8 @@
   </div>
 
   <!-- All table logic and JSON parsing lives in app.js -->
-  <script src="./app.js"></script>
+  <!-- ?v=2 — cache-buster: GitHub Pages и браузеры агрессивно кэшируют app.js,
+       из-за чего правки на стороне могут не подхватываться. Меняйте версию при каждом деплое. -->
+  <script src="./app.js?v=2"></script>
 </body>
 </html>
