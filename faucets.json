@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-17T16:44:45Z",
+  "fetched_at": "2026-08-17T17:43:48Z",
   "data": {
     "status": 200,
     "message": "OK",
@@ -44,10 +44,10 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "1.04183131",
-            "total_users_paid": "15",
-            "active_users": "0",
-            "balance": "0.00042102",
+            "paid_today": "1.07387631",
+            "total_users_paid": "16",
+            "active_users": "1",
+            "balance": "0.00042052",
             "health": "27"
           },
           "1": {
@@ -376,9 +376,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.77895447",
-            "total_users_paid": "3166",
-            "active_users": "487",
+            "paid_today": "427.88859996",
+            "total_users_paid": "3168",
+            "active_users": "490",
             "balance": "0.00068405",
             "health": "2"
           },
@@ -652,9 +652,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.35445029",
+            "paid_today": "2.35543037",
             "total_users_paid": "594",
-            "active_users": "83",
+            "active_users": "84",
             "balance": "0.00000848",
             "health": "39"
           },
@@ -1256,7 +1256,7 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.82051886",
+            "paid_today": "0.82071439",
             "total_users_paid": "620",
             "active_users": "40",
             "balance": "0.00000809",
@@ -2020,7 +2020,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.08576200",
+            "paid_today": "3.08602507",
             "total_users_paid": "745",
             "active_users": "36",
             "balance": "0.00000000",
@@ -2995,7 +2995,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "1.29159824",
+            "paid_today": "1.29179823",
             "total_users_paid": "289",
             "active_users": "27",
             "balance": "0.00000000",
@@ -3267,7 +3267,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36936791",
+            "paid_today": "2.36963345",
             "total_users_paid": "1647",
             "active_users": "107",
             "balance": "0.00000000",
@@ -3323,9 +3323,9 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13580134",
+            "paid_today": "3.13588873",
             "total_users_paid": "1562",
-            "active_users": "103",
+            "active_users": "104",
             "balance": "0.00000000",
             "health": "11"
           },
@@ -3443,7 +3443,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.44538649",
+            "paid_today": "3.44738712",
             "total_users_paid": "207",
             "active_users": "29",
             "balance": "0.00000000",
@@ -3863,7 +3863,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.59171707",
+            "paid_today": "0.59186684",
             "total_users_paid": "113",
             "active_users": "16",
             "balance": "0.00000091",
@@ -4067,9 +4067,9 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28631812",
+            "paid_today": "4.28682703",
             "total_users_paid": "198",
-            "active_users": "40",
+            "active_users": "41",
             "balance": "0.00000000",
             "health": "22"
           },
@@ -4883,9 +4883,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.50043224",
+            "paid_today": "2.50095139",
             "total_users_paid": "412",
-            "active_users": "60",
+            "active_users": "61",
             "balance": "0.00000000",
             "health": "66"
           },
@@ -5231,7 +5231,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.51873494",
+            "paid_today": "9.51989825",
             "total_users_paid": "970",
             "active_users": "182",
             "balance": "0.00000000",
@@ -5547,9 +5547,9 @@
                 "name": "App"
               }
             },
-            "paid_today": "7.47072586",
-            "total_users_paid": "643",
-            "active_users": "82",
+            "paid_today": "7.48607188",
+            "total_users_paid": "645",
+            "active_users": "84",
             "balance": "0.00207489",
             "health": "100"
           },
@@ -5615,9 +5615,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.94547255",
+            "paid_today": "23.95028300",
             "total_users_paid": "2075",
-            "active_users": "369",
+            "active_users": "370",
             "balance": "0.00002137",
             "health": "15"
           },
@@ -5711,9 +5711,9 @@
                 "name": "Service"
               }
             },
-            "paid_today": "27.49171800",
+            "paid_today": "27.49284322",
             "total_users_paid": "438",
-            "active_users": "48",
+            "active_users": "49",
             "balance": "0.00000000",
             "health": "12"
           },
@@ -6123,7 +6123,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.78433416",
+            "paid_today": "2.78556826",
             "total_users_paid": "407",
             "active_users": "23",
             "balance": "0.00000000",
@@ -7351,9 +7351,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79538840",
+            "paid_today": "2.79648881",
             "total_users_paid": "693",
-            "active_users": "79",
+            "active_users": "80",
             "balance": "0.00000000",
             "health": "29"
           },
@@ -7851,7 +7851,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06395650",
+            "paid_today": "12.06597763",
             "total_users_paid": "1470",
             "active_users": "188",
             "balance": "0.00000000",
@@ -8325,9 +8325,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.77895447",
-            "total_users_paid": "3166",
-            "active_users": "487",
+            "paid_today": "427.88859996",
+            "total_users_paid": "3168",
+            "active_users": "490",
             "balance": "0.00000000",
             "health": "2"
           },
@@ -8565,9 +8565,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.35445029",
+            "paid_today": "2.35592373",
             "total_users_paid": "594",
-            "active_users": "83",
+            "active_users": "84",
             "balance": "0.00010154",
             "health": "39"
           },
@@ -9049,7 +9049,7 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.82051886",
+            "paid_today": "0.82071439",
             "total_users_paid": "620",
             "active_users": "40",
             "balance": "0.00018608",
@@ -9257,7 +9257,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.08576200",
+            "paid_today": "3.08602507",
             "total_users_paid": "745",
             "active_users": "36",
             "balance": "0.00000000",
@@ -9909,7 +9909,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "1.29159824",
+            "paid_today": "1.29179823",
             "total_users_paid": "289",
             "active_users": "27",
             "balance": "0.00000000",
@@ -10129,7 +10129,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36944696",
+            "paid_today": "2.36963345",
             "total_users_paid": "1647",
             "active_users": "107",
             "balance": "0.00000002",
@@ -10185,9 +10185,9 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13580134",
+            "paid_today": "3.13594502",
             "total_users_paid": "1562",
-            "active_users": "103",
+            "active_users": "104",
             "balance": "0.00000000",
             "health": "11"
           },
@@ -10269,7 +10269,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.75225497",
+            "paid_today": "0.75270487",
             "total_users_paid": "115",
             "active_users": "22",
             "balance": "0.00011304",
@@ -10661,7 +10661,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.59171707",
+            "paid_today": "0.59186684",
             "total_users_paid": "113",
             "active_users": "16",
             "balance": "0.00010913",
@@ -10797,9 +10797,9 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28642793",
+            "paid_today": "4.28693684",
             "total_users_paid": "198",
-            "active_users": "40",
+            "active_users": "41",
             "balance": "0.00024755",
             "health": "22"
           },
@@ -11645,10 +11645,10 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.51885492",
+            "paid_today": "9.52023641",
             "total_users_paid": "970",
             "active_users": "182",
-            "balance": "0.00228802",
+            "balance": "0.00228772",
             "health": "41"
           },
           "79": {
@@ -11917,9 +11917,9 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71508555",
-            "total_users_paid": "1587",
-            "active_users": "187",
+            "paid_today": "3.71712429",
+            "total_users_paid": "1588",
+            "active_users": "188",
             "balance": "0.00200305",
             "health": "100"
           },
@@ -11957,9 +11957,9 @@
                 "name": "App"
               }
             },
-            "paid_today": "7.47072586",
-            "total_users_paid": "643",
-            "active_users": "82",
+            "paid_today": "7.48607188",
+            "total_users_paid": "645",
+            "active_users": "84",
             "balance": "0.03886727",
             "health": "100"
           },
@@ -12025,10 +12025,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.94644899",
+            "paid_today": "23.95061299",
             "total_users_paid": "2075",
-            "active_users": "369",
-            "balance": "0.00024040",
+            "active_users": "370",
+            "balance": "0.00024014",
             "health": "15"
           },
           "88": {
@@ -12381,7 +12381,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.78483411",
+            "paid_today": "2.78556826",
             "total_users_paid": "407",
             "active_users": "23",
             "balance": "0.00088558",
@@ -13333,9 +13333,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79538840",
+            "paid_today": "2.79648881",
             "total_users_paid": "693",
-            "active_users": "79",
+            "active_users": "80",
             "balance": "0.00000000",
             "health": "29"
           },
@@ -13609,10 +13609,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06405649",
+            "paid_today": "12.06607762",
             "total_users_paid": "1470",
             "active_users": "188",
-            "balance": "0.00011282",
+            "balance": "0.00011267",
             "health": "11"
           },
           "125": {
@@ -13705,7 +13705,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05583658",
+            "paid_today": "8.05713920",
             "total_users_paid": "935",
             "active_users": "120",
             "balance": "0.00000000",
@@ -14095,9 +14095,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.78615508",
-            "total_users_paid": "3167",
-            "active_users": "488",
+            "paid_today": "427.88859996",
+            "total_users_paid": "3168",
+            "active_users": "490",
             "balance": "908.55670791",
             "health": "2"
           },
@@ -14395,9 +14395,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.35474359",
+            "paid_today": "2.35592373",
             "total_users_paid": "594",
-            "active_users": "83",
+            "active_users": "84",
             "balance": "6.04796145",
             "health": "39"
           },
@@ -15303,7 +15303,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.08576200",
+            "paid_today": "3.08602507",
             "total_users_paid": "745",
             "active_users": "36",
             "balance": "12.93311438",
@@ -15367,9 +15367,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "241.97109005",
-            "total_users_paid": "460",
-            "active_users": "19",
+            "paid_today": "242.17105085",
+            "total_users_paid": "461",
+            "active_users": "20",
             "balance": "639.38585261",
             "health": "30"
           },
@@ -16311,7 +16311,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36944967",
+            "paid_today": "2.36963345",
             "total_users_paid": "1647",
             "active_users": "107",
             "balance": "0.00000000",
@@ -16367,9 +16367,9 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13580134",
+            "paid_today": "3.13594502",
             "total_users_paid": "1562",
-            "active_users": "103",
+            "active_users": "104",
             "balance": "0.00022000",
             "health": "11"
           },
@@ -16479,10 +16479,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.75225497",
+            "paid_today": "0.75270487",
             "total_users_paid": "115",
             "active_users": "22",
-            "balance": "2.90613388",
+            "balance": "2.90400093",
             "health": "52"
           },
           "68": {
@@ -16899,7 +16899,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.59171707",
+            "paid_today": "0.59186684",
             "total_users_paid": "113",
             "active_users": "16",
             "balance": "4.47437747",
@@ -17123,9 +17123,9 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28652792",
+            "paid_today": "4.28693684",
             "total_users_paid": "198",
-            "active_users": "40",
+            "active_users": "41",
             "balance": "10.80172260",
             "health": "22"
           },
@@ -17843,7 +17843,7 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.50062932",
+            "paid_today": "2.50105147",
             "total_users_paid": "412",
             "active_users": "61",
             "balance": "17.32029121",
@@ -18131,7 +18131,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.51897490",
+            "paid_today": "9.52057735",
             "total_users_paid": "970",
             "active_users": "182",
             "balance": "20.63337667",
@@ -18479,9 +18479,9 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71508555",
-            "total_users_paid": "1587",
-            "active_users": "187",
+            "paid_today": "3.71724428",
+            "total_users_paid": "1588",
+            "active_users": "188",
             "balance": "22.19846978",
             "health": "100"
           },
@@ -18519,9 +18519,9 @@
                 "name": "App"
               }
             },
-            "paid_today": "7.47072586",
-            "total_users_paid": "643",
-            "active_users": "82",
+            "paid_today": "7.48607188",
+            "total_users_paid": "645",
+            "active_users": "84",
             "balance": "1167.05759347",
             "health": "100"
           },
@@ -18587,9 +18587,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.94742334",
+            "paid_today": "23.95140198",
             "total_users_paid": "2075",
-            "active_users": "369",
+            "active_users": "370",
             "balance": "11.42427068",
             "health": "15"
           },
@@ -18683,9 +18683,9 @@
                 "name": "Service"
               }
             },
-            "paid_today": "27.49171800",
+            "paid_today": "27.49284322",
             "total_users_paid": "438",
-            "active_users": "48",
+            "active_users": "49",
             "balance": "4.45894089",
             "health": "12"
           },
@@ -18983,7 +18983,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.78483411",
+            "paid_today": "2.78556826",
             "total_users_paid": "407",
             "active_users": "23",
             "balance": "14.79573288",
@@ -20279,9 +20279,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79548847",
+            "paid_today": "2.79648881",
             "total_users_paid": "693",
-            "active_users": "79",
+            "active_users": "80",
             "balance": "3.82289861",
             "health": "29"
           },
@@ -20643,10 +20643,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06439112",
-            "total_users_paid": "1470",
-            "active_users": "188",
-            "balance": "3.35562456",
+            "paid_today": "12.06647758",
+            "total_users_paid": "1471",
+            "active_users": "189",
+            "balance": "3.35420259",
             "health": "11"
           },
           "170": {
@@ -20767,10 +20767,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05583658",
+            "paid_today": "8.05828669",
             "total_users_paid": "935",
             "active_users": "120",
-            "balance": "4.52454586",
+            "balance": "4.52232759",
             "health": "13"
           },
           "174": {
@@ -21173,9 +21173,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.78615508",
-            "total_users_paid": "3167",
-            "active_users": "488",
+            "paid_today": "427.88859996",
+            "total_users_paid": "3168",
+            "active_users": "490",
             "balance": "2.71327915",
             "health": "2"
           },
@@ -21449,10 +21449,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.35494365",
+            "paid_today": "2.35592373",
             "total_users_paid": "594",
             "active_users": "84",
-            "balance": "0.00532719",
+            "balance": "0.00532059",
             "health": "39"
           },
           "13": {
@@ -21989,10 +21989,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.82051886",
+            "paid_today": "0.82071439",
             "total_users_paid": "620",
             "active_users": "40",
-            "balance": "0.00505565",
+            "balance": "0.00505125",
             "health": "15"
           },
           "25": {
@@ -22221,10 +22221,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.03957558",
+            "paid_today": "0.03958891",
             "total_users_paid": "152",
             "active_users": "35",
-            "balance": "0.07028785",
+            "balance": "0.07028755",
             "health": "100"
           },
           "31": {
@@ -22477,10 +22477,10 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.08576200",
+            "paid_today": "3.08602507",
             "total_users_paid": "745",
             "active_users": "36",
-            "balance": "0.01571755",
+            "balance": "0.01571460",
             "health": "27"
           },
           "38": {
@@ -22541,9 +22541,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "241.97109005",
-            "total_users_paid": "460",
-            "active_users": "19",
+            "paid_today": "242.17105085",
+            "total_users_paid": "461",
+            "active_users": "20",
             "balance": "11.30313805",
             "health": "30"
           },
@@ -23593,7 +23593,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36944967",
+            "paid_today": "2.36969997",
             "total_users_paid": "1647",
             "active_users": "107",
             "balance": "0.00000076",
@@ -23649,9 +23649,9 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13584523",
+            "paid_today": "3.13600131",
             "total_users_paid": "1562",
-            "active_users": "103",
+            "active_users": "104",
             "balance": "0.00000104",
             "health": "11"
           },
@@ -23730,8 +23730,8 @@
               }
             },
             "paid_today": "0.00771914",
-            "total_users_paid": "21169",
-            "active_users": "941",
+            "total_users_paid": "21172",
+            "active_users": "944",
             "balance": "0.00000142",
             "health": "0"
           },
@@ -23789,10 +23789,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.75225497",
+            "paid_today": "0.75285507",
             "total_users_paid": "115",
             "active_users": "22",
-            "balance": "0.00236610",
+            "balance": "0.00236272",
             "health": "52"
           },
           "71": {
@@ -24010,8 +24010,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16013",
-            "active_users": "713",
+            "total_users_paid": "16016",
+            "active_users": "716",
             "balance": "0.00000132",
             "health": "0"
           },
@@ -24573,7 +24573,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28682703",
+            "paid_today": "4.28693684",
             "total_users_paid": "198",
             "active_users": "41",
             "balance": "0.00810735",
@@ -25297,7 +25297,7 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.50072932",
+            "paid_today": "2.50124225",
             "total_users_paid": "412",
             "active_users": "61",
             "balance": "0.04354068",
@@ -25617,10 +25617,10 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.51920935",
+            "paid_today": "9.52092731",
             "total_users_paid": "970",
             "active_users": "182",
-            "balance": "0.13245349",
+            "balance": "0.13243999",
             "health": "41"
           },
           "117": {
@@ -25736,7 +25736,7 @@
             "paid_today": "0.13310683",
             "total_users_paid": "16",
             "active_users": "2",
-            "balance": "0.05903480",
+            "balance": "0.02951740",
             "health": "100"
           },
           "120": {
@@ -25941,7 +25941,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71642072",
+            "paid_today": "3.71748426",
             "total_users_paid": "1588",
             "active_users": "188",
             "balance": "0.09493821",
@@ -25981,10 +25981,10 @@
                 "name": "App"
               }
             },
-            "paid_today": "7.47839887",
-            "total_users_paid": "644",
-            "active_users": "83",
-            "balance": "1.20111909",
+            "paid_today": "7.48607188",
+            "total_users_paid": "645",
+            "active_users": "84",
+            "balance": "1.20094643",
             "health": "100"
           },
           "125": {
@@ -26049,10 +26049,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.94834521",
+            "paid_today": "23.95302883",
             "total_users_paid": "2075",
-            "active_users": "369",
-            "balance": "0.05012795",
+            "active_users": "370",
+            "balance": "0.05010616",
             "health": "15"
           },
           "127": {
@@ -26145,10 +26145,10 @@
                 "name": "Service"
               }
             },
-            "paid_today": "27.49171800",
+            "paid_today": "27.49284322",
             "total_users_paid": "438",
-            "active_users": "48",
-            "balance": "0.07373778",
+            "active_users": "49",
+            "balance": "0.07371246",
             "health": "12"
           },
           "129": {
@@ -26389,10 +26389,10 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.14732944",
+            "paid_today": "0.14737388",
             "total_users_paid": "173",
             "active_users": "34",
-            "balance": "0.27480177",
+            "balance": "0.27480077",
             "health": "100"
           },
           "135": {
@@ -26477,7 +26477,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.78483411",
+            "paid_today": "2.78556826",
             "total_users_paid": "407",
             "active_users": "23",
             "balance": "0.08585130",
@@ -26853,9 +26853,9 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.73020303",
-            "total_users_paid": "387",
-            "active_users": "27",
+            "paid_today": "2.73161283",
+            "total_users_paid": "388",
+            "active_users": "28",
             "balance": "0.00000000",
             "health": "48"
           },
@@ -28181,10 +28181,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06498598",
-            "total_users_paid": "1470",
-            "active_users": "188",
-            "balance": "0.02757633",
+            "paid_today": "12.06667756",
+            "total_users_paid": "1471",
+            "active_users": "189",
+            "balance": "0.02756508",
             "health": "11"
           },
           "179": {
@@ -28313,10 +28313,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05595656",
+            "paid_today": "8.05840659",
             "total_users_paid": "935",
             "active_users": "120",
-            "balance": "0.01967622",
+            "balance": "0.01966461",
             "health": "13"
           },
           "183": {
@@ -28738,9 +28738,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.80132201",
-            "total_users_paid": "3167",
-            "active_users": "489",
+            "paid_today": "427.88859996",
+            "total_users_paid": "3168",
+            "active_users": "490",
             "balance": "0.00000000",
             "health": "2"
           },
@@ -28978,7 +28978,7 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.35494365",
+            "paid_today": "2.35592373",
             "total_users_paid": "594",
             "active_users": "84",
             "balance": "0.00159031",
@@ -29634,7 +29634,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.08576200",
+            "paid_today": "3.08602507",
             "total_users_paid": "745",
             "active_users": "36",
             "balance": "0.00000000",
@@ -29702,9 +29702,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "241.97109005",
-            "total_users_paid": "460",
-            "active_users": "19",
+            "paid_today": "242.17105085",
+            "total_users_paid": "461",
+            "active_users": "20",
             "balance": "0.42621994",
             "health": "30"
           },
@@ -30254,7 +30254,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "1.29179823",
+            "paid_today": "1.29199822",
             "total_users_paid": "289",
             "active_users": "27",
             "balance": "0.00000000",
@@ -30474,7 +30474,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36952947",
+            "paid_today": "2.36974995",
             "total_users_paid": "1647",
             "active_users": "107",
             "balance": "0.00000016",
@@ -30530,9 +30530,9 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13584523",
+            "paid_today": "3.13600131",
             "total_users_paid": "1562",
-            "active_users": "103",
+            "active_users": "104",
             "balance": "0.00000000",
             "health": "11"
           },
@@ -30610,10 +30610,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.75240474",
+            "paid_today": "0.75285507",
             "total_users_paid": "115",
             "active_users": "22",
-            "balance": "0.00109251",
+            "balance": "0.00109178",
             "health": "52"
           },
           "47": {
@@ -31090,7 +31090,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28682703",
+            "paid_today": "4.28703683",
             "total_users_paid": "198",
             "active_users": "41",
             "balance": "0.00470364",
@@ -31630,7 +31630,7 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.50095139",
+            "paid_today": "2.50124225",
             "total_users_paid": "412",
             "active_users": "61",
             "balance": "0.00360220",
@@ -31922,10 +31922,10 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.51954933",
+            "paid_today": "9.52092731",
             "total_users_paid": "970",
             "active_users": "182",
-            "balance": "0.00583912",
+            "balance": "0.00583858",
             "health": "41"
           },
           "78": {
@@ -32154,7 +32154,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71665373",
+            "paid_today": "3.71760424",
             "total_users_paid": "1588",
             "active_users": "188",
             "balance": "0.00903727",
@@ -32194,9 +32194,9 @@
                 "name": "App"
               }
             },
-            "paid_today": "7.47839887",
-            "total_users_paid": "644",
-            "active_users": "83",
+            "paid_today": "7.49374622",
+            "total_users_paid": "646",
+            "active_users": "85",
             "balance": "0.34215399",
             "health": "100"
           },
@@ -32262,10 +32262,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.94860638",
+            "paid_today": "23.95363769",
             "total_users_paid": "2075",
-            "active_users": "369",
-            "balance": "0.00615976",
+            "active_users": "370",
+            "balance": "0.00615878",
             "health": "15"
           },
           "86": {
@@ -32534,7 +32534,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.14732944",
+            "paid_today": "0.14737388",
             "total_users_paid": "173",
             "active_users": "34",
             "balance": "0.00000000",
@@ -32590,7 +32590,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.78483411",
+            "paid_today": "2.78556826",
             "total_users_paid": "407",
             "active_users": "23",
             "balance": "0.00398666",
@@ -32866,9 +32866,9 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.73020303",
-            "total_users_paid": "387",
-            "active_users": "27",
+            "paid_today": "2.73161283",
+            "total_users_paid": "388",
+            "active_users": "28",
             "balance": "0.00000000",
             "health": "48"
           },
@@ -33714,9 +33714,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06518596",
-            "total_users_paid": "1470",
-            "active_users": "188",
+            "paid_today": "12.06714684",
+            "total_users_paid": "1471",
+            "active_users": "189",
             "balance": "0.00056560",
             "health": "11"
           },
@@ -33810,7 +33810,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05595656",
+            "paid_today": "8.05840659",
             "total_users_paid": "935",
             "active_users": "120",
             "balance": "0.00000000",
@@ -33892,10 +33892,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.05510702",
+            "paid_today": "0.05517513",
             "total_users_paid": "133",
-            "active_users": "30",
-            "balance": "0.11642472",
+            "active_users": "31",
+            "balance": "0.11642248",
             "health": "100"
           },
           "1": {
@@ -34100,9 +34100,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.80132201",
-            "total_users_paid": "3167",
-            "active_users": "489",
+            "paid_today": "427.88859996",
+            "total_users_paid": "3168",
+            "active_users": "490",
             "balance": "0.00000000",
             "health": "2"
           },
@@ -34376,10 +34376,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.35494365",
+            "paid_today": "2.35592373",
             "total_users_paid": "594",
             "active_users": "84",
-            "balance": "0.00979277",
+            "balance": "0.00977677",
             "health": "39"
           },
           "13": {
@@ -34837,8 +34837,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "17136",
-            "active_users": "788",
+            "total_users_paid": "17146",
+            "active_users": "798",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -35036,7 +35036,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.08576200",
+            "paid_today": "3.08602507",
             "total_users_paid": "745",
             "active_users": "36",
             "balance": "0.00000000",
@@ -35064,9 +35064,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "241.97109005",
-            "total_users_paid": "460",
-            "active_users": "19",
+            "paid_today": "242.17105085",
+            "total_users_paid": "461",
+            "active_users": "20",
             "balance": "5.62183320",
             "health": "30"
           },
@@ -35525,8 +35525,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "17281",
-            "active_users": "767",
+            "total_users_paid": "17291",
+            "active_users": "777",
             "balance": "0.00000000",
             "health": "0"
           },
@@ -35672,7 +35672,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "1.29179823",
+            "paid_today": "1.29199822",
             "total_users_paid": "289",
             "active_users": "27",
             "balance": "0.00000000",
@@ -35892,7 +35892,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36958204",
+            "paid_today": "2.36979844",
             "total_users_paid": "1647",
             "active_users": "107",
             "balance": "0.00000095",
@@ -35948,7 +35948,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13588873",
+            "paid_today": "3.13600131",
             "total_users_paid": "1562",
             "active_users": "104",
             "balance": "0.00000000",
@@ -36029,8 +36029,8 @@
               }
             },
             "paid_today": "0.00771914",
-            "total_users_paid": "21169",
-            "active_users": "941",
+            "total_users_paid": "21178",
+            "active_users": "950",
             "balance": "0.00000000",
             "health": "0"
           },
@@ -36056,7 +36056,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.75240474",
+            "paid_today": "0.75285507",
             "total_users_paid": "115",
             "active_users": "22",
             "balance": "0.00913806",
@@ -36193,8 +36193,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16013",
-            "active_users": "713",
+            "total_users_paid": "16022",
+            "active_users": "722",
             "balance": "0.00000000",
             "health": "0"
           },
@@ -36592,7 +36592,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28682703",
+            "paid_today": "4.28713392",
             "total_users_paid": "198",
             "active_users": "41",
             "balance": "0.04906351",
@@ -37092,10 +37092,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.50095139",
+            "paid_today": "2.50136760",
             "total_users_paid": "412",
             "active_users": "61",
-            "balance": "0.02893590",
+            "balance": "0.02893261",
             "health": "66"
           },
           "77": {
@@ -37356,7 +37356,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.51966380",
+            "paid_today": "9.52092731",
             "total_users_paid": "970",
             "active_users": "182",
             "balance": "0.05859116",
@@ -37628,7 +37628,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71665373",
+            "paid_today": "3.71761623",
             "total_users_paid": "1588",
             "active_users": "188",
             "balance": "0.05428403",
@@ -37668,9 +37668,9 @@
                 "name": "App"
               }
             },
-            "paid_today": "7.47839887",
-            "total_users_paid": "644",
-            "active_users": "83",
+            "paid_today": "7.49374622",
+            "total_users_paid": "646",
+            "active_users": "85",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -37736,10 +37736,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.94910284",
+            "paid_today": "23.95363769",
             "total_users_paid": "2075",
             "active_users": "370",
-            "balance": "0.06068551",
+            "balance": "0.06068221",
             "health": "15"
           },
           "92": {
@@ -38008,7 +38008,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.14732944",
+            "paid_today": "0.14737388",
             "total_users_paid": "173",
             "active_users": "34",
             "balance": "0.00000000",
@@ -38064,7 +38064,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.78483411",
+            "paid_today": "2.78556826",
             "total_users_paid": "407",
             "active_users": "23",
             "balance": "0.02545338",
@@ -38288,7 +38288,7 @@
                 "name": "Service"
               }
             },
-            "paid_today": "0.50204481",
+            "paid_today": "0.50239499",
             "total_users_paid": "40",
             "active_users": "3",
             "balance": "0.00000000",
@@ -38372,9 +38372,9 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.73020303",
-            "total_users_paid": "387",
-            "active_users": "27",
+            "paid_today": "2.73161283",
+            "total_users_paid": "388",
+            "active_users": "28",
             "balance": "0.00000000",
             "health": "48"
           },
@@ -39044,7 +39044,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79648881",
+            "paid_today": "2.79658918",
             "total_users_paid": "693",
             "active_users": "80",
             "balance": "0.00535697",
@@ -39208,9 +39208,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06538641",
-            "total_users_paid": "1470",
-            "active_users": "188",
+            "paid_today": "12.06734254",
+            "total_users_paid": "1471",
+            "active_users": "189",
             "balance": "0.00290670",
             "health": "11"
           },
@@ -39304,7 +39304,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05635297",
+            "paid_today": "8.05840659",
             "total_users_paid": "935",
             "active_users": "120",
             "balance": "0.00000000",
@@ -39786,7 +39786,7 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.35543037",
+            "paid_today": "2.35592373",
             "total_users_paid": "594",
             "active_users": "84",
             "balance": "76.95296032",
@@ -40322,10 +40322,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.08121553",
-            "total_users_paid": "149",
-            "active_users": "42",
-            "balance": "724.06056496",
+            "paid_today": "0.08123985",
+            "total_users_paid": "150",
+            "active_users": "43",
+            "balance": "724.05456496",
             "health": "100"
           },
           "22": {
@@ -40422,7 +40422,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.08589309",
+            "paid_today": "3.08602507",
             "total_users_paid": "745",
             "active_users": "36",
             "balance": "0.00000000",
@@ -40486,9 +40486,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "241.97109005",
-            "total_users_paid": "460",
-            "active_users": "19",
+            "paid_today": "242.17105085",
+            "total_users_paid": "461",
+            "active_users": "20",
             "balance": "605.83126447",
             "health": "30"
           },
@@ -41018,7 +41018,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "1.29179823",
+            "paid_today": "1.29199822",
             "total_users_paid": "289",
             "active_users": "27",
             "balance": "0.00000000",
@@ -41238,7 +41238,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36958204",
+            "paid_today": "2.36979844",
             "total_users_paid": "1647",
             "active_users": "107",
             "balance": "53.48200000",
@@ -41294,7 +41294,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13588873",
+            "paid_today": "3.13604481",
             "total_users_paid": "1562",
             "active_users": "104",
             "balance": "28.27900000",
@@ -41374,7 +41374,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.75240474",
+            "paid_today": "0.75285507",
             "total_users_paid": "115",
             "active_users": "22",
             "balance": "82.92571928",
@@ -41854,7 +41854,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28682703",
+            "paid_today": "4.28713392",
             "total_users_paid": "198",
             "active_users": "41",
             "balance": "0.01501908",
@@ -41962,7 +41962,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.29189204",
+            "paid_today": "0.29189284",
             "total_users_paid": "2654",
             "active_users": "93",
             "balance": "0.00000000",
@@ -42326,7 +42326,7 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.50095139",
+            "paid_today": "2.50156758",
             "total_users_paid": "412",
             "active_users": "61",
             "balance": "351.27739705",
@@ -42618,7 +42618,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.51966380",
+            "paid_today": "9.52092731",
             "total_users_paid": "970",
             "active_users": "182",
             "balance": "545.98048437",
@@ -42850,10 +42850,10 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71665373",
+            "paid_today": "3.71773621",
             "total_users_paid": "1588",
             "active_users": "188",
-            "balance": "489.69750542",
+            "balance": "489.63830800",
             "health": "100"
           },
           "81": {
@@ -42890,9 +42890,9 @@
                 "name": "App"
               }
             },
-            "paid_today": "7.47839887",
-            "total_users_paid": "644",
-            "active_users": "83",
+            "paid_today": "7.49374622",
+            "total_users_paid": "646",
+            "active_users": "85",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -42958,10 +42958,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.94974032",
+            "paid_today": "23.95393482",
             "total_users_paid": "2075",
             "active_users": "370",
-            "balance": "334.61293158",
+            "balance": "334.56494694",
             "health": "15"
           },
           "84": {
@@ -43230,7 +43230,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.14732944",
+            "paid_today": "0.14737388",
             "total_users_paid": "173",
             "active_users": "34",
             "balance": "0.00000000",
@@ -43286,7 +43286,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.78483411",
+            "paid_today": "2.78556826",
             "total_users_paid": "407",
             "active_users": "23",
             "balance": "186.04685953",
@@ -43546,7 +43546,7 @@
                 "name": "Service"
               }
             },
-            "paid_today": "0.50204481",
+            "paid_today": "0.50239499",
             "total_users_paid": "40",
             "active_users": "3",
             "balance": "0.00000000",
@@ -43598,9 +43598,9 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.73020303",
-            "total_users_paid": "387",
-            "active_users": "27",
+            "paid_today": "2.73161283",
+            "total_users_paid": "388",
+            "active_users": "28",
             "balance": "0.00000000",
             "health": "48"
           },
@@ -44310,7 +44310,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79648881",
+            "paid_today": "2.79681658",
             "total_users_paid": "693",
             "active_users": "80",
             "balance": "112.12871714",
@@ -44450,9 +44450,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06568226",
-            "total_users_paid": "1470",
-            "active_users": "188",
+            "paid_today": "12.06734254",
+            "total_users_paid": "1471",
+            "active_users": "189",
             "balance": "83.55698585",
             "health": "11"
           },
@@ -44546,7 +44546,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05662882",
+            "paid_today": "8.05840659",
             "total_users_paid": "935",
             "active_users": "120",
             "balance": "106.91646842",
@@ -44752,9 +44752,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.88859996",
+            "paid_today": "427.90177606",
             "total_users_paid": "3168",
-            "active_users": "490",
+            "active_users": "491",
             "balance": "161.21357746",
             "health": "2"
           },
@@ -45028,7 +45028,7 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.35572367",
+            "paid_today": "2.35592373",
             "total_users_paid": "594",
             "active_users": "84",
             "balance": "4.61945160",
@@ -45517,8 +45517,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "17136",
-            "active_users": "788",
+            "total_users_paid": "17151",
+            "active_users": "803",
             "balance": "0.00028409",
             "health": "100"
           },
@@ -45736,10 +45736,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.10628284",
-            "total_users_paid": "175",
-            "active_users": "39",
-            "balance": "4.48789009",
+            "paid_today": "0.10634525",
+            "total_users_paid": "176",
+            "active_users": "40",
+            "balance": "4.48770109",
             "health": "100"
           },
           "28": {
@@ -46020,9 +46020,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "241.97109005",
-            "total_users_paid": "460",
-            "active_users": "19",
+            "paid_today": "242.17105085",
+            "total_users_paid": "461",
+            "active_users": "20",
             "balance": "193.98849081",
             "health": "30"
           },
@@ -46681,8 +46681,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "17281",
-            "active_users": "767",
+            "total_users_paid": "17296",
+            "active_users": "782",
             "balance": "0.00012569",
             "health": "0"
           },
@@ -46828,7 +46828,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "1.29179823",
+            "paid_today": "1.29199822",
             "total_users_paid": "289",
             "active_users": "27",
             "balance": "1.29928352",
@@ -47048,7 +47048,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36963345",
+            "paid_today": "2.36988462",
             "total_users_paid": "1647",
             "active_users": "107",
             "balance": "0.00003200",
@@ -47104,7 +47104,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13588873",
+            "paid_today": "3.13604481",
             "total_users_paid": "1562",
             "active_users": "104",
             "balance": "0.00000000",
@@ -47216,7 +47216,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.75240474",
+            "paid_today": "0.75285507",
             "total_users_paid": "115",
             "active_users": "22",
             "balance": "0.57636837",
@@ -47636,7 +47636,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.59186684",
+            "paid_today": "0.59201661",
             "total_users_paid": "113",
             "active_users": "16",
             "balance": "0.92086302",
@@ -47860,7 +47860,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28682703",
+            "paid_today": "4.28713392",
             "total_users_paid": "198",
             "active_users": "41",
             "balance": "2.87671016",
@@ -47992,7 +47992,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.29189204",
+            "paid_today": "0.29189284",
             "total_users_paid": "2654",
             "active_users": "93",
             "balance": "0.00001360",
@@ -48412,7 +48412,7 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.50095139",
+            "paid_today": "2.50156758",
             "total_users_paid": "412",
             "active_users": "61",
             "balance": "3.52980086",
@@ -48704,7 +48704,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.51989825",
+            "paid_today": "9.52104729",
             "total_users_paid": "970",
             "active_users": "182",
             "balance": "10.07286120",
@@ -49052,10 +49052,10 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71700430",
+            "paid_today": "3.71773621",
             "total_users_paid": "1588",
             "active_users": "188",
-            "balance": "10.04940054",
+            "balance": "10.04903723",
             "health": "100"
           },
           "109": {
@@ -49092,9 +49092,9 @@
                 "name": "App"
               }
             },
-            "paid_today": "7.48607188",
-            "total_users_paid": "645",
-            "active_users": "84",
+            "paid_today": "7.49374622",
+            "total_users_paid": "646",
+            "active_users": "85",
             "balance": "178.14136168",
             "health": "100"
           },
@@ -49160,9 +49160,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.95015243",
+            "paid_today": "23.95490336",
             "total_users_paid": "2075",
-            "active_users": "370",
+            "active_users": "371",
             "balance": "6.63900347",
             "health": "15"
           },
@@ -49500,7 +49500,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.14732944",
+            "paid_today": "0.14737388",
             "total_users_paid": "173",
             "active_users": "34",
             "balance": "2.75806180",
@@ -49556,10 +49556,10 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.78483411",
+            "paid_today": "2.78556826",
             "total_users_paid": "407",
             "active_users": "23",
-            "balance": "1.34241622",
+            "balance": "1.34181021",
             "health": "24"
           },
           "121": {
@@ -49848,7 +49848,7 @@
                 "name": "Service"
               }
             },
-            "paid_today": "0.50204481",
+            "paid_today": "0.50239499",
             "total_users_paid": "40",
             "active_users": "3",
             "balance": "0.00000000",
@@ -49932,9 +49932,9 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.73020303",
-            "total_users_paid": "387",
-            "active_users": "27",
+            "paid_today": "2.73161283",
+            "total_users_paid": "388",
+            "active_users": "28",
             "balance": "0.00000000",
             "health": "48"
           },
@@ -50828,7 +50828,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79648881",
+            "paid_today": "2.79681658",
             "total_users_paid": "693",
             "active_users": "80",
             "balance": "0.96119400",
@@ -51224,9 +51224,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06587764",
-            "total_users_paid": "1470",
-            "active_users": "188",
+            "paid_today": "12.06747788",
+            "total_users_paid": "1471",
+            "active_users": "189",
             "balance": "0.83700701",
             "health": "11"
           },
@@ -51384,7 +51384,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05674872",
+            "paid_today": "8.05856330",
             "total_users_paid": "935",
             "active_users": "120",
             "balance": "0.00000000",
@@ -51654,10 +51654,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.88859996",
+            "paid_today": "427.90177606",
             "total_users_paid": "3168",
-            "active_users": "490",
-            "balance": "40.13035275",
+            "active_users": "491",
+            "balance": "40.11716600",
             "health": "2"
           },
           "7": {
@@ -52754,9 +52754,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "241.97109005",
-            "total_users_paid": "460",
-            "active_users": "19",
+            "paid_today": "242.17105085",
+            "total_users_paid": "461",
+            "active_users": "20",
             "balance": "36.82266932",
             "health": "30"
           },
@@ -53242,9 +53242,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "13.27140803",
-            "total_users_paid": "229",
-            "active_users": "12",
+            "paid_today": "13.28378679",
+            "total_users_paid": "230",
+            "active_users": "13",
             "balance": "4.06695598",
             "health": "3"
           },
@@ -53566,10 +53566,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "1.29179823",
+            "paid_today": "1.29199822",
             "total_users_paid": "289",
             "active_users": "27",
-            "balance": "1.27161578",
+            "balance": "1.27141562",
             "health": "56"
           },
           "51": {
@@ -53814,7 +53814,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36963345",
+            "paid_today": "2.36988462",
             "total_users_paid": "1647",
             "active_users": "107",
             "balance": "0.00001500",
@@ -53870,7 +53870,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13594502",
+            "paid_today": "3.13604481",
             "total_users_paid": "1562",
             "active_users": "104",
             "balance": "0.00004500",
@@ -54018,7 +54018,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.75270487",
+            "paid_today": "0.75285507",
             "total_users_paid": "115",
             "active_users": "22",
             "balance": "0.29332380",
@@ -54522,7 +54522,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.59186684",
+            "paid_today": "0.59201661",
             "total_users_paid": "113",
             "active_users": "16",
             "balance": "0.16174438",
@@ -54746,7 +54746,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28693684",
+            "paid_today": "4.28713392",
             "total_users_paid": "198",
             "active_users": "41",
             "balance": "0.65383421",
@@ -54965,7 +54965,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.29189204",
+            "paid_today": "0.29189284",
             "total_users_paid": "2654",
             "active_users": "93",
             "balance": "0.00000000",
@@ -55505,10 +55505,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.50095139",
+            "paid_today": "2.50176794",
             "total_users_paid": "412",
             "active_users": "61",
-            "balance": "3.11449414",
+            "balance": "3.11439406",
             "health": "66"
           },
           "98": {
@@ -55809,7 +55809,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.52000747",
+            "paid_today": "9.52127730",
             "total_users_paid": "970",
             "active_users": "182",
             "balance": "2.82809551",
@@ -56093,7 +56093,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71712429",
+            "paid_today": "3.71785600",
             "total_users_paid": "1588",
             "active_users": "188",
             "balance": "2.98234553",
@@ -56133,9 +56133,9 @@
                 "name": "App"
               }
             },
-            "paid_today": "7.48607188",
-            "total_users_paid": "645",
-            "active_users": "84",
+            "paid_today": "7.50141923",
+            "total_users_paid": "647",
+            "active_users": "86",
             "balance": "23.64490753",
             "health": "100"
           },
@@ -56201,10 +56201,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.95051299",
+            "paid_today": "23.95539912",
             "total_users_paid": "2075",
-            "active_users": "370",
-            "balance": "0.36610931",
+            "active_users": "371",
+            "balance": "0.36567893",
             "health": "15"
           },
           "115": {
@@ -56653,7 +56653,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.14732944",
+            "paid_today": "0.14737388",
             "total_users_paid": "173",
             "active_users": "34",
             "balance": "0.00008946",
@@ -57061,7 +57061,7 @@
                 "name": "Service"
               }
             },
-            "paid_today": "0.50204481",
+            "paid_today": "0.50239499",
             "total_users_paid": "40",
             "active_users": "3",
             "balance": "0.00000000",
@@ -57145,9 +57145,9 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.73020303",
-            "total_users_paid": "387",
-            "active_users": "27",
+            "paid_today": "2.73161283",
+            "total_users_paid": "388",
+            "active_users": "28",
             "balance": "0.00000000",
             "health": "48"
           },
@@ -58069,7 +58069,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79648881",
+            "paid_today": "2.79681658",
             "total_users_paid": "693",
             "active_users": "80",
             "balance": "0.42106198",
@@ -58497,10 +58497,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06607762",
-            "total_users_paid": "1470",
-            "active_users": "188",
-            "balance": "0.16784722",
+            "paid_today": "12.06767786",
+            "total_users_paid": "1471",
+            "active_users": "189",
+            "balance": "0.16734682",
             "health": "11"
           },
           "172": {
@@ -58657,10 +58657,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05701906",
+            "paid_today": "8.05868328",
             "total_users_paid": "935",
             "active_users": "120",
-            "balance": "0.56367329",
+            "balance": "0.56355329",
             "health": "13"
           },
           "177": {
@@ -58729,9 +58729,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "3.71138666",
-            "total_users_paid": "327",
-            "active_users": "19",
+            "paid_today": "3.73644260",
+            "total_users_paid": "328",
+            "active_users": "20",
             "balance": "4.07574451",
             "health": "49"
           },
@@ -59046,9 +59046,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.88859996",
+            "paid_today": "427.90177606",
             "total_users_paid": "3168",
-            "active_users": "490",
+            "active_users": "491",
             "balance": "0.00000000",
             "health": "2"
           },
@@ -60307,8 +60307,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16979",
-            "active_users": "664",
+            "total_users_paid": "16982",
+            "active_users": "667",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -60338,7 +60338,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "1.29179823",
+            "paid_today": "1.29199822",
             "total_users_paid": "289",
             "active_users": "27",
             "balance": "0.00000000",
@@ -60558,10 +60558,10 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36963345",
+            "paid_today": "2.36988462",
             "total_users_paid": "1647",
             "active_users": "107",
-            "balance": "22.54900000",
+            "balance": "22.54350000",
             "health": "10"
           },
           "35": {
@@ -60614,7 +60614,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13594502",
+            "paid_today": "3.13604481",
             "total_users_paid": "1562",
             "active_users": "104",
             "balance": "18.00850000",
@@ -60694,7 +60694,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.75270487",
+            "paid_today": "0.75285507",
             "total_users_paid": "115",
             "active_users": "22",
             "balance": "55.64799538",
@@ -61011,8 +61011,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16597",
-            "active_users": "619",
+            "total_users_paid": "16599",
+            "active_users": "621",
             "balance": "0.00000000",
             "health": "0"
           },
@@ -61038,10 +61038,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.59186684",
-            "total_users_paid": "113",
-            "active_users": "16",
-            "balance": "34.96579189",
+            "paid_today": "0.59216658",
+            "total_users_paid": "114",
+            "active_users": "17",
+            "balance": "34.93824823",
             "health": "62"
           },
           "47": {
@@ -61174,7 +61174,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28693684",
+            "paid_today": "4.28723391",
             "total_users_paid": "198",
             "active_users": "41",
             "balance": "144.54260194",
@@ -61282,7 +61282,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.29189204",
+            "paid_today": "0.29189284",
             "total_users_paid": "2654",
             "active_users": "93",
             "balance": "0.15210446",
@@ -61790,7 +61790,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.52045737",
+            "paid_today": "9.52172649",
             "total_users_paid": "970",
             "active_users": "182",
             "balance": "540.22493692",
@@ -62022,10 +62022,10 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71724428",
+            "paid_today": "3.71797599",
             "total_users_paid": "1588",
             "active_users": "188",
-            "balance": "494.82698880",
+            "balance": "494.80495740",
             "health": "100"
           },
           "70": {
@@ -62062,9 +62062,9 @@
                 "name": "App"
               }
             },
-            "paid_today": "7.48607188",
-            "total_users_paid": "645",
-            "active_users": "84",
+            "paid_today": "7.50141923",
+            "total_users_paid": "647",
+            "active_users": "86",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -62130,10 +62130,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.95071227",
+            "paid_today": "23.95604792",
             "total_users_paid": "2075",
-            "active_users": "370",
-            "balance": "225.33804755",
+            "active_users": "371",
+            "balance": "225.31965167",
             "health": "15"
           },
           "73": {
@@ -62322,7 +62322,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.14732944",
+            "paid_today": "0.14737388",
             "total_users_paid": "173",
             "active_users": "34",
             "balance": "0.00000000",
@@ -62602,7 +62602,7 @@
                 "name": "Service"
               }
             },
-            "paid_today": "0.50204481",
+            "paid_today": "0.50239499",
             "total_users_paid": "40",
             "active_users": "3",
             "balance": "0.00000000",
@@ -62654,9 +62654,9 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.73020303",
-            "total_users_paid": "387",
-            "active_users": "27",
+            "paid_today": "2.73161283",
+            "total_users_paid": "388",
+            "active_users": "28",
             "balance": "0.00000000",
             "health": "48"
           },
@@ -63226,7 +63226,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79648881",
+            "paid_today": "2.79681658",
             "total_users_paid": "693",
             "active_users": "80",
             "balance": "0.00000000",
@@ -63462,9 +63462,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06607762",
-            "total_users_paid": "1470",
-            "active_users": "188",
+            "paid_today": "12.06777804",
+            "total_users_paid": "1471",
+            "active_users": "189",
             "balance": "0.01316384",
             "health": "11"
           },
@@ -63526,7 +63526,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05713920",
+            "paid_today": "8.05868328",
             "total_users_paid": "935",
             "active_users": "120",
             "balance": "24.53820279",
@@ -63684,9 +63684,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.88859996",
+            "paid_today": "427.90177606",
             "total_users_paid": "3168",
-            "active_users": "490",
+            "active_users": "491",
             "balance": "0.00000000",
             "health": "2"
           },
@@ -64436,10 +64436,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.14167019",
+            "paid_today": "0.14177766",
             "total_users_paid": "147",
-            "active_users": "42",
-            "balance": "0.00214418",
+            "active_users": "43",
+            "balance": "0.00214397",
             "health": "60"
           },
           "19": {
@@ -64949,8 +64949,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16979",
-            "active_users": "664",
+            "total_users_paid": "16985",
+            "active_users": "670",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -64980,7 +64980,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "1.29179823",
+            "paid_today": "1.29199822",
             "total_users_paid": "289",
             "active_users": "27",
             "balance": "0.00000000",
@@ -65200,10 +65200,10 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36963345",
+            "paid_today": "2.37000743",
             "total_users_paid": "1647",
             "active_users": "107",
-            "balance": "0.00475991",
+            "balance": "0.00475967",
             "health": "10"
           },
           "36": {
@@ -65256,10 +65256,10 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13594502",
+            "paid_today": "3.13604481",
             "total_users_paid": "1562",
             "active_users": "104",
-            "balance": "0.00429051",
+            "balance": "0.00429040",
             "health": "11"
           },
           "37": {
@@ -65653,8 +65653,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16597",
-            "active_users": "619",
+            "total_users_paid": "16601",
+            "active_users": "623",
             "balance": "0.00000000",
             "health": "0"
           },
@@ -65680,9 +65680,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.59186684",
-            "total_users_paid": "113",
-            "active_users": "16",
+            "paid_today": "0.59216658",
+            "total_users_paid": "114",
+            "active_users": "17",
             "balance": "0.00061603",
             "health": "62"
           },
@@ -65816,7 +65816,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28693684",
+            "paid_today": "4.28723391",
             "total_users_paid": "198",
             "active_users": "41",
             "balance": "0.00208692",
@@ -65924,7 +65924,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.29189204",
+            "paid_today": "0.29189284",
             "total_users_paid": "2654",
             "active_users": "93",
             "balance": "0.00000000",
@@ -66316,7 +66316,7 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.50105147",
+            "paid_today": "2.50176794",
             "total_users_paid": "412",
             "active_users": "61",
             "balance": "0.00448971",
@@ -66608,7 +66608,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.52057735",
+            "paid_today": "9.52183649",
             "total_users_paid": "970",
             "active_users": "182",
             "balance": "0.00553307",
@@ -66892,7 +66892,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71724428",
+            "paid_today": "3.71797599",
             "total_users_paid": "1588",
             "active_users": "188",
             "balance": "0.00495229",
@@ -66932,9 +66932,9 @@
                 "name": "App"
               }
             },
-            "paid_today": "7.48607188",
-            "total_users_paid": "645",
-            "active_users": "84",
+            "paid_today": "7.50141923",
+            "total_users_paid": "647",
+            "active_users": "86",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -67000,9 +67000,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.95119956",
+            "paid_today": "23.95615107",
             "total_users_paid": "2075",
-            "active_users": "370",
+            "active_users": "371",
             "balance": "0.00296257",
             "health": "15"
           },
@@ -67272,7 +67272,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.14732944",
+            "paid_today": "0.14737388",
             "total_users_paid": "173",
             "active_users": "34",
             "balance": "0.00000000",
@@ -67552,7 +67552,7 @@
                 "name": "Service"
               }
             },
-            "paid_today": "0.50204481",
+            "paid_today": "0.50239499",
             "total_users_paid": "40",
             "active_users": "3",
             "balance": "0.00000000",
@@ -67604,9 +67604,9 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.73020303",
-            "total_users_paid": "387",
-            "active_users": "27",
+            "paid_today": "2.73161283",
+            "total_users_paid": "388",
+            "active_users": "28",
             "balance": "0.00000000",
             "health": "48"
           },
@@ -68276,7 +68276,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79648881",
+            "paid_today": "2.79781783",
             "total_users_paid": "693",
             "active_users": "80",
             "balance": "0.00000000",
@@ -68412,7 +68412,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06627760",
+            "paid_today": "12.06807388",
             "total_users_paid": "1471",
             "active_users": "189",
             "balance": "0.00000000",
@@ -68476,7 +68476,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05753542",
+            "paid_today": "8.05868328",
             "total_users_paid": "935",
             "active_users": "120",
             "balance": "0.00000000",
@@ -68654,9 +68654,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.88859996",
+            "paid_today": "427.90177606",
             "total_users_paid": "3168",
-            "active_users": "490",
+            "active_users": "491",
             "balance": "0.00000000",
             "health": "2"
           },
@@ -68894,7 +68894,7 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.35592373",
+            "paid_today": "2.35622028",
             "total_users_paid": "594",
             "active_users": "84",
             "balance": "0.00158580",
@@ -69622,10 +69622,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.08401057",
-            "total_users_paid": "137",
-            "active_users": "32",
-            "balance": "0.00211746",
+            "paid_today": "0.08407125",
+            "total_users_paid": "138",
+            "active_users": "33",
+            "balance": "0.00211736",
             "health": "100"
           },
           "26": {
@@ -70187,8 +70187,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16979",
-            "active_users": "664",
+            "total_users_paid": "16987",
+            "active_users": "672",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -70218,7 +70218,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "1.29179823",
+            "paid_today": "1.29199822",
             "total_users_paid": "289",
             "active_users": "27",
             "balance": "0.00000000",
@@ -70438,7 +70438,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36969486",
+            "paid_today": "2.37001142",
             "total_users_paid": "1647",
             "active_users": "107",
             "balance": "0.00000004",
@@ -70494,7 +70494,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13599620",
+            "paid_today": "3.13604481",
             "total_users_paid": "1562",
             "active_users": "104",
             "balance": "0.00000006",
@@ -70923,8 +70923,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16597",
-            "active_users": "619",
+            "total_users_paid": "16603",
+            "active_users": "625",
             "balance": "0.00000000",
             "health": "0"
           },
@@ -70950,9 +70950,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.59186684",
-            "total_users_paid": "113",
-            "active_users": "16",
+            "paid_today": "0.59216658",
+            "total_users_paid": "114",
+            "active_users": "17",
             "balance": "0.00040959",
             "health": "62"
           },
@@ -71122,10 +71122,10 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28693684",
+            "paid_today": "4.28723391",
             "total_users_paid": "198",
             "active_users": "41",
-            "balance": "0.00114778",
+            "balance": "0.00114762",
             "health": "22"
           },
           "62": {
@@ -71230,7 +71230,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.29189204",
+            "paid_today": "0.29189284",
             "total_users_paid": "2654",
             "active_users": "93",
             "balance": "0.00000000",
@@ -71662,7 +71662,7 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.50124225",
+            "paid_today": "2.50176794",
             "total_users_paid": "412",
             "active_users": "61",
             "balance": "0.00279509",
@@ -71982,10 +71982,10 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.52092731",
+            "paid_today": "9.52194648",
             "total_users_paid": "970",
             "active_users": "182",
-            "balance": "0.00495207",
+            "balance": "0.00495189",
             "health": "41"
           },
           "83": {
@@ -72266,7 +72266,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71736427",
+            "paid_today": "3.71797599",
             "total_users_paid": "1588",
             "active_users": "188",
             "balance": "0.00515188",
@@ -72306,9 +72306,9 @@
                 "name": "App"
               }
             },
-            "paid_today": "7.48607188",
-            "total_users_paid": "645",
-            "active_users": "84",
+            "paid_today": "7.50141923",
+            "total_users_paid": "647",
+            "active_users": "86",
             "balance": "0.46005375",
             "health": "100"
           },
@@ -72374,10 +72374,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.95149286",
+            "paid_today": "23.95641455",
             "total_users_paid": "2075",
-            "active_users": "370",
-            "balance": "0.01004918",
+            "active_users": "371",
+            "balance": "0.01004828",
             "health": "15"
           },
           "92": {
@@ -72966,7 +72966,7 @@
                 "name": "Service"
               }
             },
-            "paid_today": "0.50204481",
+            "paid_today": "0.50239499",
             "total_users_paid": "40",
             "active_users": "3",
             "balance": "0.00000000",
@@ -73766,10 +73766,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79648881",
+            "paid_today": "2.79781783",
             "total_users_paid": "693",
             "active_users": "80",
-            "balance": "0.00011945",
+            "balance": "0.00011780",
             "health": "29"
           },
           "123": {
@@ -74102,7 +74102,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06647758",
+            "paid_today": "12.06837250",
             "total_users_paid": "1471",
             "active_users": "189",
             "balance": "0.00036589",
@@ -74166,7 +74166,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05828669",
+            "paid_today": "8.05883915",
             "total_users_paid": "935",
             "active_users": "120",
             "balance": "0.00000000",
@@ -74238,9 +74238,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "3.71138666",
-            "total_users_paid": "327",
-            "active_users": "19",
+            "paid_today": "3.73644260",
+            "total_users_paid": "328",
+            "active_users": "20",
             "balance": "0.00251196",
             "health": "49"
           },
@@ -74424,9 +74424,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.88859996",
+            "paid_today": "427.90177606",
             "total_users_paid": "3168",
-            "active_users": "490",
+            "active_users": "491",
             "balance": "0.76121670",
             "health": "2"
           },
@@ -74664,10 +74664,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.35592373",
-            "total_users_paid": "594",
-            "active_users": "84",
-            "balance": "0.00407608",
+            "paid_today": "2.35740731",
+            "total_users_paid": "595",
+            "active_users": "86",
+            "balance": "0.00407218",
             "health": "39"
           },
           "9": {
@@ -75881,8 +75881,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16979",
-            "active_users": "664",
+            "total_users_paid": "16991",
+            "active_users": "676",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -75912,7 +75912,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "1.29179823",
+            "paid_today": "1.29199822",
             "total_users_paid": "289",
             "active_users": "27",
             "balance": "0.04028251",
@@ -76132,7 +76132,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36969997",
+            "paid_today": "2.37001142",
             "total_users_paid": "1647",
             "active_users": "107",
             "balance": "0.00000030",
@@ -76188,7 +76188,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13600131",
+            "paid_today": "3.13604481",
             "total_users_paid": "1562",
             "active_users": "104",
             "balance": "0.00000052",
@@ -76432,9 +76432,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "1.75715022",
-            "total_users_paid": "33",
-            "active_users": "6",
+            "paid_today": "1.77445452",
+            "total_users_paid": "34",
+            "active_users": "7",
             "balance": "0.00000000",
             "health": "0"
           },
@@ -76661,8 +76661,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16597",
-            "active_users": "619",
+            "total_users_paid": "16606",
+            "active_users": "628",
             "balance": "0.00000000",
             "health": "0"
           },
@@ -76688,9 +76688,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.59186684",
-            "total_users_paid": "113",
-            "active_users": "16",
+            "paid_today": "0.59216658",
+            "total_users_paid": "114",
+            "active_users": "17",
             "balance": "0.00241813",
             "health": "62"
           },
@@ -76860,7 +76860,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28693684",
+            "paid_today": "4.28723391",
             "total_users_paid": "198",
             "active_users": "41",
             "balance": "0.01229095",
@@ -76992,7 +76992,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.29189204",
+            "paid_today": "0.29189284",
             "total_users_paid": "2654",
             "active_users": "93",
             "balance": "0.00000000",
@@ -77384,10 +77384,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.50124225",
+            "paid_today": "2.50186793",
             "total_users_paid": "412",
             "active_users": "61",
-            "balance": "0.02834886",
+            "balance": "0.02834754",
             "health": "66"
           },
           "73": {
@@ -77648,7 +77648,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.52092731",
+            "paid_today": "9.52217646",
             "total_users_paid": "970",
             "active_users": "182",
             "balance": "0.04147286",
@@ -77932,7 +77932,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71748426",
+            "paid_today": "3.71809518",
             "total_users_paid": "1588",
             "active_users": "188",
             "balance": "0.04160805",
@@ -77972,9 +77972,9 @@
                 "name": "App"
               }
             },
-            "paid_today": "7.48607188",
-            "total_users_paid": "645",
-            "active_users": "84",
+            "paid_today": "7.50141923",
+            "total_users_paid": "647",
+            "active_users": "86",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -78040,10 +78040,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.95302883",
+            "paid_today": "23.95671629",
             "total_users_paid": "2075",
-            "active_users": "370",
-            "balance": "0.00477258",
+            "active_users": "371",
+            "balance": "0.00476691",
             "health": "15"
           },
           "88": {
@@ -78664,7 +78664,7 @@
                 "name": "Service"
               }
             },
-            "paid_today": "0.50204481",
+            "paid_today": "0.50239499",
             "total_users_paid": "40",
             "active_users": "3",
             "balance": "0.00000171",
@@ -79556,10 +79556,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79648881",
+            "paid_today": "2.79781783",
             "total_users_paid": "693",
             "active_users": "80",
-            "balance": "0.01179312",
+            "balance": "0.01179180",
             "health": "29"
           },
           "123": {
@@ -79920,10 +79920,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06657757",
+            "paid_today": "12.06867285",
             "total_users_paid": "1471",
             "active_users": "189",
-            "balance": "0.00740979",
+            "balance": "0.00740669",
             "health": "11"
           },
           "133": {
@@ -79984,10 +79984,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05840659",
+            "paid_today": "8.05907376",
             "total_users_paid": "935",
             "active_users": "120",
-            "balance": "0.00529413",
+            "balance": "0.00529050",
             "health": "13"
           },
           "135": {
@@ -80012,10 +80012,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "3.71138666",
-            "total_users_paid": "327",
-            "active_users": "19",
-            "balance": "0.02504752",
+            "paid_today": "3.73644260",
+            "total_users_paid": "328",
+            "active_users": "20",
+            "balance": "0.02471801",
             "health": "49"
           },
           "136": {
@@ -80138,9 +80138,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.88859996",
-            "total_users_paid": "3168",
-            "active_users": "490",
+            "paid_today": "427.92407402",
+            "total_users_paid": "3169",
+            "active_users": "492",
             "balance": "0.00000000",
             "health": "2"
           },
@@ -80378,9 +80378,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.35592373",
-            "total_users_paid": "594",
-            "active_users": "84",
+            "paid_today": "2.35740731",
+            "total_users_paid": "595",
+            "active_users": "86",
             "balance": "0.15423174",
             "health": "39"
           },
@@ -80778,10 +80778,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.26369646",
+            "paid_today": "0.26409645",
             "total_users_paid": "124",
-            "active_users": "13",
-            "balance": "0.14356062",
+            "active_users": "14",
+            "balance": "0.14316222",
             "health": "48"
           },
           "14": {
@@ -81202,9 +81202,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.20760974",
+            "paid_today": "0.20770983",
             "total_users_paid": "629",
-            "active_users": "65",
+            "active_users": "66",
             "balance": "0.00006184",
             "health": "100"
           },
@@ -81491,8 +81491,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16979",
-            "active_users": "664",
+            "total_users_paid": "16992",
+            "active_users": "677",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -81522,7 +81522,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "1.29179823",
+            "paid_today": "1.29199822",
             "total_users_paid": "289",
             "active_users": "27",
             "balance": "0.00000000",
@@ -81742,7 +81742,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36969997",
+            "paid_today": "2.37001142",
             "total_users_paid": "1647",
             "active_users": "107",
             "balance": "0.00000200",
@@ -81798,7 +81798,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13600131",
+            "paid_today": "3.13604481",
             "total_users_paid": "1562",
             "active_users": "104",
             "balance": "0.00003200",
@@ -82171,8 +82171,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16597",
-            "active_users": "619",
+            "total_users_paid": "16607",
+            "active_users": "629",
             "balance": "0.00000000",
             "health": "0"
           },
@@ -82198,9 +82198,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.59186684",
-            "total_users_paid": "113",
-            "active_users": "16",
+            "paid_today": "0.59216658",
+            "total_users_paid": "114",
+            "active_users": "17",
             "balance": "0.18094311",
             "health": "62"
           },
@@ -82314,7 +82314,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28703683",
+            "paid_today": "4.28723391",
             "total_users_paid": "198",
             "active_users": "41",
             "balance": "0.56960942",
@@ -82446,10 +82446,10 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.29189204",
+            "paid_today": "0.29189284",
             "total_users_paid": "2654",
             "active_users": "93",
-            "balance": "0.00686300",
+            "balance": "0.00686220",
             "health": "0"
           },
           "54": {
@@ -82810,7 +82810,7 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.50124225",
+            "paid_today": "2.50186793",
             "total_users_paid": "412",
             "active_users": "61",
             "balance": "0.00000000",
@@ -83074,7 +83074,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.52092731",
+            "paid_today": "9.52217646",
             "total_users_paid": "970",
             "active_users": "182",
             "balance": "2.11926638",
@@ -83306,10 +83306,10 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71748426",
+            "paid_today": "3.71809518",
             "total_users_paid": "1588",
             "active_users": "188",
-            "balance": "2.07078400",
+            "balance": "2.07066448",
             "health": "100"
           },
           "73": {
@@ -83346,9 +83346,9 @@
                 "name": "App"
               }
             },
-            "paid_today": "7.49374622",
-            "total_users_paid": "646",
-            "active_users": "85",
+            "paid_today": "7.50141923",
+            "total_users_paid": "647",
+            "active_users": "86",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -83414,9 +83414,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.95334143",
+            "paid_today": "23.95684688",
             "total_users_paid": "2075",
-            "active_users": "370",
+            "active_users": "371",
             "balance": "1.67013838",
             "health": "15"
           },
@@ -83890,7 +83890,7 @@
                 "name": "Service"
               }
             },
-            "paid_today": "0.50204481",
+            "paid_today": "0.50239499",
             "total_users_paid": "40",
             "active_users": "3",
             "balance": "0.00000000",
@@ -84626,7 +84626,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79648881",
+            "paid_today": "2.79781783",
             "total_users_paid": "693",
             "active_users": "80",
             "balance": "0.03152055",
@@ -84842,7 +84842,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06681221",
+            "paid_today": "12.06867285",
             "total_users_paid": "1471",
             "active_users": "189",
             "balance": "0.01280405",
@@ -84934,7 +84934,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05840659",
+            "paid_today": "8.05907376",
             "total_users_paid": "935",
             "active_users": "120",
             "balance": "0.00000000",
@@ -85032,9 +85032,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.88859996",
-            "total_users_paid": "3168",
-            "active_users": "490",
+            "paid_today": "427.92407402",
+            "total_users_paid": "3169",
+            "active_users": "492",
             "balance": "0.00000000",
             "health": "2"
           },
@@ -85272,9 +85272,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.35592373",
-            "total_users_paid": "594",
-            "active_users": "84",
+            "paid_today": "2.35740731",
+            "total_users_paid": "595",
+            "active_users": "86",
             "balance": "2.90860208",
             "health": "39"
           },
@@ -86076,9 +86076,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.20760974",
+            "paid_today": "0.20770983",
             "total_users_paid": "629",
-            "active_users": "65",
+            "active_users": "66",
             "balance": "9.67253692",
             "health": "100"
           },
@@ -86365,8 +86365,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16979",
-            "active_users": "664",
+            "total_users_paid": "16994",
+            "active_users": "679",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -86616,7 +86616,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36974995",
+            "paid_today": "2.37001142",
             "total_users_paid": "1647",
             "active_users": "107",
             "balance": "0.00004000",
@@ -86672,7 +86672,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13600131",
+            "paid_today": "3.13604481",
             "total_users_paid": "1562",
             "active_users": "104",
             "balance": "0.00016000",
@@ -87065,8 +87065,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16597",
-            "active_users": "619",
+            "total_users_paid": "16608",
+            "active_users": "630",
             "balance": "0.00000000",
             "health": "0"
           },
@@ -87092,9 +87092,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.59186684",
-            "total_users_paid": "113",
-            "active_users": "16",
+            "paid_today": "0.59216658",
+            "total_users_paid": "114",
+            "active_users": "17",
             "balance": "2.46801682",
             "health": "62"
           },
@@ -87208,7 +87208,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28703683",
+            "paid_today": "4.28723391",
             "total_users_paid": "198",
             "active_users": "41",
             "balance": "9.33062666",
@@ -87316,7 +87316,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.29189204",
+            "paid_today": "0.29189284",
             "total_users_paid": "2654",
             "active_users": "93",
             "balance": "0.00000000",
@@ -87708,7 +87708,7 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.50124225",
+            "paid_today": "2.50186793",
             "total_users_paid": "412",
             "active_users": "61",
             "balance": "22.25204602",
@@ -87928,10 +87928,10 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.52092731",
+            "paid_today": "9.52229093",
             "total_users_paid": "970",
             "active_users": "182",
-            "balance": "20.14229819",
+            "balance": "20.14088775",
             "health": "41"
           },
           "68": {
@@ -88212,7 +88212,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71748426",
+            "paid_today": "3.71809518",
             "total_users_paid": "1588",
             "active_users": "188",
             "balance": "20.09758103",
@@ -88252,9 +88252,9 @@
                 "name": "App"
               }
             },
-            "paid_today": "7.49374622",
-            "total_users_paid": "646",
-            "active_users": "85",
+            "paid_today": "7.50141923",
+            "total_users_paid": "647",
+            "active_users": "86",
             "balance": "188.77549157",
             "health": "100"
           },
@@ -88320,9 +88320,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.95363769",
+            "paid_today": "23.95717412",
             "total_users_paid": "2075",
-            "active_users": "370",
+            "active_users": "371",
             "balance": "13.09653200",
             "health": "15"
           },
@@ -88824,7 +88824,7 @@
                 "name": "Service"
               }
             },
-            "paid_today": "0.50204481",
+            "paid_today": "0.50239499",
             "total_users_paid": "40",
             "active_users": "3",
             "balance": "0.00000000",
@@ -89588,7 +89588,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79648881",
+            "paid_today": "2.79781783",
             "total_users_paid": "693",
             "active_users": "80",
             "balance": "6.41496095",
@@ -89796,10 +89796,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06714684",
+            "paid_today": "12.06877284",
             "total_users_paid": "1471",
             "active_users": "189",
-            "balance": "4.42593671",
+            "balance": "4.42465092",
             "health": "11"
           },
           "111": {
@@ -89860,7 +89860,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05840659",
+            "paid_today": "8.05930837",
             "total_users_paid": "935",
             "active_users": "120",
             "balance": "2.58188582",
@@ -89888,9 +89888,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "3.71138666",
-            "total_users_paid": "327",
-            "active_users": "19",
+            "paid_today": "3.73644260",
+            "total_users_paid": "328",
+            "active_users": "20",
             "balance": "21.21866118",
             "health": "49"
           }
@@ -89966,9 +89966,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.88859996",
-            "total_users_paid": "3168",
-            "active_users": "490",
+            "paid_today": "427.92407402",
+            "total_users_paid": "3169",
+            "active_users": "492",
             "balance": "0.00000000",
             "health": "2"
           },
@@ -90206,9 +90206,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.35592373",
-            "total_users_paid": "594",
-            "active_users": "84",
+            "paid_today": "2.35740731",
+            "total_users_paid": "595",
+            "active_users": "86",
             "balance": "1.24725066",
             "health": "39"
           },
@@ -90934,9 +90934,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.20760974",
+            "paid_today": "0.20770983",
             "total_users_paid": "629",
-            "active_users": "65",
+            "active_users": "66",
             "balance": "0.00044567",
             "health": "100"
           },
@@ -91155,8 +91155,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16979",
-            "active_users": "664",
+            "total_users_paid": "16996",
+            "active_users": "681",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -91406,7 +91406,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36979449",
+            "paid_today": "2.37003860",
             "total_users_paid": "1647",
             "active_users": "107",
             "balance": "0.00025000",
@@ -91462,7 +91462,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13600131",
+            "paid_today": "3.13604481",
             "total_users_paid": "1562",
             "active_users": "104",
             "balance": "0.00000000",
@@ -91855,8 +91855,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16597",
-            "active_users": "619",
+            "total_users_paid": "16610",
+            "active_users": "632",
             "balance": "0.00000000",
             "health": "0"
           },
@@ -91882,9 +91882,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.59186684",
-            "total_users_paid": "113",
-            "active_users": "16",
+            "paid_today": "0.59216658",
+            "total_users_paid": "114",
+            "active_users": "17",
             "balance": "1.34661491",
             "health": "62"
           },
@@ -91998,7 +91998,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28713392",
+            "paid_today": "4.28723391",
             "total_users_paid": "198",
             "active_users": "41",
             "balance": "1.61883705",
@@ -92106,7 +92106,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.29189204",
+            "paid_today": "0.29189284",
             "total_users_paid": "2654",
             "active_users": "93",
             "balance": "0.00000000",
@@ -92666,7 +92666,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.52092731",
+            "paid_today": "9.52240540",
             "total_users_paid": "970",
             "active_users": "182",
             "balance": "11.40720920",
@@ -92874,7 +92874,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71761623",
+            "paid_today": "3.71809518",
             "total_users_paid": "1588",
             "active_users": "188",
             "balance": "11.49259146",
@@ -92914,9 +92914,9 @@
                 "name": "App"
               }
             },
-            "paid_today": "7.49374622",
-            "total_users_paid": "646",
-            "active_users": "85",
+            "paid_today": "7.50141923",
+            "total_users_paid": "647",
+            "active_users": "86",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -92982,9 +92982,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.95363769",
+            "paid_today": "23.95745586",
             "total_users_paid": "2075",
-            "active_users": "370",
+            "active_users": "371",
             "balance": "7.51534918",
             "health": "15"
           },
@@ -93426,7 +93426,7 @@
                 "name": "Service"
               }
             },
-            "paid_today": "0.50204481",
+            "paid_today": "0.50239499",
             "total_users_paid": "40",
             "active_users": "3",
             "balance": "0.00000000",
@@ -94122,7 +94122,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79648881",
+            "paid_today": "2.79781783",
             "total_users_paid": "693",
             "active_users": "80",
             "balance": "1.10000640",
@@ -94298,7 +94298,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06714684",
+            "paid_today": "12.06877284",
             "total_users_paid": "1471",
             "active_users": "189",
             "balance": "0.61434112",
@@ -94362,7 +94362,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05840659",
+            "paid_today": "8.05930837",
             "total_users_paid": "935",
             "active_users": "120",
             "balance": "0.00000000",
@@ -94436,9 +94436,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.88859996",
-            "total_users_paid": "3168",
-            "active_users": "490",
+            "paid_today": "427.92407402",
+            "total_users_paid": "3169",
+            "active_users": "492",
             "balance": "42.72478578",
             "health": "2"
           },
@@ -94564,9 +94564,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.35592373",
-            "total_users_paid": "594",
-            "active_users": "84",
+            "paid_today": "2.35740731",
+            "total_users_paid": "595",
+            "active_users": "86",
             "balance": "0.42085984",
             "health": "39"
           },
@@ -94964,9 +94964,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.26369646",
+            "paid_today": "0.26409645",
             "total_users_paid": "124",
-            "active_users": "13",
+            "active_users": "14",
             "balance": "0.58509524",
             "health": "48"
           },
@@ -95360,9 +95360,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.20760974",
+            "paid_today": "0.20770983",
             "total_users_paid": "629",
-            "active_users": "65",
+            "active_users": "66",
             "balance": "0.00002547",
             "health": "100"
           },
@@ -95581,8 +95581,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16979",
-            "active_users": "664",
+            "total_users_paid": "16997",
+            "active_users": "682",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -95832,10 +95832,10 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36979844",
+            "paid_today": "2.37004131",
             "total_users_paid": "1647",
             "active_users": "107",
-            "balance": "0.09420700",
+            "balance": "0.09417400",
             "health": "10"
           },
           "32": {
@@ -95888,7 +95888,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13600131",
+            "paid_today": "3.13604481",
             "total_users_paid": "1562",
             "active_users": "104",
             "balance": "0.04673800",
@@ -96177,8 +96177,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16597",
-            "active_users": "619",
+            "total_users_paid": "16611",
+            "active_users": "633",
             "balance": "0.00000000",
             "health": "0"
           },
@@ -96204,9 +96204,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.59186684",
-            "total_users_paid": "113",
-            "active_users": "16",
+            "paid_today": "0.59216658",
+            "total_users_paid": "114",
+            "active_users": "17",
             "balance": "0.12869258",
             "health": "62"
           },
@@ -96320,7 +96320,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28713392",
+            "paid_today": "4.28723391",
             "total_users_paid": "198",
             "active_users": "41",
             "balance": "0.26663126",
@@ -96428,7 +96428,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.29189204",
+            "paid_today": "0.29189284",
             "total_users_paid": "2654",
             "active_users": "93",
             "balance": "0.00000000",
@@ -96820,7 +96820,7 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.50124225",
+            "paid_today": "2.50186793",
             "total_users_paid": "412",
             "active_users": "61",
             "balance": "0.95353882",
@@ -96984,10 +96984,10 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.52092731",
+            "paid_today": "9.52252538",
             "total_users_paid": "970",
             "active_users": "182",
-            "balance": "1.16158167",
+            "balance": "1.16141625",
             "health": "41"
           },
           "60": {
@@ -97268,7 +97268,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71761623",
+            "paid_today": "3.71809518",
             "total_users_paid": "1588",
             "active_users": "188",
             "balance": "1.16340053",
@@ -97308,9 +97308,9 @@
                 "name": "App"
               }
             },
-            "paid_today": "7.49374622",
-            "total_users_paid": "646",
-            "active_users": "85",
+            "paid_today": "7.50909357",
+            "total_users_paid": "648",
+            "active_users": "87",
             "balance": "19.86699328",
             "health": "100"
           },
@@ -97376,10 +97376,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.95363769",
+            "paid_today": "23.95745586",
             "total_users_paid": "2075",
-            "active_users": "370",
-            "balance": "2.01283149",
+            "active_users": "371",
+            "balance": "2.01268111",
             "health": "15"
           },
           "69": {
@@ -98776,7 +98776,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79648881",
+            "paid_today": "2.79781783",
             "total_users_paid": "693",
             "active_users": "80",
             "balance": "0.05467093",
@@ -99068,7 +99068,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06724715",
+            "paid_today": "12.06877284",
             "total_users_paid": "1471",
             "active_users": "189",
             "balance": "0.00005306",
@@ -99132,7 +99132,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05840659",
+            "paid_today": "8.05930837",
             "total_users_paid": "935",
             "active_users": "120",
             "balance": "0.00000000",
@@ -99160,9 +99160,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "3.71138666",
-            "total_users_paid": "327",
-            "active_users": "19",
+            "paid_today": "3.73644260",
+            "total_users_paid": "328",
+            "active_users": "20",
             "balance": "1.16565829",
             "health": "49"
           }
@@ -99210,9 +99210,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.88859996",
-            "total_users_paid": "3168",
-            "active_users": "490",
+            "paid_today": "427.92407402",
+            "total_users_paid": "3169",
+            "active_users": "492",
             "balance": "0.00000000",
             "health": "2"
           },
@@ -99338,9 +99338,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.35592373",
-            "total_users_paid": "594",
-            "active_users": "84",
+            "paid_today": "2.35740731",
+            "total_users_paid": "595",
+            "active_users": "86",
             "balance": "4.15777131",
             "health": "39"
           },
@@ -99942,9 +99942,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.20760974",
+            "paid_today": "0.20770983",
             "total_users_paid": "629",
-            "active_users": "65",
+            "active_users": "66",
             "balance": "0.00035926",
             "health": "100"
           },
@@ -100163,8 +100163,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16979",
-            "active_users": "664",
+            "total_users_paid": "16998",
+            "active_users": "683",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -100414,7 +100414,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36979844",
+            "paid_today": "2.37004131",
             "total_users_paid": "1647",
             "active_users": "107",
             "balance": "4.44105000",
@@ -100470,10 +100470,10 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13600131",
+            "paid_today": "3.13604481",
             "total_users_paid": "1562",
             "active_users": "104",
-            "balance": "5.30807500",
+            "balance": "5.30780000",
             "health": "11"
           },
           "28": {
@@ -100787,8 +100787,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16597",
-            "active_users": "619",
+            "total_users_paid": "16612",
+            "active_users": "634",
             "balance": "0.00000000",
             "health": "0"
           },
@@ -100814,9 +100814,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.59186684",
-            "total_users_paid": "113",
-            "active_users": "16",
+            "paid_today": "0.59216658",
+            "total_users_paid": "114",
+            "active_users": "17",
             "balance": "1.63280790",
             "health": "62"
           },
@@ -100894,7 +100894,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28713392",
+            "paid_today": "4.28723391",
             "total_users_paid": "198",
             "active_users": "41",
             "balance": "5.11427279",
@@ -100974,7 +100974,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "0.29189204",
+            "paid_today": "0.29189284",
             "total_users_paid": "2654",
             "active_users": "93",
             "balance": "0.00000000",
@@ -101378,7 +101378,7 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.50134294",
+            "paid_today": "2.50186793",
             "total_users_paid": "412",
             "active_users": "61",
             "balance": "0.00000000",
@@ -101542,10 +101542,10 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.52092731",
+            "paid_today": "9.52252538",
             "total_users_paid": "970",
             "active_users": "182",
-            "balance": "12.09148783",
+            "balance": "12.09079251",
             "health": "41"
           },
           "54": {
@@ -101774,7 +101774,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71761623",
+            "paid_today": "3.71809518",
             "total_users_paid": "1588",
             "active_users": "188",
             "balance": "10.81856662",
@@ -101842,9 +101842,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.95363769",
+            "paid_today": "23.95774666",
             "total_users_paid": "2075",
-            "active_users": "370",
+            "active_users": "371",
             "balance": "1.91016243",
             "health": "15"
           },
@@ -102898,7 +102898,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79658918",
+            "paid_today": "2.79781783",
             "total_users_paid": "693",
             "active_users": "80",
             "balance": "1.01929993",
@@ -103034,10 +103034,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06734254",
+            "paid_today": "12.06887293",
             "total_users_paid": "1471",
             "active_users": "189",
-            "balance": "0.26194952",
+            "balance": "0.26131622",
             "health": "11"
           },
           "87": {
@@ -103098,7 +103098,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05840659",
+            "paid_today": "8.05942883",
             "total_users_paid": "935",
             "active_users": "120",
             "balance": "0.00000000",
@@ -103172,9 +103172,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.90177606",
-            "total_users_paid": "3168",
-            "active_users": "491",
+            "paid_today": "427.92407402",
+            "total_users_paid": "3169",
+            "active_users": "492",
             "balance": "0.00000000",
             "health": "2"
           },
@@ -103696,7 +103696,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.08602507",
+            "paid_today": "3.08615616",
             "total_users_paid": "745",
             "active_users": "36",
             "balance": "0.00000000",
@@ -104149,8 +104149,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16979",
-            "active_users": "664",
+            "total_users_paid": "16998",
+            "active_users": "683",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -104428,7 +104428,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36979844",
+            "paid_today": "2.37004131",
             "total_users_paid": "1647",
             "active_users": "107",
             "balance": "0.07278500",
@@ -104484,7 +104484,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13600131",
+            "paid_today": "3.13604481",
             "total_users_paid": "1562",
             "active_users": "104",
             "balance": "0.00000000",
@@ -104805,8 +104805,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16597",
-            "active_users": "619",
+            "total_users_paid": "16613",
+            "active_users": "635",
             "balance": "0.00000000",
             "health": "0"
           },
@@ -104832,9 +104832,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.59186684",
-            "total_users_paid": "113",
-            "active_users": "16",
+            "paid_today": "0.59216658",
+            "total_users_paid": "114",
+            "active_users": "17",
             "balance": "0.28858289",
             "health": "62"
           },
@@ -104912,7 +104912,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28713392",
+            "paid_today": "4.28723391",
             "total_users_paid": "198",
             "active_users": "41",
             "balance": "0.48103395",
@@ -105660,7 +105660,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.52092731",
+            "paid_today": "9.52252538",
             "total_users_paid": "970",
             "active_users": "182",
             "balance": "2.07201699",
@@ -105896,7 +105896,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71761623",
+            "paid_today": "3.71809518",
             "total_users_paid": "1588",
             "active_users": "188",
             "balance": "2.76806327",
@@ -105964,9 +105964,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.95363769",
+            "paid_today": "23.95796729",
             "total_users_paid": "2075",
-            "active_users": "370",
+            "active_users": "371",
             "balance": "2.22577183",
             "health": "15"
           },
@@ -107160,7 +107160,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79658918",
+            "paid_today": "2.79781783",
             "total_users_paid": "693",
             "active_users": "80",
             "balance": "0.16006207",
@@ -107432,7 +107432,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06734254",
+            "paid_today": "12.06887293",
             "total_users_paid": "1471",
             "active_users": "189",
             "balance": "0.00006787",
@@ -107496,7 +107496,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05840659",
+            "paid_today": "8.05942883",
             "total_users_paid": "935",
             "active_users": "120",
             "balance": "0.00000000",
@@ -107622,9 +107622,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.90177606",
-            "total_users_paid": "3168",
-            "active_users": "491",
+            "paid_today": "427.92407402",
+            "total_users_paid": "3169",
+            "active_users": "492",
             "balance": "0.00000000",
             "health": "2"
           },
@@ -108146,7 +108146,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.08602507",
+            "paid_today": "3.08615616",
             "total_users_paid": "745",
             "active_users": "36",
             "balance": "0.00000000",
@@ -108330,9 +108330,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.20760974",
+            "paid_today": "0.20770983",
             "total_users_paid": "629",
-            "active_users": "65",
+            "active_users": "66",
             "balance": "0.00021199",
             "health": "100"
           },
@@ -108551,8 +108551,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16979",
-            "active_users": "664",
+            "total_users_paid": "16999",
+            "active_users": "684",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -108802,10 +108802,10 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "2.36979844",
+            "paid_today": "2.37004131",
             "total_users_paid": "1647",
             "active_users": "107",
-            "balance": "0.00117907",
+            "balance": "0.00117887",
             "health": "10"
           },
           "25": {
@@ -108858,7 +108858,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "3.13604086",
+            "paid_today": "3.13607199",
             "total_users_paid": "1562",
             "active_users": "104",
             "balance": "0.00096970",
@@ -109175,8 +109175,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16597",
-            "active_users": "619",
+            "total_users_paid": "16614",
+            "active_users": "636",
             "balance": "0.00000000",
             "health": "0"
           },
@@ -109202,9 +109202,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.59186684",
-            "total_users_paid": "113",
-            "active_users": "16",
+            "paid_today": "0.59216658",
+            "total_users_paid": "114",
+            "active_users": "17",
             "balance": "0.00082322",
             "health": "62"
           },
@@ -109282,7 +109282,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28713392",
+            "paid_today": "4.28723391",
             "total_users_paid": "198",
             "active_users": "41",
             "balance": "0.00165780",
@@ -109910,7 +109910,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.52092731",
+            "paid_today": "9.52252538",
             "total_users_paid": "970",
             "active_users": "182",
             "balance": "0.00297585",
@@ -110194,7 +110194,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71761623",
+            "paid_today": "3.71809518",
             "total_users_paid": "1588",
             "active_users": "188",
             "balance": "0.03031343",
@@ -110262,9 +110262,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.95383943",
+            "paid_today": "23.95826854",
             "total_users_paid": "2075",
-            "active_users": "370",
+            "active_users": "371",
             "balance": "0.00209578",
             "health": "15"
           },
@@ -111386,7 +111386,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79658918",
+            "paid_today": "2.79781783",
             "total_users_paid": "693",
             "active_users": "80",
             "balance": "0.00000000",
@@ -111522,7 +111522,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06734254",
+            "paid_today": "12.06887293",
             "total_users_paid": "1471",
             "active_users": "189",
             "balance": "0.00000000",
@@ -111586,7 +111586,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05840659",
+            "paid_today": "8.05954873",
             "total_users_paid": "935",
             "active_users": "120",
             "balance": "0.00000000",
@@ -111684,9 +111684,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.90177606",
-            "total_users_paid": "3168",
-            "active_users": "491",
+            "paid_today": "427.92407402",
+            "total_users_paid": "3169",
+            "active_users": "492",
             "balance": "0.00000000",
             "health": "2"
           },
@@ -111812,9 +111812,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.35592373",
-            "total_users_paid": "594",
-            "active_users": "84",
+            "paid_today": "2.35740731",
+            "total_users_paid": "595",
+            "active_users": "86",
             "balance": "0.15263782",
             "health": "39"
           },
@@ -112232,7 +112232,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.08602507",
+            "paid_today": "3.08615616",
             "total_users_paid": "745",
             "active_users": "36",
             "balance": "0.00000000",
@@ -112468,9 +112468,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.20760974",
+            "paid_today": "0.20770983",
             "total_users_paid": "629",
-            "active_users": "65",
+            "active_users": "66",
             "balance": "0.00003418",
             "health": "100"
           },
@@ -112657,8 +112657,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16979",
-            "active_users": "664",
+            "total_users_paid": "16999",
+            "active_users": "684",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -113129,8 +113129,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16597",
-            "active_users": "619",
+            "total_users_paid": "16614",
+            "active_users": "636",
             "balance": "0.00000000",
             "health": "0"
           },
@@ -113156,9 +113156,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.59186684",
-            "total_users_paid": "113",
-            "active_users": "16",
+            "paid_today": "0.59216658",
+            "total_users_paid": "114",
+            "active_users": "17",
             "balance": "0.17322857",
             "health": "62"
           },
@@ -113236,7 +113236,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28713392",
+            "paid_today": "4.28723391",
             "total_users_paid": "198",
             "active_users": "41",
             "balance": "0.10819391",
@@ -113764,7 +113764,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.52092731",
+            "paid_today": "9.52252538",
             "total_users_paid": "970",
             "active_users": "182",
             "balance": "0.52506905",
@@ -113996,7 +113996,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71773621",
+            "paid_today": "3.71809518",
             "total_users_paid": "1588",
             "active_users": "188",
             "balance": "0.50467211",
@@ -114064,10 +114064,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.95393482",
+            "paid_today": "23.95829853",
             "total_users_paid": "2075",
-            "active_users": "370",
-            "balance": "0.51510576",
+            "active_users": "371",
+            "balance": "0.51501357",
             "health": "15"
           },
           "56": {
@@ -115056,7 +115056,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79671659",
+            "paid_today": "2.79781783",
             "total_users_paid": "693",
             "active_users": "80",
             "balance": "0.12014485",
@@ -115168,7 +115168,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06734254",
+            "paid_today": "12.06896832",
             "total_users_paid": "1471",
             "active_users": "189",
             "balance": "0.10015000",
@@ -115232,7 +115232,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05840659",
+            "paid_today": "8.05954873",
             "total_users_paid": "935",
             "active_users": "120",
             "balance": "0.00000000",
@@ -115330,9 +115330,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "427.90177606",
-            "total_users_paid": "3168",
-            "active_users": "491",
+            "paid_today": "427.92407402",
+            "total_users_paid": "3169",
+            "active_users": "492",
             "balance": "127690.20379211",
             "health": "2"
           },
@@ -115482,9 +115482,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.35592373",
-            "total_users_paid": "594",
-            "active_users": "84",
+            "paid_today": "2.35740731",
+            "total_users_paid": "595",
+            "active_users": "86",
             "balance": "42.95710434",
             "health": "39"
           },
@@ -115902,7 +115902,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.08602507",
+            "paid_today": "3.08615616",
             "total_users_paid": "745",
             "active_users": "36",
             "balance": "626992.80698053",
@@ -116138,9 +116138,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.20760974",
+            "paid_today": "0.20770983",
             "total_users_paid": "629",
-            "active_users": "65",
+            "active_users": "66",
             "balance": "19.69651104",
             "health": "100"
           },
@@ -116399,8 +116399,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16979",
-            "active_users": "664",
+            "total_users_paid": "17000",
+            "active_users": "685",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -116814,9 +116814,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "1.75715022",
-            "total_users_paid": "33",
-            "active_users": "6",
+            "paid_today": "1.77445452",
+            "total_users_paid": "34",
+            "active_users": "7",
             "balance": "0.00000000",
             "health": "0"
           },
@@ -116939,8 +116939,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16597",
-            "active_users": "619",
+            "total_users_paid": "16614",
+            "active_users": "636",
             "balance": "0.00000000",
             "health": "0"
           },
@@ -116966,9 +116966,9 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "0.59186684",
-            "total_users_paid": "113",
-            "active_users": "16",
+            "paid_today": "0.59216658",
+            "total_users_paid": "114",
+            "active_users": "17",
             "balance": "75963.12044647",
             "health": "62"
           },
@@ -117046,7 +117046,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28713392",
+            "paid_today": "4.28723391",
             "total_users_paid": "198",
             "active_users": "41",
             "balance": "262537.93609414",
@@ -117658,7 +117658,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "9.52092731",
+            "paid_today": "9.52252538",
             "total_users_paid": "970",
             "active_users": "182",
             "balance": "578952.07253662",
@@ -117890,7 +117890,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.71773621",
+            "paid_today": "3.71809518",
             "total_users_paid": "1588",
             "active_users": "188",
             "balance": "546376.47811221",
@@ -117958,10 +117958,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "23.95393482",
+            "paid_today": "23.95829853",
             "total_users_paid": "2075",
-            "active_users": "370",
-            "balance": "630353.50028327",
+            "active_users": "371",
+            "balance": "630320.16694994",
             "health": "15"
           },
           "64": {
@@ -119234,7 +119234,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79681658",
+            "paid_today": "2.79781783",
             "total_users_paid": "693",
             "active_users": "80",
             "balance": "220603.80317652",
@@ -119470,7 +119470,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "12.06734254",
+            "paid_today": "12.06896832",
             "total_users_paid": "1471",
             "active_users": "189",
             "balance": "225267.69776435",
@@ -119534,10 +119534,10 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05840659",
+            "paid_today": "8.05954873",
             "total_users_paid": "935",
             "active_users": "120",
-            "balance": "90238.57994981",
+            "balance": "90192.06832190",
             "health": "13"
           },
           "101": {
@@ -119635,10 +119635,10 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "0.13120284",
-            "total_users_paid": "134",
-            "active_users": "10",
-            "balance": "9.70025758",
+            "paid_today": "0.13184545",
+            "total_users_paid": "135",
+            "active_users": "11",
+            "balance": "9.69825758",
             "health": "97"
           },
           "2": {
@@ -119659,9 +119659,9 @@
                 "name": "Faucet"
               }
             },
-            "paid_today": "2.35592373",
-            "total_users_paid": "594",
-            "active_users": "84",
+            "paid_today": "2.35740731",
+            "total_users_paid": "595",
+            "active_users": "86",
             "balance": "9.69140000",
             "health": "39"
           },
@@ -120023,7 +120023,7 @@
                 "name": "App"
               }
             },
-            "paid_today": "3.08602507",
+            "paid_today": "3.08615616",
             "total_users_paid": "745",
             "active_users": "36",
             "balance": "0.00000000",
@@ -120236,8 +120236,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16979",
-            "active_users": "664",
+            "total_users_paid": "17000",
+            "active_users": "685",
             "balance": "0.00000000",
             "health": "100"
           },
@@ -120532,8 +120532,8 @@
               }
             },
             "paid_today": "0.00000000",
-            "total_users_paid": "16597",
-            "active_users": "619",
+            "total_users_paid": "16615",
+            "active_users": "637",
             "balance": "0.00000000",
             "health": "0"
           },
@@ -120587,7 +120587,7 @@
                 "name": "Mining"
               }
             },
-            "paid_today": "4.28713392",
+            "paid_today": "4.28723391",
             "total_users_paid": "198",
             "active_users": "41",
             "balance": "0.00000000",
@@ -121591,7 +121591,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "2.79681658",
+            "paid_today": "2.79781783",
             "total_users_paid": "693",
             "active_users": "80",
             "balance": "0.00000000",
@@ -121739,7 +121739,7 @@
                 "name": "PTC & Offers"
               }
             },
-            "paid_today": "8.05840659",
+            "paid_today": "8.05954873",
             "total_users_paid": "935",
             "active_users": "120",
             "balance": "0.00000000",
