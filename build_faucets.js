@@ -511,7 +511,10 @@ async function writeConfigToTurso(client, mode, config) {
 async function mirrorToTurso(mode, raw, history, config) {
   const client = getTursoClient();
   if (!client) {
-    console.log('[turso] no credentials found — skipping cloud mirror.');
+    if (mode === MODE_PROD) {
+      throw new Error('[turso] PROD mirror requires Turso credentials — set GitHub Secrets TURSO_URL and TURSO_TOKEN (full-access / rw token). None found; skipping would leave the DB stale, so aborting.');
+    }
+    console.log('[turso] no credentials found — skipping cloud mirror (sandbox dry-run).');
     return;
   }
   try {
@@ -526,6 +529,9 @@ async function mirrorToTurso(mode, raw, history, config) {
     }
     console.log(`[turso] mirrored -> configs(${nCfg}) faucets(${nF}) history_faucets(+${nH})`);
   } catch (e) {
+    if (mode === MODE_PROD) {
+      throw new Error('[turso] PROD mirror FAILED (check TURSO_URL / TURSO_TOKEN are correct and the token has write/rw access): ' + (e && e.message ? e.message : e));
+    }
     console.error('[turso] mirror FAILED (non-fatal): ' + (e && e.message ? e.message : e));
   } finally {
     try {
