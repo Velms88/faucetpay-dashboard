@@ -1,0 +1,819 @@
+{
+  "updated_at": "2026-08-16T20:36:38.000Z",
+  "retention_days": 7,
+  "crypto_prices_usd": {
+    "BTC": 67000,
+    "ETH": 3500,
+    "DOGE": 0.12,
+    "LTC": 90,
+    "BCH": 350,
+    "DASH": 25,
+    "DGB": 0.008,
+    "TRX": 0.25,
+    "USDT": 1,
+    "FEY": 0.5,
+    "ZEC": 20,
+    "BNB": 580,
+    "SOL": 150,
+    "XRP": 0.6,
+    "POL": 0.4,
+    "ADA": 0.35,
+    "TON": 2.5,
+    "XLM": 0.09,
+    "USDC": 1,
+    "XMR": 160,
+    "TRUMP": 15,
+    "PEPE": 0.000011,
+    "FLT": 0.01
+  },
+  "faucets": [
+    {
+      "url": "http://freecoin.in.ua",
+      "is_enabled": true,
+      "age_months": 55,
+      "payout_type": "instant",
+      "gateways_count": 1,
+      "uii": 1,
+      "coins": {
+        "DOGE": {
+          "daily_peaks": [
+            83.27356694
+          ],
+          "recent_balances": [
+            83.27356694,
+            83.27356694,
+            83.27356694
+          ]
+        }
+      },
+      "payouts": {
+        "hours_since_last_payout": null,
+        "v_3h_actual": 0,
+        "v_3h_expected_median": 0,
+        "n_3h_actual": 0,
+        "n_3h_expected_median": 0,
+        "daily_volume_usd_7d_medians": [
+          0
+        ]
+      },
+      "daily_health_medians_7d": [
+        100
+      ],
+      "_tracking": {
+        "coins": {
+          "DOGE": {
+            "day": "2026-08-16",
+            "peak": 83.27356694
+          }
+        },
+        "payouts": {
+          "last_day": "2026-08-16",
+          "last_usd_total": 0.003407496,
+          "last_n_total": 481
+        },
+        "hourly": [
+          {
+            "h": 496364,
+            "usd": 0,
+            "n": 0,
+            "health": 100
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://123bit.com/faucet.php",
+      "is_enabled": true,
+      "age_months": 77,
+      "payout_type": "mixed",
+      "gateways_count": 1,
+      "uii": 1,
+      "coins": {
+        "PEPE": {
+          "daily_peaks": [
+            9710.83263423
+          ],
+          "recent_balances": [
+            9710.83263423,
+            9710.83263423,
+            9710.83263423
+          ]
+        }
+      },
+      "payouts": {
+        "hours_since_last_payout": null,
+        "v_3h_actual": 0,
+        "v_3h_expected_median": 0,
+        "n_3h_actual": 0,
+        "n_3h_expected_median": 0,
+        "daily_volume_usd_7d_medians": [
+          0
+        ]
+      },
+      "daily_health_medians_7d": [
+        100
+      ],
+      "_tracking": {
+        "coins": {
+          "PEPE": {
+            "day": "2026-08-16",
+            "peak": 9710.83263423
+          }
+        },
+        "payouts": {
+          "last_day": "2026-08-16",
+          "last_usd_total": 1.441e-10,
+          "last_n_total": 1
+        },
+        "hourly": [
+          {
+            "h": 496364,
+            "usd": 0,
+            "n": 0,
+            "health": 100
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://adclickersbot.com/",
+      "is_enabled": true,
+      "age_months": 13,
+      "payout_type": "mixed",
+      "gateways_count": 1,
+      "uii": 1.05,
+      "coins": {
+        "USDT": {
+          "daily_peaks": [
+            370.02125533
+          ],
+          "recent_balances": [
+            370.02125533,
+            370.02125533,
+            370.02125533
+          ]
+        }
+      },
+      "payouts": {
+        "hours_since_last_payout": null,
+        "v_3h_actual": 0,
+        "v_3h_expected_median": 0,
+        "n_3h_actual": 0,
+        "n_3h_expected_median": 0,
+        "daily_volume_usd_7d_medians": [
+          0
+        ]
+      },
+      "daily_health_medians_7d": [
+        100
+      ],
+      "_tracking": {
+        "coins": {
+          "USDT": {
+            "day": "2026-08-16",
+            "peak": 370.02125533
+          }
+        },
+        "payouts": {
+          "last_day": "2026-08-16",
+          "last_usd_total": 10.26108309,
+          "last_n_total": 56
+        },
+        "hourly": [
+          {
+            "h": 496364,
+            "usd": 0,
+            "n": 0,
+            "health": 100
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://btcearn.top/",
+      "is_enabled": true,
+      "age_months": 46,
+      "payout_type": "mixed",
+      "gateways_count": 3,
+      "uii": 1,
+      "coins": {
+        "DOGE": {
+          "daily_peaks": [
+            20.74565631
+          ],
+          "recent_balances": [
+            20.74565631,
+            20.74565631,
+            20.74565631
+          ]
+        },
+        "TRX": {
+          "daily_peaks": [
+            1.03823251
+          ],
+          "recent_balances": [
+            1.03823251,
+            1.03823251,
+            1.03823251
+          ]
+        },
+        "USDT": {
+          "daily_peaks": [
+            2.96931373
+          ],
+          "recent_balances": [
+            2.96931373,
+            2.96931373,
+            2.96931373
+          ]
+        }
+      },
+      "payouts": {
+        "hours_since_last_payout": null,
+        "v_3h_actual": 0,
+        "v_3h_expected_median": 0,
+        "n_3h_actual": 0,
+        "n_3h_expected_median": 0,
+        "daily_volume_usd_7d_medians": [
+          0
+        ]
+      },
+      "daily_health_medians_7d": [
+        100
+      ],
+      "_tracking": {
+        "coins": {
+          "DOGE": {
+            "day": "2026-08-16",
+            "peak": 20.74565631
+          },
+          "TRX": {
+            "day": "2026-08-16",
+            "peak": 1.03823251
+          },
+          "USDT": {
+            "day": "2026-08-16",
+            "peak": 2.96931373
+          }
+        },
+        "payouts": {
+          "last_day": "2026-08-16",
+          "last_usd_total": 0.3255976387,
+          "last_n_total": 12
+        },
+        "hourly": [
+          {
+            "h": 496364,
+            "usd": 0,
+            "n": 0,
+            "health": 100
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://buzzcash.io",
+      "is_enabled": true,
+      "age_months": 10,
+      "payout_type": "mixed",
+      "gateways_count": 5,
+      "uii": 1,
+      "coins": {
+        "DOGE": {
+          "daily_peaks": [
+            0
+          ],
+          "recent_balances": [
+            0,
+            0,
+            0
+          ]
+        },
+        "LTC": {
+          "daily_peaks": [
+            0
+          ],
+          "recent_balances": [
+            0,
+            0,
+            0
+          ]
+        },
+        "TRX": {
+          "daily_peaks": [
+            0
+          ],
+          "recent_balances": [
+            0,
+            0,
+            0
+          ]
+        },
+        "SOL": {
+          "daily_peaks": [
+            0
+          ],
+          "recent_balances": [
+            0,
+            0,
+            0
+          ]
+        },
+        "TON": {
+          "daily_peaks": [
+            0
+          ],
+          "recent_balances": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "payouts": {
+        "hours_since_last_payout": null,
+        "v_3h_actual": 0,
+        "v_3h_expected_median": 0,
+        "n_3h_actual": 0,
+        "n_3h_expected_median": 0,
+        "daily_volume_usd_7d_medians": [
+          0
+        ]
+      },
+      "daily_health_medians_7d": [
+        2
+      ],
+      "_tracking": {
+        "coins": {
+          "DOGE": {
+            "day": "2026-08-16",
+            "peak": 0
+          },
+          "LTC": {
+            "day": "2026-08-16",
+            "peak": 0
+          },
+          "TRX": {
+            "day": "2026-08-16",
+            "peak": 0
+          },
+          "SOL": {
+            "day": "2026-08-16",
+            "peak": 0
+          },
+          "TON": {
+            "day": "2026-08-16",
+            "peak": 0
+          }
+        },
+        "payouts": {
+          "last_day": "2026-08-16",
+          "last_usd_total": 1960.5114134290002,
+          "last_n_total": 220
+        },
+        "hourly": [
+          {
+            "h": 496364,
+            "usd": 0,
+            "n": 0,
+            "health": 2
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://earntrx.online/",
+      "is_enabled": true,
+      "age_months": 52,
+      "payout_type": "mixed",
+      "gateways_count": 2,
+      "uii": 1,
+      "coins": {
+        "DASH": {
+          "daily_peaks": [
+            0
+          ],
+          "recent_balances": [
+            0,
+            0,
+            0
+          ]
+        },
+        "TRX": {
+          "daily_peaks": [
+            0.00012569
+          ],
+          "recent_balances": [
+            0.00012569,
+            0.00012569,
+            0.00012569
+          ]
+        }
+      },
+      "payouts": {
+        "hours_since_last_payout": null,
+        "v_3h_actual": 0,
+        "v_3h_expected_median": 0,
+        "n_3h_actual": 0,
+        "n_3h_expected_median": 0,
+        "daily_volume_usd_7d_medians": [
+          0
+        ]
+      },
+      "daily_health_medians_7d": [
+        0
+      ],
+      "_tracking": {
+        "coins": {
+          "DASH": {
+            "day": "2026-08-16",
+            "peak": 0
+          },
+          "TRX": {
+            "day": "2026-08-16",
+            "peak": 0.00012569
+          }
+        },
+        "payouts": {
+          "last_day": "2026-08-16",
+          "last_usd_total": 0,
+          "last_n_total": 49582
+        },
+        "hourly": [
+          {
+            "h": 496364,
+            "usd": 0,
+            "n": 0,
+            "health": 0
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://faucetboost.top/",
+      "is_enabled": true,
+      "age_months": 1,
+      "payout_type": "mixed",
+      "gateways_count": 3,
+      "uii": 1,
+      "coins": {
+        "BTC": {
+          "daily_peaks": [
+            0
+          ],
+          "recent_balances": [
+            0,
+            0,
+            0
+          ]
+        },
+        "LTC": {
+          "daily_peaks": [
+            0.00227685
+          ],
+          "recent_balances": [
+            0.00227685,
+            0.00227685,
+            0.00227685
+          ]
+        },
+        "USDT": {
+          "daily_peaks": [
+            0.61637927
+          ],
+          "recent_balances": [
+            0.61637927,
+            0.61637927,
+            0.61637927
+          ]
+        }
+      },
+      "payouts": {
+        "hours_since_last_payout": null,
+        "v_3h_actual": 0,
+        "v_3h_expected_median": 0,
+        "n_3h_actual": 0,
+        "n_3h_expected_median": 0,
+        "daily_volume_usd_7d_medians": [
+          0
+        ]
+      },
+      "daily_health_medians_7d": [
+        15
+      ],
+      "_tracking": {
+        "coins": {
+          "BTC": {
+            "day": "2026-08-16",
+            "peak": 0
+          },
+          "LTC": {
+            "day": "2026-08-16",
+            "peak": 0.00227685
+          },
+          "USDT": {
+            "day": "2026-08-16",
+            "peak": 0.61637927
+          }
+        },
+        "payouts": {
+          "last_day": "2026-08-16",
+          "last_usd_total": 146239.35970149998,
+          "last_n_total": 6
+        },
+        "hourly": [
+          {
+            "h": 496364,
+            "usd": 0,
+            "n": 0,
+            "health": 15
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://faucetbr.tk/doge",
+      "is_enabled": true,
+      "age_months": 66,
+      "payout_type": "mixed",
+      "gateways_count": 1,
+      "uii": 1,
+      "coins": {
+        "DOGE": {
+          "daily_peaks": [
+            38.65523616
+          ],
+          "recent_balances": [
+            38.65523616,
+            38.65523616,
+            38.65523616
+          ]
+        }
+      },
+      "payouts": {
+        "hours_since_last_payout": null,
+        "v_3h_actual": 0,
+        "v_3h_expected_median": 0,
+        "n_3h_actual": 0,
+        "n_3h_expected_median": 0,
+        "daily_volume_usd_7d_medians": [
+          0
+        ]
+      },
+      "daily_health_medians_7d": [
+        100
+      ],
+      "_tracking": {
+        "coins": {
+          "DOGE": {
+            "day": "2026-08-16",
+            "peak": 38.65523616
+          }
+        },
+        "payouts": {
+          "last_day": "2026-08-16",
+          "last_usd_total": 0.0065332452,
+          "last_n_total": 159
+        },
+        "hourly": [
+          {
+            "h": 496364,
+            "usd": 0,
+            "n": 0,
+            "health": 100
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://grogrowthcoin.com/join-gro/?ref=186792e8&src=faucetpay_doge&utm_source=faucetpay_doge",
+      "is_enabled": true,
+      "age_months": 21,
+      "payout_type": "mixed",
+      "gateways_count": 1,
+      "uii": 1,
+      "coins": {
+        "DOGE": {
+          "daily_peaks": [
+            175.98231177
+          ],
+          "recent_balances": [
+            175.98231177,
+            175.98231177,
+            175.98231177
+          ]
+        }
+      },
+      "payouts": {
+        "hours_since_last_payout": null,
+        "v_3h_actual": 0,
+        "v_3h_expected_median": 0,
+        "n_3h_actual": 0,
+        "n_3h_expected_median": 0,
+        "daily_volume_usd_7d_medians": [
+          0
+        ]
+      },
+      "daily_health_medians_7d": [
+        100
+      ],
+      "_tracking": {
+        "coins": {
+          "DOGE": {
+            "day": "2026-08-16",
+            "peak": 175.98231177
+          }
+        },
+        "payouts": {
+          "last_day": "2026-08-16",
+          "last_usd_total": 0.023630881200000002,
+          "last_n_total": 316
+        },
+        "hourly": [
+          {
+            "h": 496364,
+            "usd": 0,
+            "n": 0,
+            "health": 100
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://is2btc.com",
+      "is_enabled": true,
+      "age_months": 66,
+      "payout_type": "mixed",
+      "gateways_count": 1,
+      "uii": 1,
+      "coins": {
+        "DGB": {
+          "daily_peaks": [
+            746.44836496
+          ],
+          "recent_balances": [
+            746.44836496,
+            746.44836496,
+            746.44836496
+          ]
+        }
+      },
+      "payouts": {
+        "hours_since_last_payout": null,
+        "v_3h_actual": 0,
+        "v_3h_expected_median": 0,
+        "n_3h_actual": 0,
+        "n_3h_expected_median": 0,
+        "daily_volume_usd_7d_medians": [
+          0
+        ]
+      },
+      "daily_health_medians_7d": [
+        100
+      ],
+      "_tracking": {
+        "coins": {
+          "DGB": {
+            "day": "2026-08-16",
+            "peak": 746.44836496
+          }
+        },
+        "payouts": {
+          "last_day": "2026-08-16",
+          "last_usd_total": 0.00060417296,
+          "last_n_total": 154
+        },
+        "hourly": [
+          {
+            "h": 496364,
+            "usd": 0,
+            "n": 0,
+            "health": 100
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://keran.co/FEY/",
+      "is_enabled": true,
+      "age_months": 76,
+      "payout_type": "mixed",
+      "gateways_count": 2,
+      "uii": 1,
+      "coins": {
+        "FEY": {
+          "daily_peaks": [
+            73.21563561
+          ],
+          "recent_balances": [
+            73.21563561,
+            73.21563561,
+            73.21563561
+          ]
+        },
+        "FLT": {
+          "daily_peaks": [
+            9.93615758
+          ],
+          "recent_balances": [
+            9.93615758,
+            9.93615758,
+            9.93615758
+          ]
+        }
+      },
+      "payouts": {
+        "hours_since_last_payout": null,
+        "v_3h_actual": 0,
+        "v_3h_expected_median": 0,
+        "n_3h_actual": 0,
+        "n_3h_expected_median": 0,
+        "daily_volume_usd_7d_medians": [
+          0
+        ]
+      },
+      "daily_health_medians_7d": [
+        100
+      ],
+      "_tracking": {
+        "coins": {
+          "FEY": {
+            "day": "2026-08-16",
+            "peak": 73.21563561
+          },
+          "FLT": {
+            "day": "2026-08-16",
+            "peak": 9.93615758
+          }
+        },
+        "payouts": {
+          "last_day": "2026-08-16",
+          "last_usd_total": 0.0850696677,
+          "last_n_total": 250
+        },
+        "hourly": [
+          {
+            "h": 496364,
+            "usd": 0,
+            "n": 0,
+            "health": 100
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://luckywatch.pro/",
+      "is_enabled": true,
+      "age_months": 8,
+      "payout_type": "mixed",
+      "gateways_count": 1,
+      "uii": 1.1,
+      "coins": {
+        "USDT": {
+          "daily_peaks": [
+            118.103799
+          ],
+          "recent_balances": [
+            118.103799,
+            118.103799,
+            118.103799
+          ]
+        }
+      },
+      "payouts": {
+        "hours_since_last_payout": null,
+        "v_3h_actual": 0,
+        "v_3h_expected_median": 0,
+        "n_3h_actual": 0,
+        "n_3h_expected_median": 0,
+        "daily_volume_usd_7d_medians": [
+          0
+        ]
+      },
+      "daily_health_medians_7d": [
+        16
+      ],
+      "_tracking": {
+        "coins": {
+          "USDT": {
+            "day": "2026-08-16",
+            "peak": 118.103799
+          }
+        },
+        "payouts": {
+          "last_day": "2026-08-16",
+          "last_usd_total": 349.13529076,
+          "last_n_total": 443
+        },
+        "hourly": [
+          {
+            "h": 496364,
+            "usd": 0,
+            "n": 0,
+            "health": 16
+          }
+        ]
+      }
+    }
+  ]
+}

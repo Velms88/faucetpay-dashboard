@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>FaucetPay Monitor</title>
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./style.css?v=5">
 </head>
 <body>
 
@@ -14,6 +14,18 @@
       <div>
         <h1>💧 FaucetPay Monitor</h1>
         <p class="subtitle">Автоматический мониторинг кранов FaucetPay (обновление каждый час)</p>
+      </div>
+
+      <div class="topbar-controls">
+        <div class="mode-toggle" id="mode-toggle" title="Режим данных">
+          <button type="button" class="mode-btn active" data-mode="real">Real</button>
+          <button type="button" class="mode-btn" data-mode="sandbox">Sandbox</button>
+        </div>
+
+        <div id="admin-buttons" class="admin-buttons">
+          <button id="admin-real-btn" type="button" class="btn admin-btn">⚙️ Настройки конфига (Real)</button>
+          <button id="admin-sandbox-btn" type="button" class="btn admin-btn">🧪 Управление песочницей (Sandbox)</button>
+        </div>
       </div>
 
       <div class="stats-wrapper">
@@ -29,14 +41,19 @@
       </div>
     </div>
 
+    <div id="sandbox-plaque" class="sandbox-plaque" hidden>🧪 Sandbox Environment — тестовые данные (faucets.sandbox.json). Боевые файлы faucets.json и history.json не затрагиваются.</div>
+
     <div id="error-banner" class="error-banner"></div>
+
+    <div id="admin-root"></div>
 
     <div id="faucet-table"></div>
 
     <p class="footer-note">Данные предоставлены публичным API FaucetPay. Файл faucets.json обновляется автоматически через GitHub Actions.</p>
   </div>
-
-  <!-- ?v=4 — cache-buster: меняйте версию при каждом деплое, чтобы браузеры подхватывали новую версию app.js -->
-  <script src="./app.js?v=4"></script>
+  <script src="./auth_config.js"></script>
+  <!-- ?v=7 — cache-buster: меняйте версию при каждом деплое, чтобы браузеры подхватывали новую версию app.js -->
+   <script src="./cryptoPrices.js?v=1"></script>
+    <script src="./app.js?v=21"></script>
 </body>
 </html>
