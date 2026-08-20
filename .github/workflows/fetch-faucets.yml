@@ -91,7 +91,7 @@ jobs:
         run: |
           node build_faucets.js --mode=prod --fetch-prices
 
-       - name: Commit and push raw snapshot if changed
+      - name: Commit and push raw snapshot if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
