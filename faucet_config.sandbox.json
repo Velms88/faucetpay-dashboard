@@ -7,29 +7,12 @@
     "max_targets": 30
   },
   "crypto_prices_usd": {
-    "BTC": 62000,
-    "ETH": 1850,
-    "DOGE": 0.08,
-    "LTC": 45,
-    "BCH": 280,
-    "DASH": 35,
-    "DGB": 0.008,
-    "TRX": 0.25,
+    "BTC": 67000,
+    "ETH": 3500,
+    "DOGE": 0.12,
+    "LTC": 90,
     "USDT": 1,
-    "FEY": 0.5,
-    "ZEC": 20,
-    "BNB": 580,
-    "SOL": 150,
-    "XRP": 0.6,
-    "POL": 0.4,
-    "ADA": 0.35,
-    "TON": 2.5,
-    "XLM": 0.09,
-    "USDC": 1,
-    "XMR": 160,
-    "TRUMP": 15,
-    "PEPE": 0.000011,
-    "FLT": 0.01
+    "SOL": 150
   },
   "health": {
     "max_health_pct": 100,
@@ -222,5 +205,33 @@
     "block_2_max_points": 100,
     "final_rating_max": 100
   },
-  "targets": []
+  "targets": [
+    {
+      "url": "https://viefaucet.com",
+      "label": "Vie Faucet",
+      "is_enabled": true,
+      "payout_type": "instant",
+      "gateways_count": 3,
+      "age_months": 60,
+      "uii": 1.1
+    },
+    {
+      "url": "https://earnbitmoon.club",
+      "label": "EarnBitMoon",
+      "is_enabled": true,
+      "payout_type": "instant",
+      "gateways_count": 3,
+      "age_months": 48,
+      "uii": 1.08
+    },
+    {
+      "url": "https://freeltc.online",
+      "label": "FreeLTC",
+      "is_enabled": true,
+      "payout_type": "instant",
+      "gateways_count": 2,
+      "age_months": 8,
+      "uii": 1
+    }
+  ]
 }
