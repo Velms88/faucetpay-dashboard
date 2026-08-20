@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T13:10:10.000Z",
+  "updated_at": "2026-08-20T14:00:09.000Z",
   "retention_days": 7,
   "crypto_prices_usd": {
     "BTC": 67000,
@@ -41,9 +41,9 @@
             81.96546952
           ],
           "recent_balances": [
-            83.27356694,
             81.96546952,
-            81.96546472
+            81.96546472,
+            81.96546337
           ]
         }
       },
@@ -51,7 +51,7 @@
         "hours_since_last_payout": 0,
         "v_3h_actual": 0,
         "v_3h_expected_median": 0,
-        "n_3h_actual": 92,
+        "n_3h_actual": 110,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
           0,
@@ -72,7 +72,7 @@
         "payouts": {
           "last_day": "2026-08-20",
           "last_usd_total": 0,
-          "last_n_total": 381
+          "last_n_total": 399
         },
         "hourly": [
           {
@@ -92,6 +92,12 @@
             "usd": 0,
             "n": 92,
             "health": 100
+          },
+          {
+            "h": 496454,
+            "usd": 0,
+            "n": 18,
+            "health": 100
           }
         ]
       }
@@ -110,9 +116,9 @@
             8645.83263423
           ],
           "recent_balances": [
-            9710.83263423,
             8645.83263423,
-            8585.83263423
+            8585.83263423,
+            8555.83263423
           ]
         }
       },
@@ -140,7 +146,7 @@
         },
         "payouts": {
           "last_day": "2026-08-20",
-          "last_usd_total": 9.3368e-9,
+          "last_usd_total": 1.036805e-8,
           "last_n_total": 1
         },
         "hourly": [
@@ -161,6 +167,12 @@
             "usd": 2.0630500000000002e-9,
             "n": 0,
             "health": 100
+          },
+          {
+            "h": 496454,
+            "usd": 1.0312499999999997e-9,
+            "n": 0,
+            "health": 100
           }
         ]
       }
@@ -179,21 +191,21 @@
             326.17832692
           ],
           "recent_balances": [
-            370.02125533,
             326.17832692,
-            322.97682692
+            322.97682692,
+            322.08977692
           ]
         }
       },
       "payouts": {
         "hours_since_last_payout": 0,
-        "v_3h_actual": 6.66,
+        "v_3h_actual": 7.55,
         "v_3h_expected_median": 0,
-        "n_3h_actual": 13,
+        "n_3h_actual": 18,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
           0,
-          6.66
+          7.55
         ]
       },
       "daily_health_medians_7d": [
@@ -209,8 +221,8 @@
         },
         "payouts": {
           "last_day": "2026-08-20",
-          "last_usd_total": 6.66359024,
-          "last_n_total": 37
+          "last_usd_total": 7.5500746,
+          "last_n_total": 42
         },
         "hourly": [
           {
@@ -230,6 +242,12 @@
             "usd": 3.1995174200000003,
             "n": 13,
             "health": 100
+          },
+          {
+            "h": 496454,
+            "usd": 0.8864843599999999,
+            "n": 5,
+            "health": 100
           }
         ]
       }
@@ -248,7 +266,7 @@
             19.97805632
           ],
           "recent_balances": [
-            20.74565631,
+            19.97805632,
             19.97805632,
             19.97805632
           ]
@@ -259,7 +277,7 @@
             0.12623251
           ],
           "recent_balances": [
-            1.03823251,
+            0.12623251,
             0.12623251,
             0.12623251
           ]
@@ -270,7 +288,7 @@
             2.97131373
           ],
           "recent_balances": [
-            2.96931373,
+            2.97131373,
             2.97131373,
             2.97131373
           ]
@@ -326,6 +344,12 @@
           },
           {
             "h": 496453,
+            "usd": 0,
+            "n": 0,
+            "health": 100
+          },
+          {
+            "h": 496454,
             "usd": 0,
             "n": 0,
             "health": 100
@@ -399,13 +423,13 @@
       },
       "payouts": {
         "hours_since_last_payout": 0,
-        "v_3h_actual": 846.13,
+        "v_3h_actual": 1010.81,
         "v_3h_expected_median": 0,
-        "n_3h_actual": 25,
+        "n_3h_actual": 55,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
           0,
-          846.13
+          1010.81
         ]
       },
       "daily_health_medians_7d": [
@@ -437,8 +461,8 @@
         },
         "payouts": {
           "last_day": "2026-08-20",
-          "last_usd_total": 846.1265767079001,
-          "last_n_total": 115
+          "last_usd_total": 1010.8104382323002,
+          "last_n_total": 145
         },
         "hourly": [
           {
@@ -457,6 +481,12 @@
             "h": 496453,
             "usd": 134.29822338670022,
             "n": 25,
+            "health": 25
+          },
+          {
+            "h": 496454,
+            "usd": 164.68386152440007,
+            "n": 30,
             "health": 25
           }
         ]
@@ -497,7 +527,7 @@
         "hours_since_last_payout": 0,
         "v_3h_actual": 0,
         "v_3h_expected_median": 0,
-        "n_3h_actual": 4438,
+        "n_3h_actual": 6228,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
           0,
@@ -522,7 +552,7 @@
         "payouts": {
           "last_day": "2026-08-20",
           "last_usd_total": 0,
-          "last_n_total": 24282
+          "last_n_total": 26072
         },
         "hourly": [
           {
@@ -541,6 +571,12 @@
             "h": 496453,
             "usd": 0,
             "n": 4438,
+            "health": 100
+          },
+          {
+            "h": 496454,
+            "usd": 0,
+            "n": 1790,
             "health": 100
           }
         ]
@@ -571,8 +607,8 @@
             0.01348584
           ],
           "recent_balances": [
-            0.00227685,
             0.01348584,
+            0.0132594,
             0.0132594
           ]
         },
@@ -582,14 +618,14 @@
             0.28378558
           ],
           "recent_balances": [
-            0.61637927,
+            0.28378558,
             0.28378558,
             0.28378558
           ]
         }
       },
       "payouts": {
-        "hours_since_last_payout": 0,
+        "hours_since_last_payout": 1,
         "v_3h_actual": 721.02,
         "v_3h_expected_median": 0,
         "n_3h_actual": 3,
@@ -641,6 +677,12 @@
             "usd": 721.01624244,
             "n": 3,
             "health": 11
+          },
+          {
+            "h": 496454,
+            "usd": 0,
+            "n": 0,
+            "health": 11
           }
         ]
       }
@@ -659,9 +701,9 @@
             34.49096116
           ],
           "recent_balances": [
-            38.65523616,
             34.49096116,
-            34.41403616
+            34.41403616,
+            34.36783616
           ]
         }
       },
@@ -669,7 +711,7 @@
         "hours_since_last_payout": 0,
         "v_3h_actual": 0.01,
         "v_3h_expected_median": 0,
-        "n_3h_actual": 16,
+        "n_3h_actual": 24,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
           0,
@@ -689,8 +731,8 @@
         },
         "payouts": {
           "last_day": "2026-08-20",
-          "last_usd_total": 0.0052920684,
-          "last_n_total": 124
+          "last_usd_total": 0.0057205416,
+          "last_n_total": 132
         },
         "hourly": [
           {
@@ -710,6 +752,12 @@
             "usd": 0.0007113179999999998,
             "n": 16,
             "health": 100
+          },
+          {
+            "h": 496454,
+            "usd": 0.00042847320000000046,
+            "n": 8,
+            "health": 100
           }
         ]
       }
@@ -728,9 +776,9 @@
             176.08286463
           ],
           "recent_balances": [
-            175.98231177,
             176.08286463,
-            175.86527057
+            175.86527057,
+            175.76826664
           ]
         }
       },
@@ -738,7 +786,7 @@
         "hours_since_last_payout": 0,
         "v_3h_actual": 0.02,
         "v_3h_expected_median": 0,
-        "n_3h_actual": 16,
+        "n_3h_actual": 25,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
           0,
@@ -758,8 +806,8 @@
         },
         "payouts": {
           "last_day": "2026-08-20",
-          "last_usd_total": 0.018841128,
-          "last_n_total": 248
+          "last_usd_total": 0.0197408832,
+          "last_n_total": 257
         },
         "hourly": [
           {
@@ -779,6 +827,12 @@
             "usd": 0.0020121407999999993,
             "n": 16,
             "health": 100
+          },
+          {
+            "h": 496454,
+            "usd": 0.0008997552000000013,
+            "n": 9,
+            "health": 100
           }
         ]
       }
@@ -797,9 +851,9 @@
             646.50216496
           ],
           "recent_balances": [
-            746.44836496,
             646.50216496,
-            644.98476496
+            644.98476496,
+            643.73556496
           ]
         }
       },
@@ -807,7 +861,7 @@
         "hours_since_last_payout": 0,
         "v_3h_actual": 0,
         "v_3h_expected_median": 0,
-        "n_3h_actual": 11,
+        "n_3h_actual": 20,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
           0,
@@ -827,8 +881,8 @@
         },
         "payouts": {
           "last_day": "2026-08-20",
-          "last_usd_total": 0.00044148808000000003,
-          "last_n_total": 111
+          "last_usd_total": 0.0004827776,
+          "last_n_total": 120
         },
         "hourly": [
           {
@@ -848,6 +902,12 @@
             "usd": 0.00004971735999999998,
             "n": 11,
             "health": 100
+          },
+          {
+            "h": 496454,
+            "usd": 0.000041289519999999945,
+            "n": 9,
+            "health": 100
           }
         ]
       }
@@ -866,9 +926,9 @@
             88.71894111
           ],
           "recent_balances": [
-            73.21563561,
             88.71894111,
-            85.03940621
+            85.03940621,
+            83.44057365
           ]
         },
         "FLT": {
@@ -877,9 +937,9 @@
             9.88075758
           ],
           "recent_balances": [
-            9.93615758,
             9.88075758,
-            9.83405758
+            9.83405758,
+            9.79085758
           ]
         }
       },
@@ -887,7 +947,7 @@
         "hours_since_last_payout": 0,
         "v_3h_actual": 0.06,
         "v_3h_expected_median": 0,
-        "n_3h_actual": 34,
+        "n_3h_actual": 52,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
           0,
@@ -911,8 +971,8 @@
         },
         "payouts": {
           "last_day": "2026-08-20",
-          "last_usd_total": 0.0569230482,
-          "last_n_total": 198
+          "last_usd_total": 0.0639861453,
+          "last_n_total": 216
         },
         "hourly": [
           {
@@ -932,6 +992,12 @@
             "usd": 0.013583319599999998,
             "n": 34,
             "health": 87
+          },
+          {
+            "h": 496454,
+            "usd": 0.007063097100000006,
+            "n": 18,
+            "health": 87
           }
         ]
       }
@@ -950,21 +1016,21 @@
             537.926199
           ],
           "recent_balances": [
-            118.103799,
             537.926199,
-            513.462999
+            513.462999,
+            506.243399
           ]
         }
       },
       "payouts": {
         "hours_since_last_payout": 0,
-        "v_3h_actual": 111.34,
+        "v_3h_actual": 118.56,
         "v_3h_expected_median": 0,
-        "n_3h_actual": 35,
+        "n_3h_actual": 48,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
           0,
-          111.34
+          118.56
         ]
       },
       "daily_health_medians_7d": [
@@ -980,8 +1046,8 @@
         },
         "payouts": {
           "last_day": "2026-08-20",
-          "last_usd_total": 111.34404996,
-          "last_n_total": 161
+          "last_usd_total": 118.55901133,
+          "last_n_total": 174
         },
         "hourly": [
           {
@@ -1000,6 +1066,12 @@
             "h": 496453,
             "usd": 24.447931390000008,
             "n": 35,
+            "health": 12
+          },
+          {
+            "h": 496454,
+            "usd": 7.2149613699999975,
+            "n": 13,
             "health": 12
           }
         ]
