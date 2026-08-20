@@ -1,0 +1,12 @@
+{
+  "name": "faucetpay-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FaucetPay Monitor dashboard + Turso migration tooling",
+  "scripts": {
+    "init-db": "node init_db.js"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.15.15"
+  }
+}

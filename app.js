@@ -7,6 +7,11 @@ const DATA_FILES = {
   sandbox: './faucets.sandbox.json',
 };
 
+// Turso (read-only, browser-facing). This is a READ-ONLY token — safe to
+// expose publicly. Writes happen server-side in build_faucets.js (full token).
+const TURSO_DB_URL = 'https://faucetpay-db-velms.aws-eu-west-1.turso.io';
+const TURSO_READONLY_TOKEN = 'eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicm8iLCJpYXQiOjE3ODcyMzM4MDMsImlkIjoiMDFhMDFmMjktZmQwMS03YjkwLThmN2ItNmE5YWUyZTIxNWI1Iiwia2lkIjoiUGlNWXZRQnNyeUNyY1NveUhvdUU0VUxCYjktSExyZXdERk1zRlJJd0NqZyIsInJpZCI6Ijk5NDY1OWM3LTA0MjMtNGRiYS1hYWY2LTAzYWFhYzU0YzQwZiJ9.rEWeefUlnZfzv7i_JWxbsA55DMph3OWf5wIXRlReZW7245yPAlR-5aFDLqMEeosHEVVaWidbhb7u4dHtxXXlCg';
+
 const MODE_STORAGE_KEY = 'faucet-monitor-mode';
 let mode = 'real';
 let dataUrl = DATA_FILES.real;
@@ -515,33 +520,19 @@ async function loadData() {
   }
 
   try {
-    const fileName = dataUrl.split('/').pop();
-    const res = await fetch(`${dataUrl}?t=${Date.now()}`, { cache: 'no-store' });
-
-    if (!res.ok) {
-      throw new Error(`Файл ${fileName} не найден (HTTP ${res.status}). Возможно, GitHub Action ещё не запускался.`);
-    }
-
-    let json;
-    try {
-      json = await res.json();
-    } catch (e) {
-      throw new Error(`${fileName} повреждён или содержит некорректный JSON.`);
-    }
-
-    const { fetchedAt, rows } = normalizeResponse(json);
+    const { faucetsJson, hist, cfg } = await loadRealDataFromTurso();
+    if (cfg) realConfigCache = cfg;
+    const { fetchedAt, rows } = normalizeResponse(faucetsJson);
 
     if (!Array.isArray(rows) || rows.length === 0) {
-      throw new Error(`${fileName} загружен, но не удалось извлечь ни одной записи о кране — проверь структуру файла.`);
+      throw new Error('Turso: не удалось извлечь ни одной записи о кране — проверь подключение к БД.');
     }
 
     let finalRows = rows;
     try {
-      const cfg = await loadRealConfig();
-      const hist = await safeFetchJson('./history.json');
       if (cfg && hist) finalRows = computeRealRows(rows, hist, cfg);
     } catch (e) {
-      console.warn('real recompute skipped (using raw faucets.json):', e);
+      console.warn('real recompute skipped (using raw faucets from Turso):', e);
     }
 
     allRows = finalRows;
@@ -555,7 +546,7 @@ async function loadData() {
     recordCountEl.textContent = '0';
     lastUpdatedEl.textContent = '—';
     render();
-    showError(err.message || 'Не удалось загрузить данные.');
+    showError(err.message || 'Не удалось загрузить данные из Turso.');
   }
 }
 
@@ -934,9 +925,117 @@ async function fetchJson(url) {
   if (!res.ok) throw new Error('HTTP ' + res.status + ' для ' + url);
   return res.json();
 }
+
+// ---------------------------------------------------------------------------
+// Turso (read-only, browser) — Real Mode data source.
+// ---------------------------------------------------------------------------
+async function queryTurso(sql) {
+  const token = (typeof window !== 'undefined' && window.__TURSO_TOKEN) || TURSO_READONLY_TOKEN;
+  const res = await fetch(`${TURSO_DB_URL}/v2/pipeline`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + token },
+    body: JSON.stringify({ requests: [{ type: 'execute', stmt: { sql } }, { type: 'close' }] }),
+  });
+  if (!res.ok) throw new Error('Turso HTTP ' + res.status);
+  const data = await res.json();
+  if (data.error) throw new Error('Turso error: ' + (data.error.message || data.error));
+  const exec = data.results && data.results[0];
+  if (!exec || exec.type !== 'ok' || !exec.response || !exec.response.result) return [];
+  const result = exec.response.result;
+  const cols = (result.cols || []).map((c) => c.name);
+  const rows = result.rows || [];
+  return rows.map((row) => {
+    const obj = {};
+    cols.forEach((c, i) => { obj[c] = row[i] ? row[i].value : null; });
+    return obj;
+  });
+}
+
+async function loadRealDataFromTurso() {
+  const cfgRows = await queryTurso("SELECT data FROM configs WHERE mode='prod'");
+  const cfg = cfgRows.length ? JSON.parse(cfgRows[0].data) : null;
+
+  const faucetRows = await queryTurso(
+    "SELECT raw_json, health_score, rating, rating_grade FROM faucets WHERE mode='prod'"
+  );
+  const listData = faucetRows.map((r) => {
+    const base = JSON.parse(r.raw_json);
+    return Object.assign({}, base, {
+      health_score: r.health_score != null ? Number(r.health_score) : null,
+      rating: r.rating != null ? Number(r.rating) : null,
+      rating_grade: r.rating_grade != null ? r.rating_grade : null,
+    });
+  });
+  const fetchedAt = (cfg && cfg.updated_at) || new Date().toISOString();
+  const faucetsJson = { fetched_at: fetchedAt, data: { list_data: listData } };
+
+  const histRows = await queryTurso('SELECT url, data FROM history_faucets');
+  const hist = {
+    crypto_prices_usd: (cfg && cfg.crypto_prices_usd) || {},
+    retention_days: (cfg && cfg.settings && cfg.settings.history_retention_days) || 7,
+    updated_at: (cfg && cfg.updated_at) || null,
+    faucets: histRows.map((r) => JSON.parse(r.data)),
+  };
+  return { faucetsJson, hist, cfg };
+}
 const LS_CONFIG_KEY = 'sandbox_faucet_config';
 const LS_HISTORY_KEY = 'sandbox_history';
 const LS_REAL_KEY = 'real_faucet_config';
+const LS_TURSO_ADMIN_KEY = 'turso_admin_key';
+
+function getTursoAdminKey() {
+  try { return localStorage.getItem(LS_TURSO_ADMIN_KEY) || ''; } catch (e) { return ''; }
+}
+function setTursoAdminKey(tok) {
+  try { localStorage.setItem(LS_TURSO_ADMIN_KEY, tok); } catch (e) { /* ignore */ }
+}
+
+// Save a config object to Turso (requires the Full-Access Admin Key).
+async function saveConfigToTurso(mode, config) {
+  const token = getTursoAdminKey();
+  if (!token) throw new Error('Admin Key (Full-Access токен Turso) не введён.');
+  const V = (v) => ({ type: 'text', value: String(v) });
+  const sql =
+    "INSERT INTO configs (mode, data, updated_at) VALUES (?, ?, ?) " +
+    "ON CONFLICT(mode) DO UPDATE SET data=excluded.data, updated_at=excluded.updated_at";
+  const res = await fetch(`${TURSO_DB_URL}/v2/pipeline`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + token },
+    body: JSON.stringify({
+      requests: [{ type: 'execute', stmt: { sql, args: [V(mode), V(JSON.stringify(config)), V(new Date().toISOString())] } }, { type: 'close' }],
+    }),
+  });
+  const data = await res.json();
+  if (data.error) throw new Error('Turso write error: ' + (data.error.message || data.error));
+  const r0 = data.results && data.results[0];
+  if (!r0 || r0.type !== 'ok') throw new Error('Turso write failed');
+  return true;
+}
+
+// Ensure an Admin Key is present; if not, prompt via modal, then run action(token).
+async function ensureAdminKeyThen(action) {
+  const existing = getTursoAdminKey();
+  if (existing) { await action(existing); return; }
+  openAdminKeyModal(async (key) => { if (key) { setTursoAdminKey(key); await action(key); } });
+}
+
+function openAdminKeyModal(onSubmit) {
+  const overlay = openModalShell('🔑 Turso Admin Key (Full-Access)', { onClose: () => {} });
+  const body = overlay.querySelector('#modal-tab-body');
+  body.innerHTML =
+    '<p class="modal-hint">Введите <b>Full-Access</b> токен Turso (rw). Он нужен только для записи настроек в БД и сохраняется в localStorage этого браузера. Никогда не публикуйте его в коде сайта.</p>' +
+    '<input class="admin-input" id="admin-key-input" type="password" placeholder="eyJ..." style="width:100%"/>';
+  const footer = overlay.querySelector('#modal-footer');
+  footer.innerHTML = '<button class="btn" id="ak-cancel">Отмена</button><button class="btn btn-primary" id="ak-save">Сохранить ключ</button>';
+  footer.querySelector('#ak-cancel').addEventListener('click', () => overlay.remove());
+  footer.querySelector('#ak-save').addEventListener('click', () => {
+    const v = body.querySelector('#admin-key-input').value.trim();
+    if (!v) { showToast('Введите токен', 'error'); return; }
+    setTursoAdminKey(v);
+    overlay.remove();
+    onSubmit(v);
+  });
+}
 const DEMO_FAUCET_URLS = new Set([
   'https://stablefaucet.com',
   'https://decliningfaucet.com',
@@ -995,10 +1094,19 @@ async function loadSandboxAdminData(forceDisk) {
   } catch (e) { /* ignore */ }
   const needConfig = !lsConfig;
   const needHistory = !lsHistory;
-  const [config, history] = await Promise.all([
-    needConfig ? safeFetchJson('./faucet_config.sandbox.json') : Promise.resolve(lsConfig),
-    needHistory ? safeFetchJson('./history.sandbox.json') : Promise.resolve(lsHistory),
-  ]);
+  // Prefer the cloud sandbox config (source of truth) when no local override exists.
+  try {
+    if (needConfig) {
+      const rows = await queryTurso("SELECT data FROM configs WHERE mode='sandbox'");
+      if (rows.length) lsConfig = JSON.parse(rows[0].data);
+    }
+  } catch (e) {
+    console.warn('Turso sandbox config load failed, using local fallback:', e.message);
+  }
+  const config = lsConfig
+    ? lsConfig
+    : needConfig ? await safeFetchJson('./faucet_config.sandbox.json') : lsConfig;
+  const history = needHistory ? await safeFetchJson('./history.sandbox.json') : lsHistory;
   sandboxState.config = (config && typeof config === 'object') ? config : defaultSandboxConfig();
   sandboxState.history = (history && typeof history === 'object') ? history : defaultSandboxHistory();
 }
@@ -1006,6 +1114,13 @@ async function loadRealConfig(forceDisk) {
   if (!forceDisk) {
     const ls = loadFromLocalStorage(LS_REAL_KEY);
     if (ls && typeof ls === 'object') { realConfigCache = ls; return realConfigCache; }
+  }
+  // Prefer the cloud config (single source of truth for Real Mode).
+  try {
+    const rows = await queryTurso("SELECT data FROM configs WHERE mode='prod'");
+    if (rows.length) { realConfigCache = JSON.parse(rows[0].data); return realConfigCache; }
+  } catch (e) {
+    console.warn('Turso config load failed, falling back to faucet_config.json:', e.message);
   }
   realConfigCache = await fetchJson('./faucet_config.json');
   return realConfigCache;
@@ -1151,10 +1266,9 @@ function computeRealRows(rawRows, hist, cfg) {
 async function recalculateRealModeWithNewConfig() {
   if (mode !== 'real') return;
   try {
-    const cfg = realConfigCache || (await loadRealConfig());
-    const fresh = await fetchJson(DATA_FILES.real + '?t=' + Date.now());
-    const { rows } = normalizeResponse(fresh);
-    const hist = await safeFetchJson('./history.json');
+    const { faucetsJson, hist, cfg } = await loadRealDataFromTurso();
+    if (cfg) realConfigCache = cfg;
+    const { rows } = normalizeResponse(faucetsJson);
     const finalRows = hist ? computeRealRows(rows, hist, cfg) : rows;
     allRows = finalRows;
     recordCountEl.textContent = finalRows.length;
@@ -1375,7 +1489,8 @@ async function openRealAdmin() {
   let realUrls = [];
   const realUrlNames = new Map();
   try {
-    const nr = normalizeResponse(await fetchJson('./faucets.json')).rows;
+    const { faucetsJson } = await loadRealDataFromTurso();
+    const nr = normalizeResponse(faucetsJson).rows;
     nr.forEach((r) => { if (r.url) { realUrls.push(r.url); realUrlNames.set(r.url, r.name || r.url); } });
     realUrls.sort((a, b) => a.localeCompare(b));
   } catch (e) { /* dropdown falls back to targets' own URLs */ }
@@ -1387,7 +1502,16 @@ async function openRealAdmin() {
 
   footerEl.innerHTML =
     '<span style="margin-right:auto;color:var(--ok,#2e8b57);font-size:13px">💾 Автосохранение в Real Mode</span>' +
+    '<button class="btn btn-primary" id="real-save-db">💾 Сохранить в БД</button>' +
     '<button class="btn" id="real-download">📥 Скачать faucet_config.json</button>';
+  footerEl.querySelector('#real-save-db').addEventListener('click', () => {
+    ensureAdminKeyThen(async () => {
+      try {
+        await saveConfigToTurso('prod', realConfigCache);
+        showToast('Конфиг Real Mode сохранён в Turso', 'success');
+      } catch (e) { showToast('Ошибка сохранения в Turso: ' + e.message, 'error'); }
+    });
+  });
   footerEl.querySelector('#real-download').addEventListener('click', () => {
     downloadJson('faucet_config.json', cfg);
     showToast('faucet_config.json выгружен', 'info');
@@ -1597,11 +1721,20 @@ async function openSandboxAdmin() {
   footerEl.innerHTML =
     '<button class="btn" id="sb-reset">🔄 Сбросить к дефолту</button>' +
     '<button class="btn btn-primary btn-saved" id="sb-save" disabled>✅ Сохранено</button>' +
+    '<button class="btn btn-primary" id="sb-save-db">💾 Сохранить в БД</button>' +
     '<button class="btn" id="sb-export">📥 Экспорт JSON</button>' +
     '<button class="btn btn-primary" id="sb-export-real">🚀 Export config-data to Real Mode</button>';
+  footerEl.querySelector('#sb-save-db').addEventListener('click', () => {
+    ensureAdminKeyThen(async () => {
+      try {
+        await saveConfigToTurso('sandbox', sandboxState.config);
+        showToast('Конфиг песочницы сохранён в Turso', 'success');
+      } catch (e) { showToast('Ошибка сохранения в Turso: ' + e.message, 'error'); }
+    });
+  });
   footerEl.querySelector('#sb-reset').addEventListener('click', async () => {
     try {
-      const def = await fetchJson('./faucet_config.sandbox.json');
+      const def = defaultSandboxConfig();
       const keepTargets = (sandboxState.config.targets || []).map((t) => JSON.parse(JSON.stringify(t)));
       const keepFaucets = (sandboxState.history.faucets || []).map((f) => JSON.parse(JSON.stringify(f)));
       sandboxState.config.health = JSON.parse(JSON.stringify(def.health));

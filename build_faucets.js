@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { createClient } = require('@libsql/client');
 
 const CONFIG_FILE = path.join(__dirname, 'faucet_config.json');
 const HISTORY_FILE = path.join(__dirname, 'history.json');
@@ -402,6 +403,192 @@ function validateEngineConfig(config) {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Turso (cloud DB) helpers — additive mirror of the JSON artifacts.
+// The static site (GitHub Pages) reads the committed faucets.json/history.json
+// directly, and the browser cannot reach Turso without exposing the auth token,
+// so we KEEP writing those files. Turso is an additional cloud copy. Switching
+// the site's delivery to Turso is a separate, later step.
+// ---------------------------------------------------------------------------
+function getTursoCredentials() {
+  const url = process.env.TURSO_DATABASE_URL || process.env.TURSO_URL;
+  const token = process.env.TURSO_AUTH_TOKEN || process.env.TURSO_TOKEN;
+  if (url && token) return { url, authToken: token };
+  const mdPath = path.join(__dirname, 'Turso_DB_Connection.md');
+  if (fs.existsSync(mdPath)) {
+    const md = fs.readFileSync(mdPath, 'utf8');
+    const urlM = md.match(/URL:\s*(https?:\/\/\S+)/i) || md.match(/(https?:\/\/[\w.-]+\.turso\.io)/i);
+    const tokenM = md.match(/eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+/);
+    if (urlM && tokenM) return { url: urlM[1], authToken: tokenM[0] };
+  }
+  return null;
+}
+
+let _tursoClient = null;
+function getTursoClient() {
+  if (_tursoClient) return _tursoClient;
+  const creds = getTursoCredentials();
+  if (!creds) return null;
+  _tursoClient = createClient({ url: creds.url, authToken: creds.authToken });
+  return _tursoClient;
+}
+
+async function ensureTursoSchema(client) {
+  await client.execute(
+    `CREATE TABLE IF NOT EXISTS configs (mode TEXT PRIMARY KEY, data TEXT NOT NULL, updated_at TEXT)`
+  );
+  await client.execute(
+    `CREATE TABLE IF NOT EXISTS faucets (id TEXT, mode TEXT DEFAULT 'prod', name TEXT, url TEXT, owner_id TEXT, owner_name TEXT, currency TEXT, timer_in_minutes TEXT, reward TEXT, is_enabled TEXT, creation_date TEXT, category TEXT, categories TEXT, paid_today TEXT, total_users_paid TEXT, active_users TEXT, balance TEXT, health TEXT, health_score TEXT, rating TEXT, rating_grade TEXT, raw_json TEXT, updated_at TEXT, PRIMARY KEY (id, mode))`
+  );
+  await client.execute(
+    `CREATE TABLE IF NOT EXISTS history_logs (id INTEGER PRIMARY KEY AUTOINCREMENT, url TEXT NOT NULL, currency TEXT, snapshot_at TEXT, balance REAL, daily_peak REAL, meta_json TEXT, coin_json TEXT, created_at TEXT DEFAULT (datetime('now')))`,
+  );
+  try {
+    await client.execute(`ALTER TABLE history_logs ADD COLUMN coin_json TEXT`);
+  } catch (e) {
+    /* column already exists */
+  }
+  await client.execute(`CREATE INDEX IF NOT EXISTS idx_history_url ON history_logs(url)`);
+  await client.execute(`CREATE INDEX IF NOT EXISTS idx_history_url_cur ON history_logs(url, currency)`);
+  await client.execute(
+    `CREATE TABLE IF NOT EXISTS history_faucets (url TEXT PRIMARY KEY, data TEXT NOT NULL, updated_at TEXT)`
+  );
+}
+
+function faucetIdFromRec(rec) {
+  const id = String(rec.id != null ? rec.id : '').trim();
+  if (id) return id;
+  return normalizeUrl(rec.url) + '|' + String(rec.currency || '').toUpperCase();
+}
+
+async function writeFaucetsToTurso(client, mode, raw) {
+  const payload = raw.data && typeof raw.data === 'object' ? raw.data : raw;
+  const now = new Date().toISOString();
+  const seen = new Set();
+  const stmts = [];
+  walkRecords(payload.list_data, (r) => {
+    const id = faucetIdFromRec(r);
+    const key = id + '|' + mode;
+    if (seen.has(key)) return;
+    seen.add(key);
+    stmts.push({
+      sql: `INSERT INTO faucets (id, mode, name, url, owner_id, owner_name, currency, timer_in_minutes, reward, is_enabled, creation_date, category, categories, paid_today, total_users_paid, active_users, balance, health, health_score, rating, rating_grade, raw_json, updated_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(id, mode) DO UPDATE SET
+              name=excluded.name, url=excluded.url, owner_id=excluded.owner_id, owner_name=excluded.owner_name,
+              currency=excluded.currency, timer_in_minutes=excluded.timer_in_minutes, reward=excluded.reward,
+              is_enabled=excluded.is_enabled, creation_date=excluded.creation_date, category=excluded.category,
+              categories=excluded.categories, paid_today=excluded.paid_today, total_users_paid=excluded.total_users_paid,
+              active_users=excluded.active_users, balance=excluded.balance, health=excluded.health,
+              health_score=excluded.health_score, rating=excluded.rating, rating_grade=excluded.rating_grade,
+              raw_json=excluded.raw_json, updated_at=excluded.updated_at`,
+      args: [
+        id, mode, String(r.name ?? ''), String(r.url ?? ''), String(r.owner_id ?? ''), String(r.owner_name ?? ''),
+        String(r.currency ?? ''), String(r.timer_in_minutes ?? ''), String(r.reward ?? ''),
+        r.is_enabled === '1' || r.is_enabled === 1 || r.is_enabled === true ? 1 : 0,
+        String(r.creation_date ?? ''), String(r.category ?? ''), JSON.stringify(r.categories ?? null),
+        String(r.paid_today ?? ''), String(r.total_users_paid ?? ''), String(r.active_users ?? ''),
+        String(r.balance ?? ''), String(r.health ?? ''),
+        r.health_score != null ? Number(r.health_score) : null,
+        r.rating != null ? Number(r.rating) : null,
+        String(r.rating_grade ?? ''), JSON.stringify(r), now,
+      ],
+    });
+  });
+  await client.batch(stmts, 'write');
+  return stmts.length;
+}
+
+async function writeHistoryToTurso(client, mode, history) {
+  const now = new Date().toISOString();
+  const stmts = [];
+  for (const f of history.faucets || []) {
+    stmts.push({
+      sql: `INSERT INTO history_faucets (url, data, updated_at) VALUES (?, ?, ?)
+            ON CONFLICT(url) DO UPDATE SET data=excluded.data, updated_at=excluded.updated_at`,
+      args: [String(f.url ?? ''), JSON.stringify(f), now],
+    });
+  }
+  await client.batch(stmts, 'write');
+  return stmts.length;
+}
+
+async function writeConfigToTurso(client, mode, config) {
+  await client.execute({
+    sql: `INSERT OR REPLACE INTO configs (mode, data, updated_at) VALUES (?, ?, ?)`,
+    args: [mode, JSON.stringify(config), new Date().toISOString()],
+  });
+  return 1;
+}
+
+async function mirrorToTurso(mode, raw, history, config) {
+  const client = getTursoClient();
+  if (!client) {
+    console.log('[turso] no credentials found — skipping cloud mirror (JSON artifacts kept).');
+    return;
+  }
+  try {
+    await ensureTursoSchema(client);
+    const nCfg = await writeConfigToTurso(client, mode, config);
+    const nF = await writeFaucetsToTurso(client, mode, raw);
+    const nH = await writeHistoryToTurso(client, mode, history);
+    console.log(`[turso] mirrored -> configs(${nCfg}) faucets(${nF}) history_faucets(+${nH})`);
+  } catch (e) {
+    console.error('[turso] mirror FAILED (non-fatal, JSON artifacts already written): ' + (e && e.message ? e.message : e));
+  } finally {
+    try {
+      await client.close();
+    } catch (_) {
+      /* ignore */
+    }
+    _tursoClient = null;
+  }
+}
+
+async function loadHistoryFromTurso(config) {
+  const client = getTursoClient();
+  if (!client) return null;
+  try {
+    const res = await client.execute('SELECT url, data FROM history_faucets');
+    const faucets = (res.rows || []).map((r) => JSON.parse(r.data));
+    return {
+      updated_at: new Date().toISOString(),
+      retention_days: (config && config.settings && config.settings.history_retention_days) || 7,
+      crypto_prices_usd: (config && config.crypto_prices_usd) || {},
+      faucets,
+    };
+  } catch (e) {
+    console.warn('[turso] history load failed, falling back to disk: ' + e.message);
+    return null;
+  } finally {
+    try {
+      await client.close();
+    } catch (_) {
+      /* ignore */
+    }
+    _tursoClient = null;
+  }
+}
+
+async function loadSandboxConfigFromTurso() {
+  const client = getTursoClient();
+  if (!client) return null;
+  try {
+    const res = await client.execute("SELECT data FROM configs WHERE mode='sandbox'");
+    if (res.rows && res.rows.length) return JSON.parse(res.rows[0].data);
+  } catch (e) {
+    console.warn('[turso] sandbox config load failed:', e.message);
+  } finally {
+    try {
+      await client.close();
+    } catch (_) {
+      /* ignore */
+    }
+    _tursoClient = null;
+  }
+  return null;
+}
+
 async function main() {
   const argv = parseArgs();
   const mode = resolveMode(argv);
@@ -409,11 +596,19 @@ async function main() {
   const configFile =
     argv.config ||
     (mode === MODE_SANDBOX ? path.join(__dirname, 'faucet_config.sandbox.json') : CONFIG_FILE);
-  if (!fs.existsSync(configFile)) {
-    console.error('config file not found: ' + configFile);
-    process.exit(1);
+
+  let config = null;
+  if (mode === MODE_SANDBOX && !fs.existsSync(configFile)) {
+    config = await loadSandboxConfigFromTurso();
+    if (config) console.log('[config] loaded sandbox config from Turso');
   }
-  const config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
+  if (!config) {
+    if (!fs.existsSync(configFile)) {
+      console.error('config file not found: ' + configFile);
+      process.exit(1);
+    }
+    config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
+  }
   validateEngineConfig(config);
 
   if (argv['fetch-prices'] || argv['fetchprices']) {
@@ -448,20 +643,29 @@ async function main() {
   assertNotProd(mode, [configFile, historyFile, output]);
 
   let history = null;
-  if (fs.existsSync(historyFile)) {
-    history = JSON.parse(fs.readFileSync(historyFile, 'utf8'));
-  } else if (mode === MODE_SANDBOX) {
-    const gen = require('./generate_mock_history.js');
-    history = gen.generate(config);
-    fs.writeFileSync(historyFile, JSON.stringify(history, null, 2) + '\n');
-    console.log('sandbox history generated: ' + historyFile);
+  if (mode === MODE_SANDBOX) {
+    if (fs.existsSync(historyFile)) {
+      history = JSON.parse(fs.readFileSync(historyFile, 'utf8'));
+    } else {
+      const gen = require('./generate_mock_history.js');
+      history = gen.generate(config);
+      fs.writeFileSync(historyFile, JSON.stringify(history, null, 2) + '\n');
+      console.log('sandbox history generated: ' + historyFile);
+    }
   } else {
-    history = {
-      updated_at: null,
-      retention_days: config.settings.history_retention_days || 7,
-      crypto_prices_usd: config.crypto_prices_usd || {},
-      faucets: [],
-    };
+    // PROD: history is canonical in Turso; fall back to disk only if Turso empty.
+    history = await loadHistoryFromTurso(config);
+    if ((!history || !history.faucets || history.faucets.length === 0) && fs.existsSync(historyFile)) {
+      history = JSON.parse(fs.readFileSync(historyFile, 'utf8'));
+    }
+    if (!history) {
+      history = {
+        updated_at: null,
+        retention_days: config.settings.history_retention_days || 7,
+        crypto_prices_usd: config.crypto_prices_usd || {},
+        faucets: [],
+      };
+    }
   }
 
   let raw = null;
@@ -484,10 +688,21 @@ async function main() {
   const freshByUrl = collectFreshByUrl(payload.list_data);
 
   const updateResult = updateHistory(freshByUrl, history, config, nowTs);
-  fs.writeFileSync(historyFile, JSON.stringify(history, null, 2) + '\n');
 
   const enrichResult = enrichFaucets(raw, history, config);
-  fs.writeFileSync(output, JSON.stringify(raw, null, 2) + '\n');
+
+  if (mode === MODE_SANDBOX) {
+    fs.writeFileSync(historyFile, JSON.stringify(history, null, 2) + '\n');
+    fs.writeFileSync(output, JSON.stringify(raw, null, 2) + '\n');
+  } else {
+    // PROD: mirror enriched data to Turso (no local JSON write — the static
+    // site reads directly from Turso; raw faucets.json is still the API input).
+    await mirrorToTurso(mode, raw, history, config);
+  }
+
+  if (mode === MODE_PROD) {
+    await mirrorToTurso(mode, raw, history, config);
+  }
 
   console.log('=== build_faucets.js (mode: ' + mode + ') ===');
   console.log('config:       ' + configFile);
