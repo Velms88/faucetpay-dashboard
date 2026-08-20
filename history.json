@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-16T20:36:38.000Z",
+  "updated_at": "2026-08-20T11:41:36.000Z",
   "retention_days": 7,
   "crypto_prices_usd": {
     "BTC": 67000,
@@ -37,12 +37,13 @@
       "coins": {
         "DOGE": {
           "daily_peaks": [
-            83.27356694
+            83.27356694,
+            81.96546952
           ],
           "recent_balances": [
             83.27356694,
             83.27356694,
-            83.27356694
+            81.96546952
           ]
         }
       },
@@ -53,27 +54,35 @@
         "n_3h_actual": 0,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
+          0,
           0
         ]
       },
       "daily_health_medians_7d": [
+        100,
         100
       ],
       "_tracking": {
         "coins": {
           "DOGE": {
-            "day": "2026-08-16",
-            "peak": 83.27356694
+            "day": "2026-08-20",
+            "peak": 81.96546952
           }
         },
         "payouts": {
-          "last_day": "2026-08-16",
-          "last_usd_total": 0.003407496,
-          "last_n_total": 481
+          "last_day": "2026-08-20",
+          "last_usd_total": 0,
+          "last_n_total": 289
         },
         "hourly": [
           {
             "h": 496364,
+            "usd": 0,
+            "n": 0,
+            "health": 100
+          },
+          {
+            "h": 496451,
             "usd": 0,
             "n": 0,
             "health": 100
@@ -91,44 +100,53 @@
       "coins": {
         "PEPE": {
           "daily_peaks": [
-            9710.83263423
+            9710.83263423,
+            8645.83263423
           ],
           "recent_balances": [
             9710.83263423,
             9710.83263423,
-            9710.83263423
+            8645.83263423
           ]
         }
       },
       "payouts": {
-        "hours_since_last_payout": null,
+        "hours_since_last_payout": 0,
         "v_3h_actual": 0,
         "v_3h_expected_median": 0,
         "n_3h_actual": 0,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
+          0,
           0
         ]
       },
       "daily_health_medians_7d": [
+        100,
         100
       ],
       "_tracking": {
         "coins": {
           "PEPE": {
-            "day": "2026-08-16",
-            "peak": 9710.83263423
+            "day": "2026-08-20",
+            "peak": 8645.83263423
           }
         },
         "payouts": {
-          "last_day": "2026-08-16",
-          "last_usd_total": 1.441e-10,
+          "last_day": "2026-08-20",
+          "last_usd_total": 7.27375e-9,
           "last_n_total": 1
         },
         "hourly": [
           {
             "h": 496364,
             "usd": 0,
+            "n": 0,
+            "health": 100
+          },
+          {
+            "h": 496451,
+            "usd": 7.27375e-9,
             "n": 0,
             "health": 100
           }
@@ -145,44 +163,53 @@
       "coins": {
         "USDT": {
           "daily_peaks": [
-            370.02125533
+            370.02125533,
+            326.17832692
           ],
           "recent_balances": [
             370.02125533,
             370.02125533,
-            370.02125533
+            326.17832692
           ]
         }
       },
       "payouts": {
-        "hours_since_last_payout": null,
-        "v_3h_actual": 0,
+        "hours_since_last_payout": 0,
+        "v_3h_actual": 3.46,
         "v_3h_expected_median": 0,
         "n_3h_actual": 0,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
-          0
+          0,
+          3.46
         ]
       },
       "daily_health_medians_7d": [
+        100,
         100
       ],
       "_tracking": {
         "coins": {
           "USDT": {
-            "day": "2026-08-16",
-            "peak": 370.02125533
+            "day": "2026-08-20",
+            "peak": 326.17832692
           }
         },
         "payouts": {
-          "last_day": "2026-08-16",
-          "last_usd_total": 10.26108309,
-          "last_n_total": 56
+          "last_day": "2026-08-20",
+          "last_usd_total": 3.46407282,
+          "last_n_total": 24
         },
         "hourly": [
           {
             "h": 496364,
             "usd": 0,
+            "n": 0,
+            "health": 100
+          },
+          {
+            "h": 496451,
+            "usd": 3.46407282,
             "n": 0,
             "health": 100
           }
@@ -199,32 +226,35 @@
       "coins": {
         "DOGE": {
           "daily_peaks": [
-            20.74565631
+            20.74565631,
+            19.97805632
           ],
           "recent_balances": [
             20.74565631,
             20.74565631,
-            20.74565631
+            19.97805632
           ]
         },
         "TRX": {
           "daily_peaks": [
-            1.03823251
+            1.03823251,
+            0.12623251
           ],
           "recent_balances": [
             1.03823251,
             1.03823251,
-            1.03823251
+            0.12623251
           ]
         },
         "USDT": {
           "daily_peaks": [
-            2.96931373
+            2.96931373,
+            2.97131373
           ],
           "recent_balances": [
             2.96931373,
             2.96931373,
-            2.96931373
+            2.97131373
           ]
         }
       },
@@ -235,35 +265,43 @@
         "n_3h_actual": 0,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
+          0,
           0
         ]
       },
       "daily_health_medians_7d": [
+        100,
         100
       ],
       "_tracking": {
         "coins": {
           "DOGE": {
-            "day": "2026-08-16",
-            "peak": 20.74565631
+            "day": "2026-08-20",
+            "peak": 19.97805632
           },
           "TRX": {
-            "day": "2026-08-16",
-            "peak": 1.03823251
+            "day": "2026-08-20",
+            "peak": 0.12623251
           },
           "USDT": {
-            "day": "2026-08-16",
-            "peak": 2.96931373
+            "day": "2026-08-20",
+            "peak": 2.97131373
           }
         },
         "payouts": {
-          "last_day": "2026-08-16",
-          "last_usd_total": 0.3255976387,
-          "last_n_total": 12
+          "last_day": "2026-08-20",
+          "last_usd_total": 0,
+          "last_n_total": 0
         },
         "hourly": [
           {
             "h": 496364,
+            "usd": 0,
+            "n": 0,
+            "health": 100
+          },
+          {
+            "h": 496451,
             "usd": 0,
             "n": 0,
             "health": 100
@@ -281,6 +319,7 @@
       "coins": {
         "DOGE": {
           "daily_peaks": [
+            0,
             0
           ],
           "recent_balances": [
@@ -291,6 +330,7 @@
         },
         "LTC": {
           "daily_peaks": [
+            0,
             0
           ],
           "recent_balances": [
@@ -301,6 +341,7 @@
         },
         "TRX": {
           "daily_peaks": [
+            0,
             0
           ],
           "recent_balances": [
@@ -311,6 +352,7 @@
         },
         "SOL": {
           "daily_peaks": [
+            0,
             0
           ],
           "recent_balances": [
@@ -321,6 +363,7 @@
         },
         "TON": {
           "daily_peaks": [
+            0,
             0
           ],
           "recent_balances": [
@@ -331,45 +374,47 @@
         }
       },
       "payouts": {
-        "hours_since_last_payout": null,
-        "v_3h_actual": 0,
+        "hours_since_last_payout": 0,
+        "v_3h_actual": 711.83,
         "v_3h_expected_median": 0,
         "n_3h_actual": 0,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
-          0
+          0,
+          711.83
         ]
       },
       "daily_health_medians_7d": [
-        2
+        2,
+        25
       ],
       "_tracking": {
         "coins": {
           "DOGE": {
-            "day": "2026-08-16",
+            "day": "2026-08-20",
             "peak": 0
           },
           "LTC": {
-            "day": "2026-08-16",
+            "day": "2026-08-20",
             "peak": 0
           },
           "TRX": {
-            "day": "2026-08-16",
+            "day": "2026-08-20",
             "peak": 0
           },
           "SOL": {
-            "day": "2026-08-16",
+            "day": "2026-08-20",
             "peak": 0
           },
           "TON": {
-            "day": "2026-08-16",
+            "day": "2026-08-20",
             "peak": 0
           }
         },
         "payouts": {
-          "last_day": "2026-08-16",
-          "last_usd_total": 1960.5114134290002,
-          "last_n_total": 220
+          "last_day": "2026-08-20",
+          "last_usd_total": 711.8283533211999,
+          "last_n_total": 90
         },
         "hourly": [
           {
@@ -377,6 +422,12 @@
             "usd": 0,
             "n": 0,
             "health": 2
+          },
+          {
+            "h": 496451,
+            "usd": 711.8283533211999,
+            "n": 0,
+            "health": 25
           }
         ]
       }
@@ -391,6 +442,7 @@
       "coins": {
         "DASH": {
           "daily_peaks": [
+            0,
             0
           ],
           "recent_balances": [
@@ -401,6 +453,7 @@
         },
         "TRX": {
           "daily_peaks": [
+            0.00012569,
             0.00012569
           ],
           "recent_balances": [
@@ -417,27 +470,29 @@
         "n_3h_actual": 0,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
+          0,
           0
         ]
       },
       "daily_health_medians_7d": [
-        0
+        0,
+        100
       ],
       "_tracking": {
         "coins": {
           "DASH": {
-            "day": "2026-08-16",
+            "day": "2026-08-20",
             "peak": 0
           },
           "TRX": {
-            "day": "2026-08-16",
+            "day": "2026-08-20",
             "peak": 0.00012569
           }
         },
         "payouts": {
-          "last_day": "2026-08-16",
+          "last_day": "2026-08-20",
           "last_usd_total": 0,
-          "last_n_total": 49582
+          "last_n_total": 19844
         },
         "hourly": [
           {
@@ -445,6 +500,12 @@
             "usd": 0,
             "n": 0,
             "health": 0
+          },
+          {
+            "h": 496451,
+            "usd": 0,
+            "n": 0,
+            "health": 100
           }
         ]
       }
@@ -459,6 +520,7 @@
       "coins": {
         "BTC": {
           "daily_peaks": [
+            0,
             0
           ],
           "recent_balances": [
@@ -469,22 +531,24 @@
         },
         "LTC": {
           "daily_peaks": [
-            0.00227685
+            0.00227685,
+            0.01348584
           ],
           "recent_balances": [
             0.00227685,
             0.00227685,
-            0.00227685
+            0.01348584
           ]
         },
         "USDT": {
           "daily_peaks": [
-            0.61637927
+            0.61637927,
+            0.28378558
           ],
           "recent_balances": [
             0.61637927,
             0.61637927,
-            0.61637927
+            0.28378558
           ]
         }
       },
@@ -495,31 +559,33 @@
         "n_3h_actual": 0,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
+          0,
           0
         ]
       },
       "daily_health_medians_7d": [
-        15
+        15,
+        11
       ],
       "_tracking": {
         "coins": {
           "BTC": {
-            "day": "2026-08-16",
+            "day": "2026-08-20",
             "peak": 0
           },
           "LTC": {
-            "day": "2026-08-16",
-            "peak": 0.00227685
+            "day": "2026-08-20",
+            "peak": 0.01348584
           },
           "USDT": {
-            "day": "2026-08-16",
-            "peak": 0.61637927
+            "day": "2026-08-20",
+            "peak": 0.28378558
           }
         },
         "payouts": {
-          "last_day": "2026-08-16",
-          "last_usd_total": 146239.35970149998,
-          "last_n_total": 6
+          "last_day": "2026-08-20",
+          "last_usd_total": 0,
+          "last_n_total": 0
         },
         "hourly": [
           {
@@ -527,6 +593,12 @@
             "usd": 0,
             "n": 0,
             "health": 15
+          },
+          {
+            "h": 496451,
+            "usd": 0,
+            "n": 0,
+            "health": 11
           }
         ]
       }
@@ -541,44 +613,53 @@
       "coins": {
         "DOGE": {
           "daily_peaks": [
-            38.65523616
+            38.65523616,
+            34.49096116
           ],
           "recent_balances": [
             38.65523616,
             38.65523616,
-            38.65523616
+            34.49096116
           ]
         }
       },
       "payouts": {
-        "hours_since_last_payout": null,
+        "hours_since_last_payout": 0,
         "v_3h_actual": 0,
         "v_3h_expected_median": 0,
         "n_3h_actual": 0,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
+          0,
           0
         ]
       },
       "daily_health_medians_7d": [
+        100,
         100
       ],
       "_tracking": {
         "coins": {
           "DOGE": {
-            "day": "2026-08-16",
-            "peak": 38.65523616
+            "day": "2026-08-20",
+            "peak": 34.49096116
           }
         },
         "payouts": {
-          "last_day": "2026-08-16",
-          "last_usd_total": 0.0065332452,
-          "last_n_total": 159
+          "last_day": "2026-08-20",
+          "last_usd_total": 0.0045807504,
+          "last_n_total": 108
         },
         "hourly": [
           {
             "h": 496364,
             "usd": 0,
+            "n": 0,
+            "health": 100
+          },
+          {
+            "h": 496451,
+            "usd": 0.0045807504,
             "n": 0,
             "health": 100
           }
@@ -595,44 +676,53 @@
       "coins": {
         "DOGE": {
           "daily_peaks": [
-            175.98231177
+            175.98231177,
+            176.08286463
           ],
           "recent_balances": [
             175.98231177,
             175.98231177,
-            175.98231177
+            176.08286463
           ]
         }
       },
       "payouts": {
-        "hours_since_last_payout": null,
-        "v_3h_actual": 0,
+        "hours_since_last_payout": 0,
+        "v_3h_actual": 0.02,
         "v_3h_expected_median": 0,
         "n_3h_actual": 0,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
-          0
+          0,
+          0.02
         ]
       },
       "daily_health_medians_7d": [
+        100,
         100
       ],
       "_tracking": {
         "coins": {
           "DOGE": {
-            "day": "2026-08-16",
-            "peak": 175.98231177
+            "day": "2026-08-20",
+            "peak": 176.08286463
           }
         },
         "payouts": {
-          "last_day": "2026-08-16",
-          "last_usd_total": 0.023630881200000002,
-          "last_n_total": 316
+          "last_day": "2026-08-20",
+          "last_usd_total": 0.0168289872,
+          "last_n_total": 232
         },
         "hourly": [
           {
             "h": 496364,
             "usd": 0,
+            "n": 0,
+            "health": 100
+          },
+          {
+            "h": 496451,
+            "usd": 0.0168289872,
             "n": 0,
             "health": 100
           }
@@ -649,44 +739,53 @@
       "coins": {
         "DGB": {
           "daily_peaks": [
-            746.44836496
+            746.44836496,
+            646.50216496
           ],
           "recent_balances": [
             746.44836496,
             746.44836496,
-            746.44836496
+            646.50216496
           ]
         }
       },
       "payouts": {
-        "hours_since_last_payout": null,
+        "hours_since_last_payout": 0,
         "v_3h_actual": 0,
         "v_3h_expected_median": 0,
         "n_3h_actual": 0,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
+          0,
           0
         ]
       },
       "daily_health_medians_7d": [
+        100,
         100
       ],
       "_tracking": {
         "coins": {
           "DGB": {
-            "day": "2026-08-16",
-            "peak": 746.44836496
+            "day": "2026-08-20",
+            "peak": 646.50216496
           }
         },
         "payouts": {
-          "last_day": "2026-08-16",
-          "last_usd_total": 0.00060417296,
-          "last_n_total": 154
+          "last_day": "2026-08-20",
+          "last_usd_total": 0.00039177072000000005,
+          "last_n_total": 100
         },
         "hourly": [
           {
             "h": 496364,
             "usd": 0,
+            "n": 0,
+            "health": 100
+          },
+          {
+            "h": 496451,
+            "usd": 0.00039177072000000005,
             "n": 0,
             "health": 100
           }
@@ -703,53 +802,57 @@
       "coins": {
         "FEY": {
           "daily_peaks": [
-            73.21563561
+            73.21563561,
+            88.71894111
           ],
           "recent_balances": [
             73.21563561,
             73.21563561,
-            73.21563561
+            88.71894111
           ]
         },
         "FLT": {
           "daily_peaks": [
-            9.93615758
+            9.93615758,
+            9.88075758
           ],
           "recent_balances": [
             9.93615758,
             9.93615758,
-            9.93615758
+            9.88075758
           ]
         }
       },
       "payouts": {
-        "hours_since_last_payout": null,
-        "v_3h_actual": 0,
+        "hours_since_last_payout": 0,
+        "v_3h_actual": 0.04,
         "v_3h_expected_median": 0,
         "n_3h_actual": 0,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
-          0
+          0,
+          0.04
         ]
       },
       "daily_health_medians_7d": [
-        100
+        100,
+        87
       ],
       "_tracking": {
         "coins": {
           "FEY": {
-            "day": "2026-08-16",
-            "peak": 73.21563561
+            "day": "2026-08-20",
+            "peak": 88.71894111
           },
           "FLT": {
-            "day": "2026-08-16",
-            "peak": 9.93615758
+            "day": "2026-08-20",
+            "peak": 9.88075758
           }
         },
         "payouts": {
-          "last_day": "2026-08-16",
-          "last_usd_total": 0.0850696677,
-          "last_n_total": 250
+          "last_day": "2026-08-20",
+          "last_usd_total": 0.0433397286,
+          "last_n_total": 164
         },
         "hourly": [
           {
@@ -757,6 +860,12 @@
             "usd": 0,
             "n": 0,
             "health": 100
+          },
+          {
+            "h": 496451,
+            "usd": 0.0433397286,
+            "n": 0,
+            "health": 87
           }
         ]
       }
@@ -771,39 +880,42 @@
       "coins": {
         "USDT": {
           "daily_peaks": [
-            118.103799
+            118.103799,
+            537.926199
           ],
           "recent_balances": [
             118.103799,
             118.103799,
-            118.103799
+            537.926199
           ]
         }
       },
       "payouts": {
-        "hours_since_last_payout": null,
-        "v_3h_actual": 0,
+        "hours_since_last_payout": 0,
+        "v_3h_actual": 86.9,
         "v_3h_expected_median": 0,
         "n_3h_actual": 0,
         "n_3h_expected_median": 0,
         "daily_volume_usd_7d_medians": [
-          0
+          0,
+          86.9
         ]
       },
       "daily_health_medians_7d": [
-        16
+        16,
+        12
       ],
       "_tracking": {
         "coins": {
           "USDT": {
-            "day": "2026-08-16",
-            "peak": 118.103799
+            "day": "2026-08-20",
+            "peak": 537.926199
           }
         },
         "payouts": {
-          "last_day": "2026-08-16",
-          "last_usd_total": 349.13529076,
-          "last_n_total": 443
+          "last_day": "2026-08-20",
+          "last_usd_total": 86.89611857,
+          "last_n_total": 126
         },
         "hourly": [
           {
@@ -811,6 +923,12 @@
             "usd": 0,
             "n": 0,
             "health": 16
+          },
+          {
+            "h": 496451,
+            "usd": 86.89611857,
+            "n": 0,
+            "health": 12
           }
         ]
       }
