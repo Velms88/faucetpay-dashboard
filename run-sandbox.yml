@@ -1,0 +1,45 @@
+name: Run Sandbox Test (dry-run)
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'build_faucets.js'
+      - 'generate_mock_faucets.js'
+      - 'generate_mock_history.js'
+      - 'healthScore.js'
+      - 'ratingCalculator.js'
+      - 'cryptoPrices.js'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sandbox-test
+  cancel-in-progress: false
+
+jobs:
+  sandbox:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      # Dry-run only: NO Turso credentials are passed, so build_faucets.js
+      # uses an embedded demo faucet list and writes nothing to the cloud.
+      # This validates the enrichment pipeline without touching production.
+      - name: Run sandbox pipeline (mock data only)
+        run: |
+          node build_faucets.js --mode=sandbox
+
+      - name: Verify no repository files were modified
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::Sandbox run modified repository files!"
+            git status --porcelain
+            exit 1
+          fi
+          echo "No repository files modified. OK."
