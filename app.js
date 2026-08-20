@@ -1262,6 +1262,14 @@ async function loadSandboxAdminData(forceDisk) {
     cfg.targets = cfg.targets.filter((t) => !DEMO_FAUCET_URLS.has(t && t.url));
   }
   sandboxState.config = (cfg && typeof cfg === 'object') ? cfg : defaultSandboxConfig();
+  // Migrate legacy sandbox prices (previously stored only in LocalStorage
+  // history, which was never synced to the cloud) into config — config is the
+  // part persisted to Turso by saveSandboxToTurso.
+  if (sandboxState.config && (!sandboxState.config.crypto_prices_usd || Object.keys(sandboxState.config.crypto_prices_usd).length === 0)) {
+    if (hist && hist.crypto_prices_usd && Object.keys(hist.crypto_prices_usd).length) {
+      sandboxState.config.crypto_prices_usd = hist.crypto_prices_usd;
+    }
+  }
   if (hist && Array.isArray(hist.faucets)) {
     hist.faucets = hist.faucets.filter((f) => !DEMO_FAUCET_URLS.has(f && f.url));
   }
@@ -1311,7 +1319,7 @@ function computeSandboxRows() {
   const cfg = sandboxState.config;
   const hist = sandboxState.history;
   if (!cfg || !hist) return null;
-  const prices = Object.assign({}, cfg.crypto_prices_usd || {}, hist.crypto_prices_usd || {});
+  const prices = Object.assign({}, hist.crypto_prices_usd || {}, cfg.crypto_prices_usd || {});
   const retention = (cfg.settings && cfg.settings.history_retention_days) || 7;
   const historyByUrl = new Map((hist.faucets || []).map((f) => [normUrl(f.url), f]));
   const rows = [];
@@ -2161,7 +2169,7 @@ function renderFormulasTab(container) {
 function renderHistoryTab(container) {
   const hist = sandboxState.history;
   const cfg = sandboxState.config;
-  const prices = hist.crypto_prices_usd || (hist.crypto_prices_usd = {});
+  const prices = cfg.crypto_prices_usd || (cfg.crypto_prices_usd = {});
   const wrap = document.createElement('div');
   wrap.innerHTML = '<p class="modal-hint">Полный контроль над снимками: курсы валют, монеты выбранного крана (балансы/пики) и метрики выплат Блока 1. Всё считывается динамически из списка целей — без хардкода кранов и монет. Изменения сразу пересчитывают Health Score и Rating (Live Preview).</p>';
 
@@ -2219,8 +2227,10 @@ function renderHistoryTab(container) {
 
 function buildPricesEditor() {
   const hist = sandboxState.history;
-  const prices = hist.crypto_prices_usd || (hist.crypto_prices_usd = {});
+  const cfg = sandboxState.config;
+  const prices = cfg.crypto_prices_usd || (cfg.crypto_prices_usd = {});
   const block = document.createElement('div');
+  const DEFAULT_PRICE_COINS = ['BTC','ETH','USDT','USDC','BNB','SOL','XRP','ADA','DOGE','LTC','BCH','DASH','DGB','TRX','ZEC','XLM','TON','POL','FEY','TRUMP','PEPE','FLT'];
   const table = document.createElement('table'); table.className = 'admin-table';
   table.innerHTML = '<thead><tr><th>Монета</th><th>Цена (USD)</th><th></th></tr></thead>';
   const tb = document.createElement('tbody');
@@ -2254,18 +2264,23 @@ function buildPricesEditor() {
     updBtn.disabled = true;
     updBtn.textContent = '⏳ Загрузка…';
     try {
-      const res = await window.CryptoPrices.fetchCryptoPrices(Object.keys(prices));
+      const symbols = Object.keys(prices).length ? Object.keys(prices) : DEFAULT_PRICE_COINS;
+      const res = await window.CryptoPrices.fetchCryptoPrices(symbols);
       let n = 0;
       Object.keys(res.prices).forEach((coin) => {
         prices[coin] = res.prices[coin];
-        const inp = block.querySelector('[data-price="' + coin + '"]');
-        if (inp) inp.value = res.prices[coin];
         n++;
       });
+      renderRows();
       previewComputeAll();
-      showToast('Курсы обновлены из API (' + n + ' монет)', 'success');
+      const ok = res.sources ? Object.keys(res.sources).filter((k) => res.sources[k]).join(', ') : 'n/a';
+      if (n === 0) {
+        showToast('API вернул 0 курсов. Источники: ' + ok, 'error');
+      } else {
+        showToast('Курсы обновлены из API (' + n + ' монет). Источники: ' + ok, 'success');
+      }
     } catch (e) {
-      showToast('Не удалось обновить курсы через API. Использованы текущие значения из конфига', 'error');
+      showToast('Ошибка обновления курсов: ' + e.message, 'error');
     } finally {
       updBtn.disabled = false;
       updBtn.textContent = original;
