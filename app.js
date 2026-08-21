@@ -1081,11 +1081,23 @@ async function queryTurso(sql, args) {
   });
 }
 
+// Smart read: when an admin session is active we read from the PRIMARY (the
+// same database the writes go to) so the UI reflects just-saved data instead of
+// a possibly-lagging read-only replica. Falls back to the read-only token when
+// no session key is present (public, logged-out view).
+async function readTurso(sql, args) {
+  if (getTursoAdminKey()) {
+    try { return await tursoAdminQuery(sql, args); }
+    catch (e) { console.warn('primary read failed, falling back to read-only:', e.message); }
+  }
+  return queryTurso(sql, args);
+}
+
 async function loadRealDataFromTurso() {
-  const cfgRows = await queryTurso("SELECT data FROM configs WHERE mode='prod'");
+  const cfgRows = await readTurso("SELECT data FROM configs WHERE mode='prod'");
   const cfg = cfgRows.length ? JSON.parse(cfgRows[0].data) : null;
 
-  const faucetRows = await queryTurso(
+  const faucetRows = await readTurso(
     "SELECT raw_json, health_score, rating, rating_grade FROM faucets WHERE mode='prod'"
   );
   const listData = faucetRows.map((r) => {
@@ -1135,9 +1147,7 @@ async function loadRawFaucetUrls() {
   }
 }
 
-const LS_CONFIG_KEY = 'sandbox_faucet_config';
 const LS_HISTORY_KEY = 'sandbox_history';
-const LS_REAL_KEY = 'real_faucet_config';
 
 // The Full-Access Turso token lives inside the session object (setSession),
 // never in localStorage, so password + DB key share one expiry.
@@ -1259,7 +1269,7 @@ let realTargetOverridesDirty = new Set(); // normUrl(url) keys pending save
 async function loadTargetOverrides(mode) {
   const map = new Map();
   try {
-    const rows = await queryTurso('SELECT url, data FROM faucet_target_overrides WHERE mode = ?', [{ type: 'text', value: mode }]);
+    const rows = await readTurso('SELECT url, data FROM faucet_target_overrides WHERE mode = ?', [{ type: 'text', value: mode }]);
     rows.forEach((r) => { try { map.set(normUrl(r.url), JSON.parse(r.data)); } catch (e) {} });
   } catch (e) { console.warn('overrides load failed', e); }
   return map;
@@ -1371,10 +1381,6 @@ function loadFromLocalStorage(key) {
 function saveToLocalStorage(key, obj) {
   try { localStorage.setItem(key, JSON.stringify(obj)); return true; } catch (e) { return false; }
 }
-function clearSandboxLocalStorage() {
-  try { localStorage.removeItem(LS_CONFIG_KEY); localStorage.removeItem(LS_HISTORY_KEY); } catch (e) { /* ignore */ }
-}
-
 async function safeFetchJson(url) {
   try { return await fetchJson(url); } catch (e) { console.warn('fetch failed for', url, '-', e.message); return null; }
 }
@@ -1394,19 +1400,14 @@ function defaultSandboxHistory() {
 
 async function loadSandboxAdminData(forceDisk) {
   // Turso (cloud) is the single source of truth for the sandbox CONFIG.
-  // LocalStorage is only an offline fallback when Turso is unreachable, so the
-  // same data is seen from every browser (no browser-specific copies).
+  // LocalStorage is only used for sandbox HISTORY, which has no cloud sync yet.
   let cfg = null;
   let hist = loadFromLocalStorage(LS_HISTORY_KEY); // history has no cloud sync yet
   try {
-    const rows = await queryTurso("SELECT data FROM configs WHERE mode='sandbox'");
+    const rows = await readTurso("SELECT data FROM configs WHERE mode='sandbox'");
     if (rows.length) cfg = JSON.parse(rows[0].data);
   } catch (e) {
-    console.warn('Turso sandbox config load failed, using local fallback:', e.message);
-  }
-  if (!cfg) {
-    const ls = loadFromLocalStorage(LS_CONFIG_KEY);
-    if (ls && typeof ls === 'object') cfg = ls;
+    console.warn('Turso sandbox config load failed:', e.message);
   }
   if (cfg && Array.isArray(cfg.targets)) {
     cfg.targets = cfg.targets.filter((t) => !DEMO_FAUCET_URLS.has(t && t.url));
@@ -1427,18 +1428,15 @@ async function loadSandboxAdminData(forceDisk) {
 }
 async function loadRealConfig(forceDisk) {
   // Cloud config is the single source of truth for Real Mode. There is no
-  // local .json artifact anymore — everything lives in Turso (with
-  // localStorage as an offline cache).
+  // local .json artifact and no localStorage shadow — everything lives in Turso.
   if (forceDisk) realConfigCache = null;
   try {
-    const rows = await queryTurso("SELECT data FROM configs WHERE mode='prod'");
+    const rows = await readTurso("SELECT data FROM configs WHERE mode='prod'");
     if (rows.length) { realConfigCache = JSON.parse(rows[0].data); return realConfigCache; }
   } catch (e) {
-    console.warn('Turso config load failed, falling back to localStorage:', e.message);
+    console.warn('Turso config load failed:', e.message);
   }
-  const ls = loadFromLocalStorage(LS_REAL_KEY);
-  if (ls && typeof ls === 'object') { realConfigCache = ls; return realConfigCache; }
-  console.warn('Real Mode config unavailable (Turso + localStorage empty).');
+  console.warn('Real Mode config unavailable (Turso empty).');
   return null;
 }
 
@@ -1824,6 +1822,9 @@ async function openRealAdmin() {
       const n = await saveTargetOverridesToTurso('prod', realTargetOverrides, realTargetOverridesDirty);
       realTargetOverridesDirty.clear();
       showToast(n ? ('Успешно сохранено: ' + n + ' кран(ов)') : 'Нет изменений для сохранения', 'success', anchor);
+      // Re-read (now from the primary, since the session has the admin key) so
+      // the main table reflects the just-saved UII without a manual reload.
+      if (typeof loadData === 'function') loadData();
     }, { anchor, onError: (err) => { showToast('Не удалось записать данные в БД', 'error', anchor); console.error(err); } });
   });
 
