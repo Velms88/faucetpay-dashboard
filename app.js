@@ -869,7 +869,7 @@ function getTargetForFaucet(url) {
 // It expires after SESSION_TTL_MS; on expiry the UI must re-prompt for BOTH
 // (so DB writes never fail silently). Nothing is stored in localStorage.
 const SESSION_KEY = 'faucet-monitor-session';
-const SESSION_TTL_MS = 1 * 60 * 1000; // 30 minutes
+const SESSION_TTL_MS = 180 * 60 * 1000; // 180 minutes
 
 function getSession() {
   try {
