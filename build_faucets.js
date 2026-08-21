@@ -121,7 +121,7 @@ function buildRawSnapshots(freshByUrl, prices, nowTs) {
       });
     }
     rows.push({
-      url: normUrl(entry.url || key),
+      url: normalizeUrl(entry.url || key),
       snapshot_at: snapAt,
       day: day,
       coins_json: JSON.stringify(coins),
