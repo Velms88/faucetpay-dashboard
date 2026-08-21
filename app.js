@@ -907,7 +907,7 @@ function startSessionWatcher() {
     if (!s || s.authed !== true || Date.now() > s.expiresAt) {
       if (!sessionExpiredToastShown) {
         sessionExpiredToastShown = true;
-        showToast('Сессия истекла. Введите пароль и ключ доступа к БД заново.', 'error');
+        showToast('Сессия истекла. Введите пароль и ключ доступа к БД заново.', 'error', null, true);
       }
     } else {
       sessionExpiredToastShown = false;
@@ -976,13 +976,13 @@ function requireAuth() {
   if (isAuthed()) return Promise.resolve(true);
   return new Promise((resolve) => {
     const expired = isSessionExpired();
-    if (expired) showToast('Сессия истекла. Введите пароль и ключ доступа к БД заново.', 'error');
+    if (expired) showToast('Сессия истекла. Введите пароль и ключ доступа к БД заново.', 'error', null, true);
     openLoginModal({ expired }, (ok) => resolve(ok));
   });
 }
 
 // ----- toast -----
-function showToast(msg, type, anchor) {
+function showToast(msg, type, anchor, centered) {
   console.log('[TOAST]', type || 'info', msg);
   const t = document.createElement('div');
   t.className = 'toast toast-' + (type || 'info');
@@ -1000,6 +1000,14 @@ function showToast(msg, type, anchor) {
       setTimeout(() => { if (t && t.parentNode) t.parentNode.removeChild(t); }, 3500);
       return t;
     }
+  }
+  if (centered) {
+    // Shown dead-center of the viewport (e.g. session-expired), so it can't be
+    // clipped behind the bottom edge like the corner toast-host.
+    t.setAttribute('style', base + 'margin:0;max-width:90vw;text-align:center;left:50% !important;top:50% !important;transform:translate(-50%,-50%) !important;font-size:15px;font-weight:600;box-shadow:0 8px 30px rgba(0,0,0,0.45);');
+    (document.body || document.documentElement).appendChild(t);
+    setTimeout(() => { if (t && t.parentNode) t.parentNode.removeChild(t); }, 3500);
+    return t;
   }
   let host = document.getElementById('toast-host');
   if (!host) {
@@ -1321,7 +1329,7 @@ async function ensureSessionThen(action, handlers) {
     if (AUTH_ERR_RE.test(msg)) {
       clearSession();
       const wasExpired = msg.indexOf('сессия истекла') !== -1 || isSessionExpired();
-      showToast(wasExpired ? 'Сессия истекла. Введите пароль и ключ доступа к БД заново.' : 'Нужны пароль и ключ доступа к БД', 'error');
+      showToast(wasExpired ? 'Сессия истекла. Введите пароль и ключ доступа к БД заново.' : 'Нужны пароль и ключ доступа к БД', 'error', null, true);
       await promptLoginAndRun(action, handlers);
     } else if (handlers.onError) {
       handlers.onError(e);
