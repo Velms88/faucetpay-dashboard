@@ -193,6 +193,28 @@ function fmtMoney(v) {
   return (v === null || v === undefined || isNaN(v)) ? '—' : Number(v).toFixed(2);
 }
 
+// Format a crypto rate. For "normal" values (>= 0.01) we just show the number
+// with a sensible number of decimals. For very small rates (2 or more leading
+// zeros after the decimal) we use the CoinGecko style: the count of leading
+// zeros is rendered as a subscript index, followed by 5 significant digits
+// (e.g. 0.000003582 -> "0.<sub>5</sub>35820"). Returns safe HTML (numbers and a
+// <sub> tag only) — no external/user input is interpolated.
+function fmtRate(p) {
+  const n = Number(p);
+  if (!isFinite(n) || n === 0) return '0';
+  if (n >= 0.01) {
+    return Number(n.toFixed(6)).toLocaleString('en-US');
+  }
+  const s = n.toFixed(20);
+  const dot = s.indexOf('.');
+  let i = dot + 1;
+  let zeros = 0;
+  while (i < s.length && s[i] === '0') { zeros++; i++; }
+  const sig = s.slice(i, i + 5);
+  const digits = (sig + '00000').slice(0, 5);
+  return '0.<sub>' + zeros + '</sub>' + digits;
+}
+
 function fmtPct(v) {
   return (v === null || v === undefined || isNaN(v)) ? '—' : Number(v) + '%';
 }
@@ -1940,7 +1962,7 @@ function buildRawTableHtml(snaps) {
       const bal = c ? (Number(c.balance) || 0) : 0;
       const p = Number(prices[sym]) || 0;
       row += '<td>' + escapeAttr(String(bal)) + '</td>'
-        + '<td class="rate-cell">' + (p > 0 ? escapeAttr(fmtMoney(p)) : '—') + '</td>';
+        + '<td class="rate-cell">' + (p > 0 ? fmtRate(p) : '—') + '</td>';
     }
     row += '</tr>';
     body += row;
