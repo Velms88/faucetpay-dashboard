@@ -1887,7 +1887,7 @@ async function openRealAdmin() {
 }
 
 function renderRealTargets(container, cfg, faucetRows, overrides) {
-  const defaults = { is_enabled: true, payout_type: 'mixed', gateways_count: 1, age_months: 0, uii: 1.0, comment: '' };
+  const defaults = { is_enabled: true, payout_type: '', gateways_count: 0, age_months: 0, uii: 1.0, comment: '' };
   const baseTarget = (url) => (cfg.targets || []).find((t) => normUrl(t.url) === normUrl(url)) || null;
   container.innerHTML = '';
   const wrap = document.createElement('div');
@@ -1920,8 +1920,8 @@ function renderRealTargets(container, cfg, faucetRows, overrides) {
       const key = normUrl(f.url);
       const ov = overrides.get(key) || baseTarget(f.url) || defaults;
       const uii = def(ov.uii, 1.0);
-      const pay = def(ov.payout_type, 'mixed');
-      const gw = def(ov.gateways_count, 1);
+      const pay = def(ov.payout_type, '');
+      const gw = def(ov.gateways_count, 0);
       const age = def(ov.age_months, 0);
       const en = ov.is_enabled !== false;
       const cm = def(ov.comment, '');
@@ -1932,6 +1932,7 @@ function renderRealTargets(container, cfg, faucetRows, overrides) {
         '<td>' + escapeAttr(f.currency || '') + '</td>' +
         '<td><input class="admin-input num" data-f="uii" type="number" min="0.80" max="1.20" step="0.01" value="' + uii + '" style="width:64px"/></td>' +
         '<td><select class="admin-input" data-f="payout_type">' +
+          '<option value="">None</option>' +
           '<option value="instant">instant</option><option value="mixed">mixed</option><option value="manual">manual</option>' +
         '</select></td>' +
         '<td><input class="admin-input num" data-f="gateways_count" type="number" min="0" step="1" value="' + gw + '" style="width:64px"/></td>' +
@@ -1948,6 +1949,7 @@ function renderRealTargets(container, cfg, faucetRows, overrides) {
           else t = Object.assign({}, t);
           let v = inp.value;
           if (fld === 'uii' || fld === 'gateways_count' || fld === 'age_months') v = v === '' ? null : Number(v);
+          if (fld === 'payout_type' && v === '') v = null;
           if (inp.type === 'checkbox') v = inp.checked;
           t[fld] = v;
           overrides.set(key, t);
