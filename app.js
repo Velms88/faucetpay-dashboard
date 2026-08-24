@@ -1898,7 +1898,7 @@ function renderRealTargets(container, cfg, faucetRows, overrides) {
 
   const table = document.createElement('table');
   table.className = 'admin-table targets-table';
-  table.innerHTML = '<thead><tr><th>URL</th><th>Name</th><th>UII (0..' + (w3 * 100) + ')</th><th>Bonus (0..' + (w4 * 100) + ')</th><th>Payout type</th><th>Gateways</th><th>Age (мес.)</th><th>Enabled</th><th>Comment</th></tr></thead>';
+  table.innerHTML = '<thead><tr><th>URL</th><th>Name</th><th>UII (0.' + (w3 * 100) + ')</th><th>Bonus (0.' + (w4 * 100) + ')</th><th>Payout type</th><th>Gateways</th><th>Age (мес.)</th><th>Enabled</th><th>Comment</th></tr></thead>';
   const tb = document.createElement('tbody');
   table.appendChild(tb);
   const tableScroll = document.createElement('div');
